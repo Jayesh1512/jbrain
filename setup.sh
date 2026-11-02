@@ -150,8 +150,9 @@ elif [ "$MODE" = docker ] && [ $DOCKER_OK = 0 ]; then die "--docker requested bu
 elif [ "$MODE" = native ] && [ $NATIVE_OK = 0 ]; then die "--native requested but Rust 1.89+ is missing"; fi
 
 # ── 2. configuration ──────────────────────────────────────────────────────────
-sync_setup() { # asks for the repo and token, verifies access; sets JBRAIN_GIT_REMOTE / JBRAIN_GIT_TOKEN
-  ask "Repository (owner/name or full URL, empty = keep sync off)"; r=$REPLY
+sync_setup() { # [repo] asks for the repo (unless given) and token, verifies access; sets JBRAIN_GIT_REMOTE / JBRAIN_GIT_TOKEN
+  local r=${1:-}
+  if [ -z "$r" ]; then ask "Repository (owner/name or full URL, empty = keep sync off)"; r=$REPLY; fi
   if [ -z "$r" ]; then JBRAIN_GIT_REMOTE=""; JBRAIN_GIT_TOKEN=""; ok "GitHub sync stays off"; return; fi
   case "$r" in
     *://*|/*|git@*|./*) JBRAIN_GIT_REMOTE=$r ;;
@@ -198,6 +199,14 @@ write_env() {
       echo "JBRAIN_GIT_TOKEN='$JBRAIN_GIT_TOKEN'"
     } > .env )
 }
+sync_ask() { # sync_ask "question": status 0 if the user said yes or pasted a repo (then runs sync_setup)
+  local a; printf '  %s❯%s %s %s(y/N, or paste owner/repo)%s ' "$C" "$Z" "$1" "$D" "$Z"; read -r a || a=""
+  case "$(printf '%s' "$a" | tr '[:upper:]' '[:lower:]')" in
+    y|yes)         sync_setup ;;
+    */*|*://*|git@*) sync_setup "$a" ;;
+    *)             return 1 ;;
+  esac
+}
 sync_heading() { printf '\n  %sGitHub sync%s %s(optional)%s\n  %sEvery change is committed to Git. You can also push each one to a GitHub repo as a backup.%s\n' "$B" "$Z" "$D" "$Z" "$D" "$Z"; }
 
 REUSE=0
@@ -217,7 +226,7 @@ if [ $REUSE = 1 ]; then
   else
     printf '  %sCurrently pushing to %s%s\n' "$D" "$(printf '%s' "$JBRAIN_GIT_REMOTE" | sed -E 's#//[^/@]*@#//#')" "$Z"; q="Change or turn off GitHub sync?"
   fi
-  if yesno "$q" n; then sync_setup; write_env; ok "Updated .env"; fi
+  if sync_ask "$q"; then write_env; ok "Updated .env"; fi
 else
   phase 2 "Configure"
   printf '\n  %sBasics%s\n' "$B" "$Z"
@@ -233,7 +242,7 @@ else
 
   sync_heading
   JBRAIN_GIT_REMOTE=""; JBRAIN_GIT_TOKEN=""
-  if yesno "Push every update to a GitHub repository?" n; then sync_setup; else ok "Skipping GitHub sync. Re-run ./setup.sh later to enable it."; fi
+  if sync_ask "Push every update to a GitHub repository?"; then :; else ok "Skipping GitHub sync. Re-run ./setup.sh later to enable it."; fi
 
   write_env
   ok "Saved .env (readable only by you)"
