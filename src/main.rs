@@ -8,6 +8,7 @@ mod mcp;
 mod okf;
 mod retrieval;
 mod storage;
+mod sync;
 
 fn main() {
     let result = tokio::runtime::Builder::new_current_thread()

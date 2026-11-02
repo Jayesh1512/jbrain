@@ -20,6 +20,8 @@ use tokio::sync::{OwnedSemaphorePermit, Semaphore, oneshot};
 pub struct Config {
     pub data_dir: PathBuf,
     pub history: bool,
+    pub git_remote: Option<String>,
+    pub git_token: Option<String>,
     pub reindex: bool,
     pub max_pending: usize,
     pub max_pending_bytes: usize,
@@ -87,7 +89,7 @@ impl Brain {
         storage::ensure_dir(&bundle)?;
         let operations = Operations::open(&data_dir)?;
         let mut index = Index::open(&data_dir)?;
-        let history = History::new(&bundle, config.history)?;
+        let history = History::new(&bundle, config.history, config.git_remote, config.git_token)?;
         // Walk one file at a time; unchanged documents retain their parsed index.
         index.reconcile(&bundle, config.reindex)?;
         let shared = Arc::new(Shared {
@@ -147,9 +149,11 @@ impl Brain {
         Ok(())
     }
     pub fn health(&self) -> Result<Value> {
-        Ok(
-            json!({"status":if self.shared.failed.load(Ordering::Acquire){"recovery_required"}else if self.shared.closing.load(Ordering::Acquire){"closing"}else{"ready"},"concepts":self.shared.index.lock().unwrap().count()?,"pendingWrites":self.shared.operations.lock().unwrap().pending_count()?,"runtime":"rust","history":if self.shared.history.enabled(){"git"}else{"journal"}}),
-        )
+        let mut health = json!({"status":if self.shared.failed.load(Ordering::Acquire){"recovery_required"}else if self.shared.closing.load(Ordering::Acquire){"closing"}else{"ready"},"concepts":self.shared.index.lock().unwrap().count()?,"pendingWrites":self.shared.operations.lock().unwrap().pending_count()?,"runtime":"rust","history":if self.shared.history.enabled(){"git"}else{"journal"}});
+        if let Some(pusher) = &self.shared.history.pusher {
+            health["sync"] = pusher.status();
+        }
+        Ok(health)
     }
     pub fn get(&self, id: &str) -> Result<Value> {
         self.check()?;
@@ -388,15 +392,22 @@ fn checkpoint(_phase: &str, _op: &Operation, _bundle: &Path) {
 
 struct History {
     bundle: Option<PathBuf>,
+    pusher: Option<Arc<crate::sync::Pusher>>,
 }
 impl History {
-    fn new(bundle: &Path, enabled: bool) -> Result<Self> {
-        let history = Self {
+    fn new(
+        bundle: &Path,
+        enabled: bool,
+        remote: Option<String>,
+        token: Option<String>,
+    ) -> Result<Self> {
+        let mut history = Self {
             bundle: enabled.then(|| bundle.to_path_buf()),
+            pusher: None,
         };
         if enabled {
             if !bundle.join(".git").exists() {
-                history.run(&["init", "--quiet"], &[0])?;
+                history.run(&["init", "--quiet", "--initial-branch=main"], &[0])?;
             }
             if fs::symlink_metadata(bundle.join(".git"))?
                 .file_type()
@@ -415,6 +426,13 @@ impl History {
                     "UNSAFE_STORAGE",
                     "Knowledge needs its own Git repository.",
                 ));
+            }
+            if let Some(remote) = remote {
+                history.pusher = Some(crate::sync::Pusher::start(
+                    bundle.to_path_buf(),
+                    remote,
+                    token,
+                )?);
             }
         }
         Ok(history)
@@ -481,6 +499,9 @@ impl History {
             )?;
         }
         let (head, code) = self.run(&["rev-parse", "--verify", "HEAD"], &[0, 128])?;
+        if let Some(pusher) = &self.pusher {
+            pusher.notify();
+        }
         Ok((code == 0).then_some(head))
     }
     fn snapshot(&self) -> Result<()> {
@@ -493,6 +514,9 @@ impl History {
                 &["commit", "--quiet", "-m", "Import existing OKF bundle"],
                 &[0],
             )?;
+            if let Some(pusher) = &self.pusher {
+                pusher.notify();
+            }
         }
         Ok(())
     }

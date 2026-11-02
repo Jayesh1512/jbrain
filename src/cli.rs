@@ -274,10 +274,20 @@ async fn serve(reindex: bool) -> Result<()> {
             ));
         }
     };
+    let remote = env::var("JBRAIN_GIT_REMOTE").ok().filter(|s| !s.is_empty());
+    if remote.is_some() && !history {
+        return Err(Error::new(
+            400,
+            "CONFIG_ERROR",
+            "JBRAIN_GIT_REMOTE requires JBRAIN_HISTORY=git.",
+        ));
+    }
     let data_dir = PathBuf::from(env::var("JBRAIN_DATA_DIR").unwrap_or_else(|_| ".jbrain".into()));
     let brain = Brain::open(Config {
         data_dir,
         history,
+        git_remote: remote,
+        git_token: env::var("JBRAIN_GIT_TOKEN").ok().filter(|s| !s.is_empty()),
         reindex,
         max_pending: positive("JBRAIN_MAX_PENDING", 64)?,
         max_pending_bytes: positive("JBRAIN_MAX_PENDING_BYTES", 8 * 1024 * 1024)?,

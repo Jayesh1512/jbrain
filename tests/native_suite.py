@@ -393,6 +393,42 @@ class NativeTests(unittest.TestCase):
             count = subprocess.check_output(["git", "-C", str(service.directory / "knowledge"), "rev-list", "--count", "HEAD"], text=True).strip()
             self.assertEqual(count, "1")
 
+    @staticmethod
+    def wait_for(check, timeout=30):
+        deadline = time.time() + timeout
+        while time.time() < deadline:
+            value = check()
+            if value:
+                return value
+            time.sleep(0.2)
+        raise AssertionError("Timed out")
+
+    def test_git_remote_push(self):
+        with tempfile.TemporaryDirectory() as remote:
+            subprocess.check_call(["git", "init", "--bare", "--quiet", remote])
+            head = lambda: subprocess.run(["git", "--git-dir", remote, "rev-parse", "--verify", "refs/heads/main"], capture_output=True, text=True).stdout.strip()
+            with Service(JBRAIN_HISTORY="git", JBRAIN_GIT_REMOTE=remote) as service:
+                for name in ["one", "two"]:
+                    commit = service.put(name)["gitCommit"]
+                    self.wait_for(lambda: head() == commit)
+                sync = self.wait_for(lambda: (h := http(service.url, "/health")[1])["sync"]["pending"] is False and h["sync"])
+                self.assertEqual((sync["pushedCommit"], sync["lastError"], sync["remote"]), (commit, None, remote))
+
+    def test_unreachable_git_remote_never_blocks_writes_and_catches_up(self):
+        with tempfile.TemporaryDirectory() as parent:
+            remote = pathlib.Path(parent) / "late.git"
+            with Service(JBRAIN_HISTORY="git", JBRAIN_GIT_REMOTE=str(remote)) as service:
+                commit = service.put("offline")["gitCommit"]
+                error = self.wait_for(lambda: http(service.url, "/health")[1]["sync"]["lastError"])
+                self.assertTrue(error)
+                self.assertEqual(http(service.url, "/health")[1]["status"], "ready")
+                subprocess.check_call(["git", "init", "--bare", "--quiet", str(remote)])
+                self.wait_for(lambda: subprocess.run(["git", "--git-dir", str(remote), "rev-parse", "refs/heads/main"], capture_output=True, text=True).stdout.strip() == commit)
+
+    def test_git_remote_requires_git_history(self):
+        with self.assertRaises(AssertionError):
+            Service(JBRAIN_HISTORY="off", JBRAIN_GIT_REMOTE="/tmp/nowhere.git")
+
     def test_unexpected_edits_and_symlinks_are_not_overwritten(self):
         with Service() as service:
             seed = service.put("external")

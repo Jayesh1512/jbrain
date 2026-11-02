@@ -6,6 +6,14 @@ A shared knowledge service for multiple agents. Knowledge lives in [Open Knowled
 
 **Run one native Rust service per brain. Every agent uses HTTP, direct MCP, or the CLI.** Agent processes never open the databases or write the knowledge directory. This avoids the multiple-process ownership collision seen when agents each open a PGLite instance.
 
+## Quick start
+
+```sh
+./setup.sh
+```
+
+The installer checks your machine and picks **Docker** when it is usable (daemon running, `docker compose` present) or a **native** cargo build otherwise (`--docker` / `--native` force a choice). It generates an access token, writes `.env` (mode 600), builds, starts the service, waits for `/health`, and prints the MCP command for your agents. It also asks, optionally, whether to **push every update to a GitHub repository** (see [GitHub sync](#github-sync)). Re-running it offers to keep your existing `.env`.
+
 ## Run
 
 Build with **Rust 1.89+** on macOS or Linux. The resulting binary runs without Rust, Bun, Node, a separate database server or containers. SQLite is bundled. Git is needed unless you set `JBRAIN_HISTORY=off`. Keep storage on a local filesystem.
@@ -32,10 +40,33 @@ The service listens on `http://127.0.0.1:7331` and stores data in `.jbrain/`. St
 | `JBRAIN_URL` | `http://127.0.0.1:7331` | Service URL used by CLI and MCP clients. |
 | `JBRAIN_TOKEN` | unset | Shared bearer token used by the service and its clients. |
 | `JBRAIN_HISTORY` | `git` | Durable journal is always enabled; `git` also commits each change to `knowledge/.git`. Set `off` to skip Git. |
+| `JBRAIN_GIT_REMOTE` | unset | Git URL or path. Every committed change is pushed to it in the background. Requires `JBRAIN_HISTORY=git`. |
+| `JBRAIN_GIT_TOKEN` | unset | Access token for an `https` remote. Sent as an HTTP header at push time only; never written to the repository or logs. |
 | `JBRAIN_MAX_PENDING` | `64` | Maximum pending logical writes; overflow receives `503 QUEUE_FULL`. |
 | `JBRAIN_MAX_PENDING_BYTES` | `8388608` | Maximum pending serialized input bytes, stored on disk. |
 
 Agents on other machines can connect to the same service URL. Keep storage on the service host's local disk; use an authenticated HTTPS endpoint or encrypted tunnel for access across machines. Authentication grants access to the whole brain; `actor` records attribution and is supplied by the client.
+
+## Docker
+
+`setup.sh` does this for you. By hand:
+
+```sh
+cp .env.example .env        # set JBRAIN_TOKEN to a long random string
+docker compose up -d --build
+```
+
+The image is built locally (no registry image is published). It runs as a non-root user, keeps the brain in the `jbrain-data` volume mounted at `/data`, listens on `127.0.0.1:${JBRAIN_PORT:-7331}` on the host, and reports `healthy` through `jbrain health`. `JBRAIN_TOKEN` is required because the service binds `0.0.0.0` inside the container. Use a local Docker volume, not a network share, and run one container per volume. Back up by stopping the container and copying the volume (`docker run --rm -v jbrain_jbrain-data:/data -v "$PWD":/out debian tar czf /out/jbrain-data.tgz -C /data .`; the volume name is prefixed with your compose project name). `ssh` and local-path remotes are not reachable from the container; use an `https` remote with `JBRAIN_GIT_TOKEN`.
+
+## GitHub sync
+
+Set `JBRAIN_GIT_REMOTE` (and `JBRAIN_GIT_TOKEN` for an `https` remote), or answer the question in `setup.sh`. The service then:
+
+- sets `origin` on the knowledge repository and pushes `HEAD` to the remote's `main` branch;
+- pushes right after each committed write, coalescing bursts into a single push, and catches up on startup;
+- never blocks or fails a write because of the network: failed pushes retry with backoff (2 s up to 5 min), and `/health` shows `sync.pending`, `sync.pushedCommit` and `sync.lastError`.
+
+Use an **empty** repository and a fine-grained token limited to it (Contents: read and write). A remote whose `main` has unrelated history rejects the push; the service never force-pushes. `ssh` remotes use the keys of the user running the service (native only). Only the Markdown knowledge is pushed, not `index.sqlite` or the operations journal. A graceful shutdown does not push; the next start does.
 
 ## Write and read
 

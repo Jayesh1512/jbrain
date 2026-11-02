@@ -1,0 +1,19 @@
+# Configuration comes from .env (create it with ./setup.sh, or copy .env.example).
+services:
+  jbrain:
+    build: .
+    image: jbrain:local
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${JBRAIN_PORT:-7331}:7331"
+    environment:
+      JBRAIN_TOKEN: ${JBRAIN_TOKEN:?run ./setup.sh or set JBRAIN_TOKEN in .env}
+      JBRAIN_GIT_REMOTE: ${JBRAIN_GIT_REMOTE:-}
+      JBRAIN_GIT_TOKEN: ${JBRAIN_GIT_TOKEN:-}
+      JBRAIN_MODEL: ${JBRAIN_MODEL:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+    volumes:
+      - jbrain-data:/data
+
+volumes:
+  jbrain-data:
