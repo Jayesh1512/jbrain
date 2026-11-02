@@ -150,6 +150,56 @@ elif [ "$MODE" = docker ] && [ $DOCKER_OK = 0 ]; then die "--docker requested bu
 elif [ "$MODE" = native ] && [ $NATIVE_OK = 0 ]; then die "--native requested but Rust 1.89+ is missing"; fi
 
 # ── 2. configuration ──────────────────────────────────────────────────────────
+sync_setup() { # asks for the repo and token, verifies access; sets JBRAIN_GIT_REMOTE / JBRAIN_GIT_TOKEN
+  ask "Repository (owner/name or full URL, empty = keep sync off)"; r=$REPLY
+  if [ -z "$r" ]; then JBRAIN_GIT_REMOTE=""; JBRAIN_GIT_TOKEN=""; ok "GitHub sync stays off"; return; fi
+  case "$r" in
+    *://*|/*|git@*|./*) JBRAIN_GIT_REMOTE=$r ;;
+    */*)                JBRAIN_GIT_REMOTE="https://github.com/${r%.git}.git" ;;
+    *)                  die "Use owner/name or a full URL" ;;
+  esac
+  case "$JBRAIN_GIT_REMOTE" in
+    https://*)
+      ghuser=""; have gh && ghuser=$(gh api user -q .login 2>/dev/null || true)
+      if [ -n "$ghuser" ] && yesno "Use your gh login ($ghuser)? Its token can access ALL your repos" n; then
+        JBRAIN_GIT_TOKEN=$(gh auth token)
+      else
+        printf '  %sBest: a fine-grained token limited to this one repo (Contents: read and write).%s\n' "$D" "$Z"
+        secret "Token (hidden; empty = use this machine's saved git credentials)"; JBRAIN_GIT_TOKEN=$REPLY
+      fi
+      [ $MODE = docker ] && [ -z "$JBRAIN_GIT_TOKEN" ] && warn "A container cannot see your saved credentials; pushes will fail without a token" ;;
+    *) [ $MODE = docker ] && warn "ssh and local-path remotes are not reachable from the container; use an https URL and a token" ;;
+  esac
+  if authgit ls-remote --heads "$JBRAIN_GIT_REMOTE" >/tmp/jbrain-ls.$$ 2>/dev/null; then
+    ok "Reached $JBRAIN_GIT_REMOTE"
+    if [ -s /tmp/jbrain-ls.$$ ]; then
+      warn "That repository already has branches. The first push is rejected unless its main branch already holds this brain's history."
+      yesno "Continue with this repository?" n || die "Re-run with an empty repository."
+    fi
+  else
+    bad "Could not read $JBRAIN_GIT_REMOTE (missing repo, or the token cannot see it)"
+    slug=$(printf '%s' "$JBRAIN_GIT_REMOTE" | sed -nE 's#^https://github\.com/(.+)\.git$#\1#p')
+    if [ -n "$slug" ] && have gh && yesno "Create the private repository $slug with gh?" y; then
+      gh repo create "$slug" --private >/dev/null && ok "Created $slug" || die "gh could not create $slug"
+    else
+      yesno "Keep this remote anyway? (pushes retry in the background until it works)" n || die "Fix the repository and re-run."
+    fi
+  fi
+  rm -f /tmp/jbrain-ls.$$
+}
+write_env() {
+  ( umask 077
+    {
+      echo "JBRAIN_TOKEN=$JBRAIN_TOKEN"
+      echo "JBRAIN_PORT=$JBRAIN_PORT"
+      echo "JBRAIN_URL=http://127.0.0.1:$JBRAIN_PORT"
+      [ -n "${DATA:-}" ] && echo "JBRAIN_DATA_DIR='$DATA'"
+      echo "JBRAIN_GIT_REMOTE='$JBRAIN_GIT_REMOTE'"
+      echo "JBRAIN_GIT_TOKEN='$JBRAIN_GIT_TOKEN'"
+    } > .env )
+}
+sync_heading() { printf '\n  %sGitHub sync%s %s(optional)%s\n  %sEvery change is committed to Git. You can also push each one to a GitHub repo as a backup.%s\n' "$B" "$Z" "$D" "$Z" "$D" "$Z"; }
+
 REUSE=0
 if [ -f .env ]; then
   phase 2 "Configure"
@@ -160,7 +210,14 @@ fi
 if [ $REUSE = 1 ]; then
   set -a; . ./.env; set +a
   : "${JBRAIN_TOKEN:?.env has no JBRAIN_TOKEN}"; JBRAIN_PORT=${JBRAIN_PORT:-7331}
-  JBRAIN_GIT_REMOTE=${JBRAIN_GIT_REMOTE:-}; JBRAIN_GIT_TOKEN=${JBRAIN_GIT_TOKEN:-}
+  JBRAIN_GIT_REMOTE=${JBRAIN_GIT_REMOTE:-}; JBRAIN_GIT_TOKEN=${JBRAIN_GIT_TOKEN:-}; DATA=${JBRAIN_DATA_DIR:-}
+  sync_heading
+  if [ -z "$JBRAIN_GIT_REMOTE" ]; then
+    printf '  %sCurrently off.%s\n' "$D" "$Z"; q="Set up GitHub sync now?"
+  else
+    printf '  %sCurrently pushing to %s%s\n' "$D" "$(printf '%s' "$JBRAIN_GIT_REMOTE" | sed -E 's#//[^/@]*@#//#')" "$Z"; q="Change or turn off GitHub sync?"
+  fi
+  if yesno "$q" n; then sync_setup; write_env; ok "Updated .env"; fi
 else
   phase 2 "Configure"
   printf '\n  %sBasics%s\n' "$B" "$Z"
@@ -174,58 +231,11 @@ else
   DATA=""
   if [ $MODE = native ]; then ask "Where should the knowledge be stored?" "$PWD/jbrain-data"; DATA=$REPLY; fi
 
-  printf '\n  %sGitHub sync%s %s(optional)%s\n' "$B" "$Z" "$D" "$Z"
-  printf '  %sEvery change is committed to Git. You can also push each one to a GitHub repo as a backup.%s\n' "$D" "$Z"
+  sync_heading
   JBRAIN_GIT_REMOTE=""; JBRAIN_GIT_TOKEN=""
-  if yesno "Push every update to a GitHub repository?" n; then
-    ask "Repository (owner/name or full URL)"; r=$REPLY
-    [ -n "$r" ] || die "No repository given"
-    case "$r" in
-      *://*|/*|git@*|./*) JBRAIN_GIT_REMOTE=$r ;;
-      */*)                JBRAIN_GIT_REMOTE="https://github.com/${r%.git}.git" ;;
-      *)                  die "Use owner/name or a full URL" ;;
-    esac
-    case "$JBRAIN_GIT_REMOTE" in
-      https://*)
-        ghuser=""; have gh && ghuser=$(gh api user -q .login 2>/dev/null || true)
-        if [ -n "$ghuser" ] && yesno "Use your gh login ($ghuser)? Its token can access ALL your repos" n; then
-          JBRAIN_GIT_TOKEN=$(gh auth token)
-        else
-          printf '  %sBest: a fine-grained token limited to this one repo (Contents: read and write).%s\n' "$D" "$Z"
-          secret "Token (hidden; empty = use this machine's saved git credentials)"; JBRAIN_GIT_TOKEN=$REPLY
-        fi
-        [ $MODE = docker ] && [ -z "$JBRAIN_GIT_TOKEN" ] && warn "A container cannot see your saved credentials; pushes will fail without a token" ;;
-      *) [ $MODE = docker ] && warn "ssh and local-path remotes are not reachable from the container; use an https URL and a token" ;;
-    esac
-    if authgit ls-remote --heads "$JBRAIN_GIT_REMOTE" >/tmp/jbrain-ls.$$ 2>/dev/null; then
-      ok "Reached $JBRAIN_GIT_REMOTE"
-      if [ -s /tmp/jbrain-ls.$$ ]; then
-        warn "That repository already has branches. The first push is rejected unless its main branch already holds this brain's history."
-        yesno "Continue with this repository?" n || die "Re-run with an empty repository."
-      fi
-    else
-      bad "Could not read $JBRAIN_GIT_REMOTE (missing repo, or the token cannot see it)"
-      slug=$(printf '%s' "$JBRAIN_GIT_REMOTE" | sed -nE 's#^https://github\.com/(.+)\.git$#\1#p')
-      if [ -n "$slug" ] && have gh && yesno "Create the private repository $slug with gh?" y; then
-        gh repo create "$slug" --private >/dev/null && ok "Created $slug" || die "gh could not create $slug"
-      else
-        yesno "Keep this remote anyway? (pushes retry in the background until it works)" n || die "Fix the repository and re-run."
-      fi
-    fi
-    rm -f /tmp/jbrain-ls.$$
-  else
-    ok "Skipping GitHub sync. You can enable it later by editing .env and restarting."
-  fi
+  if yesno "Push every update to a GitHub repository?" n; then sync_setup; else ok "Skipping GitHub sync. Re-run ./setup.sh later to enable it."; fi
 
-  ( umask 077
-    {
-      echo "JBRAIN_TOKEN=$JBRAIN_TOKEN"
-      echo "JBRAIN_PORT=$JBRAIN_PORT"
-      echo "JBRAIN_URL=http://127.0.0.1:$JBRAIN_PORT"
-      [ -n "$DATA" ] && echo "JBRAIN_DATA_DIR='$DATA'"
-      echo "JBRAIN_GIT_REMOTE='$JBRAIN_GIT_REMOTE'"
-      echo "JBRAIN_GIT_TOKEN='$JBRAIN_GIT_TOKEN'"
-    } > .env )
+  write_env
   ok "Saved .env (readable only by you)"
 fi
 
