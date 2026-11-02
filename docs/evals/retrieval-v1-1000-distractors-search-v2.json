@@ -1,0 +1,5764 @@
+{
+  "schemaVersion": 1,
+  "dataset": "jbrain-retrieval-v1-synthetic",
+  "description": "Hand-authored fictional operational knowledge. Queries and judgments are public and authored with the corpus; this is a diagnostic baseline, not a held-out or external benchmark. Relevance labels identify evidence-bearing documents, not every topically related document.",
+  "measured_at": "2026-11-02T13:53:47.744298+00:00",
+  "fixture_sha256": "9b8e14bfcb6247914b699ea87d08f73e5fddbcdfb3541674016ca40449c7c391",
+  "corpus_sha256": "48335337cb11e422f3a733c1a5defb91e7759878b70ac99f77f246bcd9fe7436",
+  "binary_sha256": "f35794db76fd1fbefe2309c173c2880d88a32a9f0ffc0a8413d3e46a48341053",
+  "evaluator_sha256": "27ca1434f491abe3b123e1378e244ef19a322a8db3f341d5db6121bfd42037b7",
+  "platform": "macOS-26.3.1-arm64-arm-64bit-Mach-O",
+  "workers": 4,
+  "document_count": 1026,
+  "core_documents": 26,
+  "distractors": 1000,
+  "freshness": {
+    "updated_content_visible": true,
+    "updated_term_searchable": true,
+    "old_term_removed": true,
+    "deleted_term_removed": true
+  },
+  "policy": {
+    "search": "Verbatim query, 10 direct search results.",
+    "search_links": "Verbatim query, retain top 3 hits, visit only their resolved outgoing/incoming links, then remaining direct hits; cap 10 documents and 4 retrieval HTTP calls. No model or query rewrite."
+  },
+  "modes": {
+    "search": {
+      "summary": {
+        "queries": 60,
+        "answerable_queries": 54,
+        "unanswerable_queries": 6,
+        "metrics": {
+          "hit@1": 0.8333333333333334,
+          "recall@1": 0.7870370370370371,
+          "precision@1": 0.8333333333333334,
+          "ndcg@1": 0.8333333333333334,
+          "evidence_complete@1": 0.7407407407407407,
+          "hit@5": 0.9074074074074074,
+          "recall@5": 0.8611111111111112,
+          "precision@5": 0.18518518518518517,
+          "ndcg@5": 0.8429818865664347,
+          "evidence_complete@5": 0.8148148148148148,
+          "hit@10": 0.9259259259259259,
+          "recall@10": 0.8888888888888888,
+          "precision@10": 0.0962962962962963,
+          "ndcg@10": 0.8529395852872093,
+          "evidence_complete@10": 0.8518518518518519,
+          "mrr@10": 0.8699294532627866
+        },
+        "unknown_empty_rate": 0.16666666666666666,
+        "latency_ms": {
+          "p50": 1.102,
+          "p95": 2.945
+        },
+        "mean_retrieval_http_calls": 1.0
+      },
+      "categories": {
+        "keyword": {
+          "queries": 12,
+          "answerable_queries": 12,
+          "unanswerable_queries": 0,
+          "metrics": {
+            "hit@1": 1.0,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1.0,
+            "hit@5": 1.0,
+            "recall@5": 1.0,
+            "precision@5": 0.20000000000000004,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1.0,
+            "hit@10": 1.0,
+            "recall@10": 1.0,
+            "precision@10": 0.10000000000000002,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1.0,
+            "mrr@10": 1.0
+          },
+          "unknown_empty_rate": null,
+          "latency_ms": {
+            "p50": 1.574,
+            "p95": 3.19
+          },
+          "mean_retrieval_http_calls": 1.0
+        },
+        "metadata_and_tokens": {
+          "queries": 8,
+          "answerable_queries": 8,
+          "unanswerable_queries": 0,
+          "metrics": {
+            "hit@1": 0.875,
+            "recall@1": 0.875,
+            "precision@1": 0.875,
+            "ndcg@1": 0.875,
+            "evidence_complete@1": 0.875,
+            "hit@5": 0.875,
+            "recall@5": 0.875,
+            "precision@5": 0.17500000000000002,
+            "ndcg@5": 0.875,
+            "evidence_complete@5": 0.875,
+            "hit@10": 0.875,
+            "recall@10": 0.875,
+            "precision@10": 0.08750000000000001,
+            "ndcg@10": 0.875,
+            "evidence_complete@10": 0.875,
+            "mrr@10": 0.875
+          },
+          "unknown_empty_rate": null,
+          "latency_ms": {
+            "p50": 0.864,
+            "p95": 1.721
+          },
+          "mean_retrieval_http_calls": 1.0
+        },
+        "natural_question": {
+          "queries": 12,
+          "answerable_queries": 12,
+          "unanswerable_queries": 0,
+          "metrics": {
+            "hit@1": 1.0,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1.0,
+            "hit@5": 1.0,
+            "recall@5": 1.0,
+            "precision@5": 0.20000000000000004,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1.0,
+            "hit@10": 1.0,
+            "recall@10": 1.0,
+            "precision@10": 0.10000000000000002,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1.0,
+            "mrr@10": 1.0
+          },
+          "unknown_empty_rate": null,
+          "latency_ms": {
+            "p50": 2.155,
+            "p95": 3.11
+          },
+          "mean_retrieval_http_calls": 1.0
+        },
+        "paraphrase": {
+          "queries": 10,
+          "answerable_queries": 10,
+          "unanswerable_queries": 0,
+          "metrics": {
+            "hit@1": 0.5,
+            "recall@1": 0.5,
+            "precision@1": 0.5,
+            "ndcg@1": 0.5,
+            "evidence_complete@1": 0.5,
+            "hit@5": 0.7,
+            "recall@5": 0.7,
+            "precision@5": 0.14,
+            "ndcg@5": 0.6130929753571458,
+            "evidence_complete@5": 0.7,
+            "hit@10": 0.8,
+            "recall@10": 0.8,
+            "precision@10": 0.08,
+            "ndcg@10": 0.6464263086904791,
+            "evidence_complete@10": 0.8,
+            "mrr@10": 0.5976190476190476
+          },
+          "unknown_empty_rate": null,
+          "latency_ms": {
+            "p50": 0.943,
+            "p95": 1.313
+          },
+          "mean_retrieval_http_calls": 1.0
+        },
+        "typo": {
+          "queries": 6,
+          "answerable_queries": 6,
+          "unanswerable_queries": 0,
+          "metrics": {
+            "hit@1": 0.6666666666666666,
+            "recall@1": 0.6666666666666666,
+            "precision@1": 0.6666666666666666,
+            "ndcg@1": 0.6666666666666666,
+            "evidence_complete@1": 0.6666666666666666,
+            "hit@5": 0.8333333333333334,
+            "recall@5": 0.8333333333333334,
+            "precision@5": 0.16666666666666666,
+            "ndcg@5": 0.7718216255952429,
+            "evidence_complete@5": 0.8333333333333334,
+            "hit@10": 0.8333333333333334,
+            "recall@10": 0.8333333333333334,
+            "precision@10": 0.08333333333333333,
+            "ndcg@10": 0.7718216255952429,
+            "evidence_complete@10": 0.8333333333333334,
+            "mrr@10": 0.75
+          },
+          "unknown_empty_rate": null,
+          "latency_ms": {
+            "p50": 0.951,
+            "p95": 1.178
+          },
+          "mean_retrieval_http_calls": 1.0
+        },
+        "multiple_documents": {
+          "queries": 6,
+          "answerable_queries": 6,
+          "unanswerable_queries": 0,
+          "metrics": {
+            "hit@1": 0.8333333333333334,
+            "recall@1": 0.4166666666666667,
+            "precision@1": 0.8333333333333334,
+            "ndcg@1": 0.8333333333333334,
+            "evidence_complete@1": 0.0,
+            "hit@5": 1.0,
+            "recall@5": 0.5833333333333334,
+            "precision@5": 0.23333333333333336,
+            "ndcg@5": 0.6265270612407604,
+            "evidence_complete@5": 0.16666666666666666,
+            "hit@10": 1.0,
+            "recall@10": 0.6666666666666666,
+            "precision@10": 0.13333333333333333,
+            "ndcg@10": 0.6605907941721748,
+            "evidence_complete@10": 0.3333333333333333,
+            "mrr@10": 0.9166666666666666
+          },
+          "unknown_empty_rate": null,
+          "latency_ms": {
+            "p50": 0.873,
+            "p95": 2.437
+          },
+          "mean_retrieval_http_calls": 1.0
+        },
+        "unanswerable": {
+          "queries": 6,
+          "answerable_queries": 0,
+          "unanswerable_queries": 6,
+          "metrics": {},
+          "unknown_empty_rate": 0.16666666666666666,
+          "latency_ms": {
+            "p50": 1.123,
+            "p95": 2.473
+          },
+          "mean_retrieval_http_calls": 1.0
+        }
+      },
+      "queries": [
+        {
+          "id": "keyword-atlas-db",
+          "category": "keyword",
+          "query": "Atlas primary database",
+          "question": "Atlas primary database",
+          "relevance": {
+            "projects/atlas-architecture": 2
+          },
+          "required_evidence": {
+            "projects/atlas-architecture": [
+              "Atlas uses PostgreSQL 16 as its primary database."
+            ]
+          },
+          "retrieved": [
+            "projects/atlas-architecture",
+            "decisions/atlas-database-draft",
+            "incidents/atlas-pool-exhaustion",
+            "projects/atlas",
+            "security/atlas-keys",
+            "operations/atlas-runbook",
+            "people/mira-sen",
+            "noise/aster-0000",
+            "noise/aster-0060",
+            "noise/aster-0120"
+          ],
+          "verified_evidence": {
+            "projects/atlas-architecture": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.869,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "keyword-atlas-owner",
+          "category": "keyword",
+          "query": "Atlas owns",
+          "question": "Atlas owns",
+          "relevance": {
+            "projects/atlas": 2
+          },
+          "required_evidence": {
+            "projects/atlas": [
+              "Mira Sen owns Atlas."
+            ]
+          },
+          "retrieved": [
+            "projects/atlas",
+            "security/atlas-keys",
+            "operations/atlas-runbook",
+            "decisions/atlas-database-draft",
+            "projects/atlas-architecture",
+            "incidents/atlas-pool-exhaustion",
+            "people/mira-sen",
+            "services/harbor",
+            "projects/boreal"
+          ],
+          "verified_evidence": {
+            "projects/atlas": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 3.099,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "keyword-boreal-owner",
+          "category": "keyword",
+          "query": "Boreal owns",
+          "question": "Boreal owns",
+          "relevance": {
+            "projects/boreal": 2
+          },
+          "required_evidence": {
+            "projects/boreal": [
+              "Jon Iyer owns Boreal."
+            ]
+          },
+          "retrieved": [
+            "projects/boreal",
+            "policies/boreal-retention",
+            "people/jon-iyer",
+            "services/harbor",
+            "projects/atlas"
+          ],
+          "verified_evidence": {
+            "projects/boreal": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.574,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "keyword-retention",
+          "category": "keyword",
+          "query": "Boreal raw logs",
+          "question": "Boreal raw logs",
+          "relevance": {
+            "policies/boreal-retention": 2
+          },
+          "required_evidence": {
+            "policies/boreal-retention": [
+              "Boreal retains raw logs for 30 days and aggregated metrics for 90 days."
+            ]
+          },
+          "retrieved": [
+            "policies/boreal-retention",
+            "projects/boreal",
+            "people/jon-iyer",
+            "security/service-tokens"
+          ],
+          "verified_evidence": {
+            "policies/boreal-retention": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 3.19,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "keyword-rotation",
+          "category": "keyword",
+          "query": "Atlas credentials rotate",
+          "question": "Atlas credentials rotate",
+          "relevance": {
+            "security/atlas-keys": 2
+          },
+          "required_evidence": {
+            "security/atlas-keys": [
+              "Atlas API credentials rotate every 90 days."
+            ]
+          },
+          "retrieved": [
+            "security/atlas-keys",
+            "projects/atlas",
+            "operations/atlas-runbook",
+            "decisions/atlas-database-draft",
+            "projects/atlas-architecture",
+            "incidents/atlas-pool-exhaustion",
+            "people/mira-sen",
+            "security/service-tokens"
+          ],
+          "verified_evidence": {
+            "security/atlas-keys": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.256,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "keyword-budget",
+          "category": "keyword",
+          "query": "2026 infrastructure budget",
+          "question": "2026 infrastructure budget",
+          "relevance": {
+            "finance/infra-2026": 2
+          },
+          "required_evidence": {
+            "finance/infra-2026": [
+              "The approved 2026 infrastructure budget is USD 48000 per month."
+            ]
+          },
+          "retrieved": [
+            "finance/infra-2026",
+            "finance/infra-2025",
+            "incidents/atlas-pool-exhaustion",
+            "noise/aster-0030",
+            "noise/aster-0090",
+            "noise/aster-0150",
+            "noise/aster-0210",
+            "noise/aster-0270",
+            "noise/aster-0330",
+            "noise/aster-0390"
+          ],
+          "verified_evidence": {
+            "finance/infra-2026": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.6,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "keyword-wireguard",
+          "category": "keyword",
+          "query": "WireGuard UDP port",
+          "question": "WireGuard UDP port",
+          "relevance": {
+            "operations/remote-access": 2
+          },
+          "required_evidence": {
+            "operations/remote-access": [
+              "Remote production access uses WireGuard on UDP port 51820."
+            ]
+          },
+          "retrieved": [
+            "operations/remote-access",
+            "devices/rover"
+          ],
+          "verified_evidence": {
+            "operations/remote-access": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 0.933,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "keyword-backups",
+          "category": "keyword",
+          "query": "snapshots retained",
+          "question": "snapshots retained",
+          "relevance": {
+            "operations/backups": 2
+          },
+          "required_evidence": {
+            "operations/backups": [
+              "Snapshots are retained for 14 days."
+            ]
+          },
+          "retrieved": [
+            "operations/backups"
+          ],
+          "verified_evidence": {
+            "operations/backups": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 0.775,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "keyword-camera",
+          "category": "keyword",
+          "query": "Rover RTSP port",
+          "question": "Rover RTSP port",
+          "relevance": {
+            "devices/rover": 2
+          },
+          "required_evidence": {
+            "devices/rover": [
+              "The Rover camera streams video over RTSP on TCP port 8554."
+            ]
+          },
+          "retrieved": [
+            "devices/rover",
+            "devices/rover-battery",
+            "operations/remote-access"
+          ],
+          "verified_evidence": {
+            "devices/rover": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.011,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "keyword-battery",
+          "category": "keyword",
+          "query": "Rover charge cycles",
+          "question": "Rover charge cycles",
+          "relevance": {
+            "devices/rover-battery": 2
+          },
+          "required_evidence": {
+            "devices/rover-battery": [
+              "Replace a Rover battery after 300 charge cycles or when capacity falls below 80 percent."
+            ]
+          },
+          "retrieved": [
+            "devices/rover-battery",
+            "devices/rover",
+            "noise/aster-0050",
+            "noise/aster-0110",
+            "noise/aster-0170",
+            "noise/aster-0230",
+            "noise/aster-0290",
+            "noise/aster-0350",
+            "noise/aster-0410",
+            "noise/aster-0470"
+          ],
+          "verified_evidence": {
+            "devices/rover-battery": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.927,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "keyword-refund",
+          "category": "keyword",
+          "query": "Merchant refunds settlement",
+          "question": "Merchant refunds settlement",
+          "relevance": {
+            "support/refunds": 2
+          },
+          "required_evidence": {
+            "support/refunds": [
+              "Merchant refunds are accepted within 14 days of settlement."
+            ]
+          },
+          "retrieved": [
+            "support/refunds",
+            "projects/atlas"
+          ],
+          "verified_evidence": {
+            "support/refunds": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 0.929,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "keyword-token",
+          "category": "keyword",
+          "query": "Service tokens expire",
+          "question": "Service tokens expire",
+          "relevance": {
+            "security/service-tokens": 2
+          },
+          "required_evidence": {
+            "security/service-tokens": [
+              "Service tokens expire after 24 hours."
+            ]
+          },
+          "retrieved": [
+            "security/service-tokens",
+            "services/cedar",
+            "decisions/vector-search"
+          ],
+          "verified_evidence": {
+            "security/service-tokens": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.473,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "lookup-alias-atlas",
+          "category": "metadata_and_tokens",
+          "query": "atlaspay",
+          "question": "atlaspay",
+          "relevance": {
+            "projects/atlas": 2
+          },
+          "required_evidence": {
+            "projects/atlas": [
+              "Mira Sen owns Atlas."
+            ]
+          },
+          "retrieved": [
+            "projects/atlas"
+          ],
+          "verified_evidence": {
+            "projects/atlas": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 0.678,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "lookup-alias-boreal",
+          "category": "metadata_and_tokens",
+          "query": "northstar",
+          "question": "northstar",
+          "relevance": {
+            "projects/boreal": 2
+          },
+          "required_evidence": {
+            "projects/boreal": [
+              "Jon Iyer owns Boreal."
+            ]
+          },
+          "retrieved": [
+            "projects/boreal"
+          ],
+          "verified_evidence": {
+            "projects/boreal": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 0.864,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "lookup-alias-backup",
+          "category": "metadata_and_tokens",
+          "query": "bluebird",
+          "question": "bluebird",
+          "relevance": {
+            "operations/backups": 2
+          },
+          "required_evidence": {
+            "operations/backups": [
+              "Database snapshots run daily at 02:00 UTC."
+            ]
+          },
+          "retrieved": [
+            "operations/backups"
+          ],
+          "verified_evidence": {
+            "operations/backups": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 0.866,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "lookup-alias-vpn",
+          "category": "metadata_and_tokens",
+          "query": "staff-tunnel",
+          "question": "staff-tunnel",
+          "relevance": {
+            "operations/remote-access": 2
+          },
+          "required_evidence": {
+            "operations/remote-access": [
+              "Multi-factor authentication is mandatory."
+            ]
+          },
+          "retrieved": [
+            "operations/remote-access"
+          ],
+          "verified_evidence": {
+            "operations/remote-access": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 0.799,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "lookup-alias-camera",
+          "category": "metadata_and_tokens",
+          "query": "field-camera",
+          "question": "field-camera",
+          "relevance": {
+            "devices/rover": 2
+          },
+          "required_evidence": {
+            "devices/rover": [
+              "H.264 is the supported codec."
+            ]
+          },
+          "retrieved": [
+            "devices/rover",
+            "noise/aster-0050",
+            "noise/aster-0110",
+            "noise/aster-0170",
+            "noise/aster-0230",
+            "noise/aster-0290",
+            "noise/aster-0350",
+            "noise/aster-0410",
+            "noise/aster-0470",
+            "noise/aster-0530"
+          ],
+          "verified_evidence": {
+            "devices/rover": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.721,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "lookup-prefix",
+          "category": "metadata_and_tokens",
+          "query": "cred rot",
+          "question": "cred rot",
+          "relevance": {
+            "security/atlas-keys": 2
+          },
+          "required_evidence": {
+            "security/atlas-keys": [
+              "Atlas API credentials rotate every 90 days."
+            ]
+          },
+          "retrieved": [
+            "security/atlas-keys",
+            "noise/aster-0020",
+            "noise/aster-0080",
+            "noise/aster-0140",
+            "noise/aster-0200",
+            "noise/aster-0260",
+            "noise/aster-0320",
+            "noise/aster-0380",
+            "noise/aster-0440",
+            "noise/aster-0500"
+          ],
+          "verified_evidence": {
+            "security/atlas-keys": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.03,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "lookup-accent",
+          "category": "metadata_and_tokens",
+          "query": "cafe etoile",
+          "question": "cafe etoile",
+          "relevance": {
+            "guides/cafe": 2
+          },
+          "required_evidence": {
+            "guides/cafe": [
+              "New hires visit Café Étoile on Tuesday for equipment collection."
+            ]
+          },
+          "retrieved": [
+            "guides/cafe"
+          ],
+          "verified_evidence": {
+            "guides/cafe": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.526,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "lookup-cjk",
+          "category": "metadata_and_tokens",
+          "query": "避難場所",
+          "question": "避難場所",
+          "relevance": {
+            "policies/tokyo": 2
+          },
+          "required_evidence": {
+            "policies/tokyo": [
+              "東京オフィスの避難場所は中央公園です。"
+            ]
+          },
+          "retrieved": [],
+          "verified_evidence": {},
+          "missing_at_5": [
+            "policies/tokyo"
+          ],
+          "metrics": {
+            "hit@1": 0,
+            "recall@1": 0.0,
+            "precision@1": 0.0,
+            "ndcg@1": 0.0,
+            "evidence_complete@1": 0,
+            "hit@5": 0,
+            "recall@5": 0.0,
+            "precision@5": 0.0,
+            "ndcg@5": 0.0,
+            "evidence_complete@5": 0,
+            "hit@10": 0,
+            "recall@10": 0.0,
+            "precision@10": 0.0,
+            "ndcg@10": 0.0,
+            "evidence_complete@10": 0,
+            "mrr@10": 0.0
+          },
+          "latency_ms": 0.547,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "question-atlas-db",
+          "category": "natural_question",
+          "query": "Which database does Atlas use in production?",
+          "question": "Which database does Atlas use in production?",
+          "relevance": {
+            "projects/atlas-architecture": 2
+          },
+          "required_evidence": {
+            "projects/atlas-architecture": [
+              "Atlas uses PostgreSQL 16 as its primary database."
+            ]
+          },
+          "retrieved": [
+            "projects/atlas-architecture",
+            "decisions/atlas-database-draft",
+            "incidents/atlas-pool-exhaustion",
+            "projects/atlas",
+            "security/atlas-keys",
+            "operations/atlas-runbook",
+            "people/mira-sen",
+            "decisions/vector-search",
+            "services/cedar",
+            "operations/remote-access"
+          ],
+          "verified_evidence": {
+            "projects/atlas-architecture": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.312,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "question-atlas-owner",
+          "category": "natural_question",
+          "query": "Who owns Atlas?",
+          "question": "Who owns Atlas?",
+          "relevance": {
+            "projects/atlas": 2
+          },
+          "required_evidence": {
+            "projects/atlas": [
+              "Mira Sen owns Atlas."
+            ]
+          },
+          "retrieved": [
+            "projects/atlas",
+            "security/atlas-keys",
+            "operations/atlas-runbook",
+            "decisions/atlas-database-draft",
+            "projects/atlas-architecture",
+            "incidents/atlas-pool-exhaustion",
+            "people/mira-sen",
+            "services/harbor",
+            "projects/boreal"
+          ],
+          "verified_evidence": {
+            "projects/atlas": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.278,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "question-boreal-logs",
+          "category": "natural_question",
+          "query": "How long are raw Boreal logs kept?",
+          "question": "How long are raw Boreal logs kept?",
+          "relevance": {
+            "policies/boreal-retention": 2
+          },
+          "required_evidence": {
+            "policies/boreal-retention": [
+              "Boreal retains raw logs for 30 days and aggregated metrics for 90 days."
+            ]
+          },
+          "retrieved": [
+            "policies/boreal-retention",
+            "projects/boreal",
+            "people/jon-iyer",
+            "security/service-tokens"
+          ],
+          "verified_evidence": {
+            "policies/boreal-retention": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 0.793,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "question-rotation",
+          "category": "natural_question",
+          "query": "How often should Atlas API credentials rotate?",
+          "question": "How often should Atlas API credentials rotate?",
+          "relevance": {
+            "security/atlas-keys": 2
+          },
+          "required_evidence": {
+            "security/atlas-keys": [
+              "Atlas API credentials rotate every 90 days."
+            ]
+          },
+          "retrieved": [
+            "security/atlas-keys",
+            "projects/atlas-architecture",
+            "projects/atlas",
+            "operations/atlas-runbook",
+            "decisions/atlas-database-draft",
+            "incidents/atlas-pool-exhaustion",
+            "people/mira-sen",
+            "security/service-tokens"
+          ],
+          "verified_evidence": {
+            "security/atlas-keys": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.102,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "question-budget",
+          "category": "natural_question",
+          "query": "What is the approved infrastructure budget for 2026?",
+          "question": "What is the approved infrastructure budget for 2026?",
+          "relevance": {
+            "finance/infra-2026": 2
+          },
+          "required_evidence": {
+            "finance/infra-2026": [
+              "The approved 2026 infrastructure budget is USD 48000 per month."
+            ]
+          },
+          "retrieved": [
+            "finance/infra-2026",
+            "finance/infra-2025",
+            "incidents/atlas-pool-exhaustion",
+            "noise/aster-0030",
+            "noise/aster-0090",
+            "noise/aster-0150",
+            "noise/aster-0210",
+            "noise/aster-0270",
+            "noise/aster-0330",
+            "noise/aster-0390"
+          ],
+          "verified_evidence": {
+            "finance/infra-2026": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.156,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "question-mira",
+          "category": "natural_question",
+          "query": "Where is Mira Sen based?",
+          "question": "Where is Mira Sen based?",
+          "relevance": {
+            "people/mira-sen": 2
+          },
+          "required_evidence": {
+            "people/mira-sen": [
+              "Mira is based in Pune."
+            ]
+          },
+          "retrieved": [
+            "people/mira-sen",
+            "projects/atlas",
+            "incidents/atlas-pool-exhaustion",
+            "people/jon-iyer"
+          ],
+          "verified_evidence": {
+            "people/mira-sen": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.089,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "question-vpn",
+          "category": "natural_question",
+          "query": "Which UDP port does WireGuard use?",
+          "question": "Which UDP port does WireGuard use?",
+          "relevance": {
+            "operations/remote-access": 2
+          },
+          "required_evidence": {
+            "operations/remote-access": [
+              "Remote production access uses WireGuard on UDP port 51820."
+            ]
+          },
+          "retrieved": [
+            "operations/remote-access",
+            "devices/rover",
+            "projects/atlas-architecture",
+            "decisions/vector-search",
+            "services/cedar",
+            "decisions/atlas-database-draft"
+          ],
+          "verified_evidence": {
+            "operations/remote-access": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.113,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "question-refund",
+          "category": "natural_question",
+          "query": "How many days after settlement can a merchant request a refund?",
+          "question": "How many days after settlement can a merchant request a refund?",
+          "relevance": {
+            "support/refunds": 2
+          },
+          "required_evidence": {
+            "support/refunds": [
+              "Merchant refunds are accepted within 14 days of settlement."
+            ]
+          },
+          "retrieved": [
+            "support/refunds",
+            "operations/atlas-runbook",
+            "policies/boreal-retention",
+            "security/service-tokens",
+            "devices/rover-battery",
+            "services/cedar",
+            "services/harbor",
+            "projects/atlas",
+            "security/atlas-keys",
+            "policies/expenses"
+          ],
+          "verified_evidence": {
+            "support/refunds": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.609,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "question-backup",
+          "category": "natural_question",
+          "query": "When do the daily database snapshots run?",
+          "question": "When do the daily database snapshots run?",
+          "relevance": {
+            "operations/backups": 2
+          },
+          "required_evidence": {
+            "operations/backups": [
+              "Database snapshots run daily at 02:00 UTC."
+            ]
+          },
+          "retrieved": [
+            "operations/backups",
+            "operations/atlas-runbook",
+            "projects/atlas",
+            "decisions/atlas-database-draft",
+            "noise/aster-0000",
+            "noise/aster-0060",
+            "noise/aster-0120",
+            "noise/aster-0180",
+            "noise/aster-0240",
+            "noise/aster-0300"
+          ],
+          "verified_evidence": {
+            "operations/backups": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.945,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "question-camera",
+          "category": "natural_question",
+          "query": "What codec is supported by the Rover camera?",
+          "question": "What codec is supported by the Rover camera?",
+          "relevance": {
+            "devices/rover": 2
+          },
+          "required_evidence": {
+            "devices/rover": [
+              "H.264 is the supported codec."
+            ]
+          },
+          "retrieved": [
+            "devices/rover",
+            "devices/rover-battery",
+            "noise/aster-0050",
+            "noise/aster-0110",
+            "noise/aster-0170",
+            "noise/aster-0230",
+            "noise/aster-0290",
+            "noise/aster-0350",
+            "noise/aster-0410",
+            "noise/aster-0470"
+          ],
+          "verified_evidence": {
+            "devices/rover": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 3.11,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "question-rollback",
+          "category": "natural_question",
+          "query": "How do I recover from a failed release?",
+          "question": "How do I recover from a failed release?",
+          "relevance": {
+            "operations/deploy": 2
+          },
+          "required_evidence": {
+            "operations/deploy": [
+              "A failed release is reverted by redeploying the last healthy image digest."
+            ]
+          },
+          "retrieved": [
+            "operations/deploy",
+            "incidents/atlas-pool-exhaustion",
+            "operations/backups",
+            "noise/aster-0040",
+            "noise/aster-0100",
+            "noise/aster-0160",
+            "noise/aster-0220",
+            "noise/aster-0280",
+            "noise/aster-0340",
+            "noise/aster-0400"
+          ],
+          "verified_evidence": {
+            "operations/deploy": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.758,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "question-contractor",
+          "category": "natural_question",
+          "query": "How long can a contractor access production?",
+          "question": "How long can a contractor access production?",
+          "relevance": {
+            "operations/remote-access": 2
+          },
+          "required_evidence": {
+            "operations/remote-access": [
+              "Contractors receive access for seven days."
+            ]
+          },
+          "retrieved": [
+            "operations/remote-access",
+            "security/atlas-keys",
+            "noise/aster-0020",
+            "noise/aster-0080",
+            "noise/aster-0140",
+            "noise/aster-0200",
+            "noise/aster-0260",
+            "noise/aster-0320",
+            "noise/aster-0380",
+            "noise/aster-0440"
+          ],
+          "verified_evidence": {
+            "operations/remote-access": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.155,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "paraphrase-datastore",
+          "category": "paraphrase",
+          "query": "Atlas persistence engine",
+          "question": "Atlas persistence engine",
+          "relevance": {
+            "projects/atlas-architecture": 2
+          },
+          "required_evidence": {
+            "projects/atlas-architecture": [
+              "Atlas uses PostgreSQL 16 as its primary database."
+            ]
+          },
+          "retrieved": [
+            "people/mira-sen",
+            "people/jon-iyer",
+            "projects/atlas",
+            "security/atlas-keys",
+            "operations/atlas-runbook",
+            "decisions/atlas-database-draft",
+            "projects/atlas-architecture",
+            "incidents/atlas-pool-exhaustion"
+          ],
+          "verified_evidence": {
+            "projects/atlas-architecture": true
+          },
+          "missing_at_5": [
+            "projects/atlas-architecture"
+          ],
+          "metrics": {
+            "hit@1": 0,
+            "recall@1": 0.0,
+            "precision@1": 0.0,
+            "ndcg@1": 0.0,
+            "evidence_complete@1": 0,
+            "hit@5": 0,
+            "recall@5": 0.0,
+            "precision@5": 0.0,
+            "ndcg@5": 0.0,
+            "evidence_complete@5": 0,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 0.3333333333333333,
+            "evidence_complete@10": 1,
+            "mrr@10": 0.14285714285714285
+          },
+          "latency_ms": 1.091,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "paraphrase-owner",
+          "category": "paraphrase",
+          "query": "Atlas responsible engineer",
+          "question": "Atlas responsible engineer",
+          "relevance": {
+            "projects/atlas": 2
+          },
+          "required_evidence": {
+            "projects/atlas": [
+              "Mira Sen owns Atlas."
+            ]
+          },
+          "retrieved": [
+            "people/mira-sen",
+            "people/jon-iyer",
+            "projects/atlas",
+            "security/atlas-keys",
+            "operations/atlas-runbook",
+            "decisions/atlas-database-draft",
+            "projects/atlas-architecture",
+            "incidents/atlas-pool-exhaustion"
+          ],
+          "verified_evidence": {
+            "projects/atlas": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 0,
+            "recall@1": 0.0,
+            "precision@1": 0.0,
+            "ndcg@1": 0.0,
+            "evidence_complete@1": 0,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 0.5,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 0.5,
+            "evidence_complete@10": 1,
+            "mrr@10": 0.3333333333333333
+          },
+          "latency_ms": 0.645,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "paraphrase-outage",
+          "category": "paraphrase",
+          "query": "Atlas outage cause",
+          "question": "Atlas outage cause",
+          "relevance": {
+            "incidents/atlas-pool-exhaustion": 2
+          },
+          "required_evidence": {
+            "incidents/atlas-pool-exhaustion": [
+              "On 2026-04-20 Atlas failed because idle transactions exhausted the database pool."
+            ]
+          },
+          "retrieved": [
+            "incidents/atlas-pool-exhaustion",
+            "projects/atlas",
+            "security/atlas-keys",
+            "operations/atlas-runbook",
+            "decisions/atlas-database-draft",
+            "projects/atlas-architecture",
+            "people/mira-sen"
+          ],
+          "verified_evidence": {
+            "incidents/atlas-pool-exhaustion": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 0.791,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "paraphrase-retention",
+          "category": "paraphrase",
+          "query": "Boreal log lifespan",
+          "question": "Boreal log lifespan",
+          "relevance": {
+            "policies/boreal-retention": 2
+          },
+          "required_evidence": {
+            "policies/boreal-retention": [
+              "Boreal retains raw logs for 30 days and aggregated metrics for 90 days."
+            ]
+          },
+          "retrieved": [
+            "policies/boreal-retention",
+            "projects/boreal",
+            "people/jon-iyer",
+            "security/service-tokens",
+            "noise/aster-0010",
+            "noise/aster-0070",
+            "noise/aster-0130",
+            "noise/aster-0190",
+            "noise/aster-0250",
+            "noise/aster-0310"
+          ],
+          "verified_evidence": {
+            "policies/boreal-retention": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.197,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "paraphrase-backup",
+          "category": "paraphrase",
+          "query": "disaster recovery copies schedule",
+          "question": "disaster recovery copies schedule",
+          "relevance": {
+            "operations/backups": 2
+          },
+          "required_evidence": {
+            "operations/backups": [
+              "Database snapshots run daily at 02:00 UTC."
+            ]
+          },
+          "retrieved": [
+            "operations/backups",
+            "operations/deploy",
+            "noise/aster-0040",
+            "noise/aster-0100",
+            "noise/aster-0160",
+            "noise/aster-0220",
+            "noise/aster-0280",
+            "noise/aster-0340",
+            "noise/aster-0400",
+            "noise/aster-0460"
+          ],
+          "verified_evidence": {
+            "operations/backups": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.313,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "paraphrase-budget",
+          "category": "paraphrase",
+          "query": "monthly cloud allowance",
+          "question": "monthly cloud allowance",
+          "relevance": {
+            "finance/infra-2026": 2
+          },
+          "required_evidence": {
+            "finance/infra-2026": [
+              "The approved 2026 infrastructure budget is USD 48000 per month."
+            ]
+          },
+          "retrieved": [],
+          "verified_evidence": {},
+          "missing_at_5": [
+            "finance/infra-2026"
+          ],
+          "metrics": {
+            "hit@1": 0,
+            "recall@1": 0.0,
+            "precision@1": 0.0,
+            "ndcg@1": 0.0,
+            "evidence_complete@1": 0,
+            "hit@5": 0,
+            "recall@5": 0.0,
+            "precision@5": 0.0,
+            "ndcg@5": 0.0,
+            "evidence_complete@5": 0,
+            "hit@10": 0,
+            "recall@10": 0.0,
+            "precision@10": 0.0,
+            "ndcg@10": 0.0,
+            "evidence_complete@10": 0,
+            "mrr@10": 0.0
+          },
+          "latency_ms": 1.226,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "paraphrase-credential",
+          "category": "paraphrase",
+          "query": "Atlas secret renewal interval",
+          "question": "Atlas secret renewal interval",
+          "relevance": {
+            "security/atlas-keys": 2
+          },
+          "required_evidence": {
+            "security/atlas-keys": [
+              "Atlas API credentials rotate every 90 days."
+            ]
+          },
+          "retrieved": [
+            "projects/atlas",
+            "security/atlas-keys",
+            "operations/atlas-runbook",
+            "decisions/atlas-database-draft",
+            "projects/atlas-architecture",
+            "incidents/atlas-pool-exhaustion",
+            "people/mira-sen",
+            "noise/aster-0010",
+            "noise/aster-0070",
+            "noise/aster-0130"
+          ],
+          "verified_evidence": {
+            "security/atlas-keys": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 0,
+            "recall@1": 0.0,
+            "precision@1": 0.0,
+            "ndcg@1": 0.0,
+            "evidence_complete@1": 0,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 0.6309297535714574,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 0.6309297535714574,
+            "evidence_complete@10": 1,
+            "mrr@10": 0.5
+          },
+          "latency_ms": 1.059,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "paraphrase-reimburse",
+          "category": "paraphrase",
+          "query": "staff lunch repayment ceiling",
+          "question": "staff lunch repayment ceiling",
+          "relevance": {
+            "policies/expenses": 2
+          },
+          "required_evidence": {
+            "policies/expenses": [
+              "Employee meal reimbursement is capped at INR 750 per day."
+            ]
+          },
+          "retrieved": [
+            "operations/remote-access"
+          ],
+          "verified_evidence": {},
+          "missing_at_5": [
+            "policies/expenses"
+          ],
+          "metrics": {
+            "hit@1": 0,
+            "recall@1": 0.0,
+            "precision@1": 0.0,
+            "ndcg@1": 0.0,
+            "evidence_complete@1": 0,
+            "hit@5": 0,
+            "recall@5": 0.0,
+            "precision@5": 0.0,
+            "ndcg@5": 0.0,
+            "evidence_complete@5": 0,
+            "hit@10": 0,
+            "recall@10": 0.0,
+            "precision@10": 0.0,
+            "ndcg@10": 0.0,
+            "evidence_complete@10": 0,
+            "mrr@10": 0.0
+          },
+          "latency_ms": 0.858,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "paraphrase-codec",
+          "category": "paraphrase",
+          "query": "Rover video encoding",
+          "question": "Rover video encoding",
+          "relevance": {
+            "devices/rover": 2
+          },
+          "required_evidence": {
+            "devices/rover": [
+              "H.264 is the supported codec."
+            ]
+          },
+          "retrieved": [
+            "devices/rover",
+            "devices/rover-battery",
+            "noise/aster-0050",
+            "noise/aster-0110",
+            "noise/aster-0170",
+            "noise/aster-0230",
+            "noise/aster-0290",
+            "noise/aster-0350",
+            "noise/aster-0410",
+            "noise/aster-0470"
+          ],
+          "verified_evidence": {
+            "devices/rover": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 0.883,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "paraphrase-rollback",
+          "category": "paraphrase",
+          "query": "undo broken deployment",
+          "question": "undo broken deployment",
+          "relevance": {
+            "operations/deploy": 2
+          },
+          "required_evidence": {
+            "operations/deploy": [
+              "A failed release is reverted by redeploying the last healthy image digest."
+            ]
+          },
+          "retrieved": [
+            "operations/deploy",
+            "noise/aster-0040",
+            "noise/aster-0100",
+            "noise/aster-0160",
+            "noise/aster-0220",
+            "noise/aster-0280",
+            "noise/aster-0340",
+            "noise/aster-0400",
+            "noise/aster-0460",
+            "noise/aster-0520"
+          ],
+          "verified_evidence": {
+            "operations/deploy": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 0.943,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "typo-atlas",
+          "category": "typo",
+          "query": "Atals database",
+          "question": "Atals database",
+          "relevance": {
+            "projects/atlas-architecture": 2
+          },
+          "required_evidence": {
+            "projects/atlas-architecture": [
+              "Atlas uses PostgreSQL 16 as its primary database."
+            ]
+          },
+          "retrieved": [
+            "decisions/atlas-database-draft",
+            "noise/aster-0000",
+            "noise/aster-0060",
+            "noise/aster-0120",
+            "noise/aster-0180",
+            "noise/aster-0240",
+            "noise/aster-0300",
+            "noise/aster-0360",
+            "noise/aster-0420",
+            "noise/aster-0480"
+          ],
+          "verified_evidence": {},
+          "missing_at_5": [
+            "projects/atlas-architecture"
+          ],
+          "metrics": {
+            "hit@1": 0,
+            "recall@1": 0.0,
+            "precision@1": 0.0,
+            "ndcg@1": 0.0,
+            "evidence_complete@1": 0,
+            "hit@5": 0,
+            "recall@5": 0.0,
+            "precision@5": 0.0,
+            "ndcg@5": 0.0,
+            "evidence_complete@5": 0,
+            "hit@10": 0,
+            "recall@10": 0.0,
+            "precision@10": 0.0,
+            "ndcg@10": 0.0,
+            "evidence_complete@10": 0,
+            "mrr@10": 0.0
+          },
+          "latency_ms": 1.177,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "typo-boreal",
+          "category": "typo",
+          "query": "Boreel retention",
+          "question": "Boreel retention",
+          "relevance": {
+            "policies/boreal-retention": 2
+          },
+          "required_evidence": {
+            "policies/boreal-retention": [
+              "Boreal retains raw logs for 30 days and aggregated metrics for 90 days."
+            ]
+          },
+          "retrieved": [
+            "policies/boreal-retention",
+            "noise/aster-0010",
+            "noise/aster-0070",
+            "noise/aster-0130",
+            "noise/aster-0190",
+            "noise/aster-0250",
+            "noise/aster-0310",
+            "noise/aster-0370",
+            "noise/aster-0430",
+            "noise/aster-0490"
+          ],
+          "verified_evidence": {
+            "policies/boreal-retention": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.178,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "typo-wireguard",
+          "category": "typo",
+          "query": "Wiregaurd port",
+          "question": "Wiregaurd port",
+          "relevance": {
+            "operations/remote-access": 2
+          },
+          "required_evidence": {
+            "operations/remote-access": [
+              "Remote production access uses WireGuard on UDP port 51820."
+            ]
+          },
+          "retrieved": [
+            "devices/rover",
+            "operations/remote-access"
+          ],
+          "verified_evidence": {
+            "operations/remote-access": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 0,
+            "recall@1": 0.0,
+            "precision@1": 0.0,
+            "ndcg@1": 0.0,
+            "evidence_complete@1": 0,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 0.6309297535714574,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 0.6309297535714574,
+            "evidence_complete@10": 1,
+            "mrr@10": 0.5
+          },
+          "latency_ms": 1.033,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "typo-snapshot",
+          "category": "typo",
+          "query": "snapshott schedule",
+          "question": "snapshott schedule",
+          "relevance": {
+            "operations/backups": 2
+          },
+          "required_evidence": {
+            "operations/backups": [
+              "Database snapshots run daily at 02:00 UTC."
+            ]
+          },
+          "retrieved": [
+            "operations/backups"
+          ],
+          "verified_evidence": {
+            "operations/backups": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 0.807,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "typo-mira",
+          "category": "typo",
+          "query": "Mira Senn",
+          "question": "Mira Senn",
+          "relevance": {
+            "people/mira-sen": 2
+          },
+          "required_evidence": {
+            "people/mira-sen": [
+              "Mira is based in Pune."
+            ]
+          },
+          "retrieved": [
+            "people/mira-sen",
+            "projects/atlas",
+            "incidents/atlas-pool-exhaustion"
+          ],
+          "verified_evidence": {
+            "people/mira-sen": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 0.951,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "typo-refund",
+          "category": "typo",
+          "query": "merhcant refunds",
+          "question": "merhcant refunds",
+          "relevance": {
+            "support/refunds": 2
+          },
+          "required_evidence": {
+            "support/refunds": [
+              "Merchant refunds are accepted within 14 days of settlement."
+            ]
+          },
+          "retrieved": [
+            "support/refunds"
+          ],
+          "verified_evidence": {
+            "support/refunds": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 0.866,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "linked-atlas-team",
+          "category": "multiple_documents",
+          "query": "Atlas",
+          "question": "Which team does the owner of Atlas work on?",
+          "relevance": {
+            "projects/atlas": 2,
+            "people/mira-sen": 2
+          },
+          "required_evidence": {
+            "projects/atlas": [
+              "Mira Sen owns Atlas."
+            ],
+            "people/mira-sen": [
+              "Mira Sen works on the Platform team at Nimbus Labs."
+            ]
+          },
+          "retrieved": [
+            "projects/atlas",
+            "security/atlas-keys",
+            "operations/atlas-runbook",
+            "decisions/atlas-database-draft",
+            "projects/atlas-architecture",
+            "incidents/atlas-pool-exhaustion",
+            "people/mira-sen"
+          ],
+          "verified_evidence": {
+            "projects/atlas": true,
+            "people/mira-sen": true
+          },
+          "missing_at_5": [
+            "people/mira-sen"
+          ],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 0.5,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 0,
+            "hit@5": 1,
+            "recall@5": 0.5,
+            "precision@5": 0.2,
+            "ndcg@5": 0.6131471927654584,
+            "evidence_complete@5": 0,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.2,
+            "ndcg@10": 0.8175295903539446,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 0.873,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "linked-atlas-city",
+          "category": "multiple_documents",
+          "query": "atlaspay",
+          "question": "Where is the owner of Atlaspay based?",
+          "relevance": {
+            "projects/atlas": 2,
+            "people/mira-sen": 2
+          },
+          "required_evidence": {
+            "projects/atlas": [
+              "Mira Sen owns Atlas."
+            ],
+            "people/mira-sen": [
+              "Mira is based in Pune."
+            ]
+          },
+          "retrieved": [
+            "projects/atlas"
+          ],
+          "verified_evidence": {
+            "projects/atlas": true
+          },
+          "missing_at_5": [
+            "people/mira-sen"
+          ],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 0.5,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 0,
+            "hit@5": 1,
+            "recall@5": 0.5,
+            "precision@5": 0.2,
+            "ndcg@5": 0.6131471927654584,
+            "evidence_complete@5": 0,
+            "hit@10": 1,
+            "recall@10": 0.5,
+            "precision@10": 0.1,
+            "ndcg@10": 0.6131471927654584,
+            "evidence_complete@10": 0,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.074,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "linked-boreal-team",
+          "category": "multiple_documents",
+          "query": "Boreal",
+          "question": "Which team does the owner of Boreal work on?",
+          "relevance": {
+            "projects/boreal": 2,
+            "people/jon-iyer": 2
+          },
+          "required_evidence": {
+            "projects/boreal": [
+              "Jon Iyer owns Boreal."
+            ],
+            "people/jon-iyer": [
+              "Jon Iyer works on the Infrastructure team at Nimbus Labs."
+            ]
+          },
+          "retrieved": [
+            "policies/boreal-retention",
+            "projects/boreal",
+            "people/jon-iyer"
+          ],
+          "verified_evidence": {
+            "projects/boreal": true,
+            "people/jon-iyer": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 0,
+            "recall@1": 0.0,
+            "precision@1": 0.0,
+            "ndcg@1": 0.0,
+            "evidence_complete@1": 0,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.4,
+            "ndcg@5": 0.6934264036172708,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.2,
+            "ndcg@10": 0.6934264036172708,
+            "evidence_complete@10": 1,
+            "mrr@10": 0.5
+          },
+          "latency_ms": 0.677,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "linked-boreal-city",
+          "category": "multiple_documents",
+          "query": "northstar",
+          "question": "Where is the owner of Northstar based?",
+          "relevance": {
+            "projects/boreal": 2,
+            "people/jon-iyer": 2
+          },
+          "required_evidence": {
+            "projects/boreal": [
+              "Jon Iyer owns Boreal."
+            ],
+            "people/jon-iyer": [
+              "Jon is based in Delhi."
+            ]
+          },
+          "retrieved": [
+            "projects/boreal"
+          ],
+          "verified_evidence": {
+            "projects/boreal": true
+          },
+          "missing_at_5": [
+            "people/jon-iyer"
+          ],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 0.5,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 0,
+            "hit@5": 1,
+            "recall@5": 0.5,
+            "precision@5": 0.2,
+            "ndcg@5": 0.6131471927654584,
+            "evidence_complete@5": 0,
+            "hit@10": 1,
+            "recall@10": 0.5,
+            "precision@10": 0.1,
+            "ndcg@10": 0.6131471927654584,
+            "evidence_complete@10": 0,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 0.645,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "linked-boreal-retention",
+          "category": "multiple_documents",
+          "query": "northstar",
+          "question": "What is Northstar and how long does it retain logs?",
+          "relevance": {
+            "projects/boreal": 2,
+            "policies/boreal-retention": 2
+          },
+          "required_evidence": {
+            "projects/boreal": [
+              "Boreal collects device telemetry."
+            ],
+            "policies/boreal-retention": [
+              "Boreal retains raw logs for 30 days and aggregated metrics for 90 days."
+            ]
+          },
+          "retrieved": [
+            "projects/boreal"
+          ],
+          "verified_evidence": {
+            "projects/boreal": true
+          },
+          "missing_at_5": [
+            "policies/boreal-retention"
+          ],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 0.5,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 0,
+            "hit@5": 1,
+            "recall@5": 0.5,
+            "precision@5": 0.2,
+            "ndcg@5": 0.6131471927654584,
+            "evidence_complete@5": 0,
+            "hit@10": 1,
+            "recall@10": 0.5,
+            "precision@10": 0.1,
+            "ndcg@10": 0.6131471927654584,
+            "evidence_complete@10": 0,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 0.992,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "linked-atlas-limits",
+          "category": "multiple_documents",
+          "query": "atlaspay",
+          "question": "What does Atlaspay do and how long are its retry keys valid?",
+          "relevance": {
+            "projects/atlas": 2,
+            "operations/atlas-runbook": 2
+          },
+          "required_evidence": {
+            "projects/atlas": [
+              "Atlas handles merchant payment authorization."
+            ],
+            "operations/atlas-runbook": [
+              "Retry keys remain valid for 48 hours."
+            ]
+          },
+          "retrieved": [
+            "projects/atlas"
+          ],
+          "verified_evidence": {
+            "projects/atlas": true
+          },
+          "missing_at_5": [
+            "operations/atlas-runbook"
+          ],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 0.5,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 0,
+            "hit@5": 1,
+            "recall@5": 0.5,
+            "precision@5": 0.2,
+            "ndcg@5": 0.6131471927654584,
+            "evidence_complete@5": 0,
+            "hit@10": 1,
+            "recall@10": 0.5,
+            "precision@10": 0.1,
+            "ndcg@10": 0.6131471927654584,
+            "evidence_complete@10": 0,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.437,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "unknown-unknown-project",
+          "category": "unanswerable",
+          "query": "Zephyr database",
+          "question": "Zephyr database",
+          "relevance": {},
+          "required_evidence": {},
+          "retrieved": [
+            "decisions/atlas-database-draft",
+            "noise/aster-0000",
+            "noise/aster-0060",
+            "noise/aster-0120",
+            "noise/aster-0180",
+            "noise/aster-0240",
+            "noise/aster-0300",
+            "noise/aster-0360",
+            "noise/aster-0420",
+            "noise/aster-0480"
+          ],
+          "verified_evidence": {},
+          "missing_at_5": [],
+          "metrics": null,
+          "latency_ms": 2.161,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "unknown-unrecorded-owner",
+          "category": "unanswerable",
+          "query": "Cedar owner",
+          "question": "Cedar owner",
+          "relevance": {},
+          "required_evidence": {},
+          "retrieved": [
+            "services/cedar",
+            "people/jon-iyer",
+            "people/mira-sen",
+            "projects/boreal",
+            "projects/atlas"
+          ],
+          "verified_evidence": {},
+          "missing_at_5": [],
+          "metrics": null,
+          "latency_ms": 2.473,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "unknown-unrecorded-rotation",
+          "category": "unanswerable",
+          "query": "Boreal credential rotation",
+          "question": "Boreal credential rotation",
+          "relevance": {},
+          "required_evidence": {},
+          "retrieved": [
+            "policies/boreal-retention",
+            "projects/boreal",
+            "people/jon-iyer",
+            "security/atlas-keys",
+            "noise/aster-0020",
+            "noise/aster-0080",
+            "noise/aster-0140",
+            "noise/aster-0200",
+            "noise/aster-0260",
+            "noise/aster-0320"
+          ],
+          "verified_evidence": {},
+          "missing_at_5": [],
+          "metrics": null,
+          "latency_ms": 2.025,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "unknown-unknown-year",
+          "category": "unanswerable",
+          "query": "2027 infrastructure budget",
+          "question": "2027 infrastructure budget",
+          "relevance": {},
+          "required_evidence": {},
+          "retrieved": [
+            "finance/infra-2025",
+            "finance/infra-2026",
+            "noise/aster-0030",
+            "noise/aster-0090",
+            "noise/aster-0150",
+            "noise/aster-0210",
+            "noise/aster-0270",
+            "noise/aster-0330",
+            "noise/aster-0390",
+            "noise/aster-0450"
+          ],
+          "verified_evidence": {},
+          "missing_at_5": [],
+          "metrics": null,
+          "latency_ms": 1.123,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "unknown-unrecorded-CEO",
+          "category": "unanswerable",
+          "query": "Nimbus CEO",
+          "question": "Nimbus CEO",
+          "relevance": {},
+          "required_evidence": {},
+          "retrieved": [
+            "companies/nimbus",
+            "people/mira-sen",
+            "people/jon-iyer"
+          ],
+          "verified_evidence": {},
+          "missing_at_5": [],
+          "metrics": null,
+          "latency_ms": 1.077,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "unknown-unknown-protocol",
+          "category": "unanswerable",
+          "query": "quasar handshake",
+          "question": "quasar handshake",
+          "relevance": {},
+          "required_evidence": {},
+          "retrieved": [],
+          "verified_evidence": {},
+          "missing_at_5": [],
+          "metrics": null,
+          "latency_ms": 0.913,
+          "retrieval_http_calls": 1
+        }
+      ]
+    },
+    "search_links": {
+      "summary": {
+        "queries": 60,
+        "answerable_queries": 54,
+        "unanswerable_queries": 6,
+        "metrics": {
+          "hit@1": 0.8333333333333334,
+          "recall@1": 0.7870370370370371,
+          "precision@1": 0.8333333333333334,
+          "ndcg@1": 0.8333333333333334,
+          "evidence_complete@1": 0.7407407407407407,
+          "hit@5": 0.9259259259259259,
+          "recall@5": 0.9259259259259259,
+          "precision@5": 0.20740740740740743,
+          "ndcg@5": 0.881529988193852,
+          "evidence_complete@5": 0.9259259259259259,
+          "hit@10": 0.9444444444444444,
+          "recall@10": 0.9444444444444444,
+          "precision@10": 0.10555555555555556,
+          "ndcg@10": 0.8877028277000247,
+          "evidence_complete@10": 0.9444444444444444,
+          "mrr@10": 0.8745590828924162
+        },
+        "unknown_empty_rate": 0.16666666666666666,
+        "latency_ms": {
+          "p50": 2.575,
+          "p95": 3.924
+        },
+        "mean_retrieval_http_calls": 3.3666666666666667
+      },
+      "categories": {
+        "keyword": {
+          "queries": 12,
+          "answerable_queries": 12,
+          "unanswerable_queries": 0,
+          "metrics": {
+            "hit@1": 1.0,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1.0,
+            "hit@5": 1.0,
+            "recall@5": 1.0,
+            "precision@5": 0.20000000000000004,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1.0,
+            "hit@10": 1.0,
+            "recall@10": 1.0,
+            "precision@10": 0.10000000000000002,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1.0,
+            "mrr@10": 1.0
+          },
+          "unknown_empty_rate": null,
+          "latency_ms": {
+            "p50": 2.75,
+            "p95": 3.674
+          },
+          "mean_retrieval_http_calls": 3.6666666666666665
+        },
+        "metadata_and_tokens": {
+          "queries": 8,
+          "answerable_queries": 8,
+          "unanswerable_queries": 0,
+          "metrics": {
+            "hit@1": 0.875,
+            "recall@1": 0.875,
+            "precision@1": 0.875,
+            "ndcg@1": 0.875,
+            "evidence_complete@1": 0.875,
+            "hit@5": 0.875,
+            "recall@5": 0.875,
+            "precision@5": 0.17500000000000002,
+            "ndcg@5": 0.875,
+            "evidence_complete@5": 0.875,
+            "hit@10": 0.875,
+            "recall@10": 0.875,
+            "precision@10": 0.08750000000000001,
+            "ndcg@10": 0.875,
+            "evidence_complete@10": 0.875,
+            "mrr@10": 0.875
+          },
+          "unknown_empty_rate": null,
+          "latency_ms": {
+            "p50": 1.169,
+            "p95": 2.49
+          },
+          "mean_retrieval_http_calls": 2.375
+        },
+        "natural_question": {
+          "queries": 12,
+          "answerable_queries": 12,
+          "unanswerable_queries": 0,
+          "metrics": {
+            "hit@1": 1.0,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1.0,
+            "hit@5": 1.0,
+            "recall@5": 1.0,
+            "precision@5": 0.20000000000000004,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1.0,
+            "hit@10": 1.0,
+            "recall@10": 1.0,
+            "precision@10": 0.10000000000000002,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1.0,
+            "mrr@10": 1.0
+          },
+          "unknown_empty_rate": null,
+          "latency_ms": {
+            "p50": 3.051,
+            "p95": 3.924
+          },
+          "mean_retrieval_http_calls": 4.0
+        },
+        "paraphrase": {
+          "queries": 10,
+          "answerable_queries": 10,
+          "unanswerable_queries": 0,
+          "metrics": {
+            "hit@1": 0.5,
+            "recall@1": 0.5,
+            "precision@1": 0.5,
+            "ndcg@1": 0.5,
+            "evidence_complete@1": 0.5,
+            "hit@5": 0.7,
+            "recall@5": 0.7,
+            "precision@5": 0.14,
+            "ndcg@5": 0.6130929753571458,
+            "evidence_complete@5": 0.7,
+            "hit@10": 0.8,
+            "recall@10": 0.8,
+            "precision@10": 0.08,
+            "ndcg@10": 0.6464263086904791,
+            "evidence_complete@10": 0.8,
+            "mrr@10": 0.5976190476190476
+          },
+          "unknown_empty_rate": null,
+          "latency_ms": {
+            "p50": 2.661,
+            "p95": 6.377
+          },
+          "mean_retrieval_http_calls": 3.5
+        },
+        "typo": {
+          "queries": 6,
+          "answerable_queries": 6,
+          "unanswerable_queries": 0,
+          "metrics": {
+            "hit@1": 0.6666666666666666,
+            "recall@1": 0.6666666666666666,
+            "precision@1": 0.6666666666666666,
+            "ndcg@1": 0.6666666666666666,
+            "evidence_complete@1": 0.6666666666666666,
+            "hit@5": 1.0,
+            "recall@5": 1.0,
+            "precision@5": 0.20000000000000004,
+            "ndcg@5": 0.8436010519408085,
+            "evidence_complete@5": 1.0,
+            "hit@10": 1.0,
+            "recall@10": 1.0,
+            "precision@10": 0.10000000000000002,
+            "ndcg@10": 0.8436010519408085,
+            "evidence_complete@10": 1.0,
+            "mrr@10": 0.7916666666666666
+          },
+          "unknown_empty_rate": null,
+          "latency_ms": {
+            "p50": 1.817,
+            "p95": 2.768
+          },
+          "mean_retrieval_http_calls": 3.1666666666666665
+        },
+        "multiple_documents": {
+          "queries": 6,
+          "answerable_queries": 6,
+          "unanswerable_queries": 0,
+          "metrics": {
+            "hit@1": 0.8333333333333334,
+            "recall@1": 0.4166666666666667,
+            "precision@1": 0.8333333333333334,
+            "ndcg@1": 0.8333333333333334,
+            "evidence_complete@1": 0.0,
+            "hit@5": 1.0,
+            "recall@5": 1.0,
+            "precision@5": 0.4000000000000001,
+            "ndcg@5": 0.9016805495419492,
+            "evidence_complete@5": 1.0,
+            "hit@10": 1.0,
+            "recall@10": 1.0,
+            "precision@10": 0.20000000000000004,
+            "ndcg@10": 0.9016805495419492,
+            "evidence_complete@10": 1.0,
+            "mrr@10": 0.9166666666666666
+          },
+          "unknown_empty_rate": null,
+          "latency_ms": {
+            "p50": 1.671,
+            "p95": 2.829
+          },
+          "mean_retrieval_http_calls": 2.6666666666666665
+        },
+        "unanswerable": {
+          "queries": 6,
+          "answerable_queries": 0,
+          "unanswerable_queries": 6,
+          "metrics": {},
+          "unknown_empty_rate": 0.16666666666666666,
+          "latency_ms": {
+            "p50": 2.414,
+            "p95": 3.445
+          },
+          "mean_retrieval_http_calls": 3.5
+        }
+      },
+      "queries": [
+        {
+          "id": "keyword-atlas-db",
+          "category": "keyword",
+          "query": "Atlas primary database",
+          "question": "Atlas primary database",
+          "relevance": {
+            "projects/atlas-architecture": 2
+          },
+          "required_evidence": {
+            "projects/atlas-architecture": [
+              "Atlas uses PostgreSQL 16 as its primary database."
+            ]
+          },
+          "retrieved": [
+            "projects/atlas-architecture",
+            "decisions/atlas-database-draft",
+            "incidents/atlas-pool-exhaustion",
+            "projects/atlas",
+            "security/atlas-keys",
+            "operations/atlas-runbook",
+            "people/mira-sen",
+            "noise/aster-0000",
+            "noise/aster-0060",
+            "noise/aster-0120"
+          ],
+          "verified_evidence": {
+            "projects/atlas-architecture": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 3.393,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "keyword-atlas-owner",
+          "category": "keyword",
+          "query": "Atlas owns",
+          "question": "Atlas owns",
+          "relevance": {
+            "projects/atlas": 2
+          },
+          "required_evidence": {
+            "projects/atlas": [
+              "Mira Sen owns Atlas."
+            ]
+          },
+          "retrieved": [
+            "projects/atlas",
+            "security/atlas-keys",
+            "operations/atlas-runbook",
+            "people/mira-sen",
+            "projects/atlas-architecture",
+            "decisions/atlas-database-draft",
+            "incidents/atlas-pool-exhaustion",
+            "services/harbor",
+            "projects/boreal"
+          ],
+          "verified_evidence": {
+            "projects/atlas": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 3.162,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "keyword-boreal-owner",
+          "category": "keyword",
+          "query": "Boreal owns",
+          "question": "Boreal owns",
+          "relevance": {
+            "projects/boreal": 2
+          },
+          "required_evidence": {
+            "projects/boreal": [
+              "Jon Iyer owns Boreal."
+            ]
+          },
+          "retrieved": [
+            "projects/boreal",
+            "policies/boreal-retention",
+            "people/jon-iyer",
+            "services/harbor",
+            "projects/atlas"
+          ],
+          "verified_evidence": {
+            "projects/boreal": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 3.674,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "keyword-retention",
+          "category": "keyword",
+          "query": "Boreal raw logs",
+          "question": "Boreal raw logs",
+          "relevance": {
+            "policies/boreal-retention": 2
+          },
+          "required_evidence": {
+            "policies/boreal-retention": [
+              "Boreal retains raw logs for 30 days and aggregated metrics for 90 days."
+            ]
+          },
+          "retrieved": [
+            "policies/boreal-retention",
+            "projects/boreal",
+            "people/jon-iyer",
+            "security/service-tokens"
+          ],
+          "verified_evidence": {
+            "policies/boreal-retention": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.751,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "keyword-rotation",
+          "category": "keyword",
+          "query": "Atlas credentials rotate",
+          "question": "Atlas credentials rotate",
+          "relevance": {
+            "security/atlas-keys": 2
+          },
+          "required_evidence": {
+            "security/atlas-keys": [
+              "Atlas API credentials rotate every 90 days."
+            ]
+          },
+          "retrieved": [
+            "security/atlas-keys",
+            "projects/atlas",
+            "operations/atlas-runbook",
+            "people/mira-sen",
+            "projects/atlas-architecture",
+            "decisions/atlas-database-draft",
+            "incidents/atlas-pool-exhaustion",
+            "security/service-tokens"
+          ],
+          "verified_evidence": {
+            "security/atlas-keys": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.589,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "keyword-budget",
+          "category": "keyword",
+          "query": "2026 infrastructure budget",
+          "question": "2026 infrastructure budget",
+          "relevance": {
+            "finance/infra-2026": 2
+          },
+          "required_evidence": {
+            "finance/infra-2026": [
+              "The approved 2026 infrastructure budget is USD 48000 per month."
+            ]
+          },
+          "retrieved": [
+            "finance/infra-2026",
+            "finance/infra-2025",
+            "incidents/atlas-pool-exhaustion",
+            "projects/atlas-architecture",
+            "noise/aster-0030",
+            "noise/aster-0090",
+            "noise/aster-0150",
+            "noise/aster-0210",
+            "noise/aster-0270",
+            "noise/aster-0330"
+          ],
+          "verified_evidence": {
+            "finance/infra-2026": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.75,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "keyword-wireguard",
+          "category": "keyword",
+          "query": "WireGuard UDP port",
+          "question": "WireGuard UDP port",
+          "relevance": {
+            "operations/remote-access": 2
+          },
+          "required_evidence": {
+            "operations/remote-access": [
+              "Remote production access uses WireGuard on UDP port 51820."
+            ]
+          },
+          "retrieved": [
+            "operations/remote-access",
+            "devices/rover"
+          ],
+          "verified_evidence": {
+            "operations/remote-access": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.0,
+          "retrieval_http_calls": 3
+        },
+        {
+          "id": "keyword-backups",
+          "category": "keyword",
+          "query": "snapshots retained",
+          "question": "snapshots retained",
+          "relevance": {
+            "operations/backups": 2
+          },
+          "required_evidence": {
+            "operations/backups": [
+              "Snapshots are retained for 14 days."
+            ]
+          },
+          "retrieved": [
+            "operations/backups"
+          ],
+          "verified_evidence": {
+            "operations/backups": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.017,
+          "retrieval_http_calls": 2
+        },
+        {
+          "id": "keyword-camera",
+          "category": "keyword",
+          "query": "Rover RTSP port",
+          "question": "Rover RTSP port",
+          "relevance": {
+            "devices/rover": 2
+          },
+          "required_evidence": {
+            "devices/rover": [
+              "The Rover camera streams video over RTSP on TCP port 8554."
+            ]
+          },
+          "retrieved": [
+            "devices/rover",
+            "devices/rover-battery",
+            "operations/remote-access"
+          ],
+          "verified_evidence": {
+            "devices/rover": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.575,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "keyword-battery",
+          "category": "keyword",
+          "query": "Rover charge cycles",
+          "question": "Rover charge cycles",
+          "relevance": {
+            "devices/rover-battery": 2
+          },
+          "required_evidence": {
+            "devices/rover-battery": [
+              "Replace a Rover battery after 300 charge cycles or when capacity falls below 80 percent."
+            ]
+          },
+          "retrieved": [
+            "devices/rover-battery",
+            "devices/rover",
+            "noise/aster-0050",
+            "noise/aster-0110",
+            "noise/aster-0170",
+            "noise/aster-0230",
+            "noise/aster-0290",
+            "noise/aster-0350",
+            "noise/aster-0410",
+            "noise/aster-0470"
+          ],
+          "verified_evidence": {
+            "devices/rover-battery": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.831,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "keyword-refund",
+          "category": "keyword",
+          "query": "Merchant refunds settlement",
+          "question": "Merchant refunds settlement",
+          "relevance": {
+            "support/refunds": 2
+          },
+          "required_evidence": {
+            "support/refunds": [
+              "Merchant refunds are accepted within 14 days of settlement."
+            ]
+          },
+          "retrieved": [
+            "support/refunds",
+            "projects/atlas",
+            "operations/atlas-runbook",
+            "people/mira-sen",
+            "projects/atlas-architecture",
+            "security/atlas-keys"
+          ],
+          "verified_evidence": {
+            "support/refunds": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.199,
+          "retrieval_http_calls": 3
+        },
+        {
+          "id": "keyword-token",
+          "category": "keyword",
+          "query": "Service tokens expire",
+          "question": "Service tokens expire",
+          "relevance": {
+            "security/service-tokens": 2
+          },
+          "required_evidence": {
+            "security/service-tokens": [
+              "Service tokens expire after 24 hours."
+            ]
+          },
+          "retrieved": [
+            "security/service-tokens",
+            "services/cedar",
+            "decisions/vector-search"
+          ],
+          "verified_evidence": {
+            "security/service-tokens": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.762,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "lookup-alias-atlas",
+          "category": "metadata_and_tokens",
+          "query": "atlaspay",
+          "question": "atlaspay",
+          "relevance": {
+            "projects/atlas": 2
+          },
+          "required_evidence": {
+            "projects/atlas": [
+              "Mira Sen owns Atlas."
+            ]
+          },
+          "retrieved": [
+            "projects/atlas",
+            "operations/atlas-runbook",
+            "people/mira-sen",
+            "projects/atlas-architecture",
+            "security/atlas-keys"
+          ],
+          "verified_evidence": {
+            "projects/atlas": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.243,
+          "retrieval_http_calls": 2
+        },
+        {
+          "id": "lookup-alias-boreal",
+          "category": "metadata_and_tokens",
+          "query": "northstar",
+          "question": "northstar",
+          "relevance": {
+            "projects/boreal": 2
+          },
+          "required_evidence": {
+            "projects/boreal": [
+              "Jon Iyer owns Boreal."
+            ]
+          },
+          "retrieved": [
+            "projects/boreal",
+            "people/jon-iyer",
+            "policies/boreal-retention"
+          ],
+          "verified_evidence": {
+            "projects/boreal": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.061,
+          "retrieval_http_calls": 2
+        },
+        {
+          "id": "lookup-alias-backup",
+          "category": "metadata_and_tokens",
+          "query": "bluebird",
+          "question": "bluebird",
+          "relevance": {
+            "operations/backups": 2
+          },
+          "required_evidence": {
+            "operations/backups": [
+              "Database snapshots run daily at 02:00 UTC."
+            ]
+          },
+          "retrieved": [
+            "operations/backups"
+          ],
+          "verified_evidence": {
+            "operations/backups": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.136,
+          "retrieval_http_calls": 2
+        },
+        {
+          "id": "lookup-alias-vpn",
+          "category": "metadata_and_tokens",
+          "query": "staff-tunnel",
+          "question": "staff-tunnel",
+          "relevance": {
+            "operations/remote-access": 2
+          },
+          "required_evidence": {
+            "operations/remote-access": [
+              "Multi-factor authentication is mandatory."
+            ]
+          },
+          "retrieved": [
+            "operations/remote-access"
+          ],
+          "verified_evidence": {
+            "operations/remote-access": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.25,
+          "retrieval_http_calls": 2
+        },
+        {
+          "id": "lookup-alias-camera",
+          "category": "metadata_and_tokens",
+          "query": "field-camera",
+          "question": "field-camera",
+          "relevance": {
+            "devices/rover": 2
+          },
+          "required_evidence": {
+            "devices/rover": [
+              "H.264 is the supported codec."
+            ]
+          },
+          "retrieved": [
+            "devices/rover",
+            "noise/aster-0050",
+            "noise/aster-0110",
+            "noise/aster-0170",
+            "noise/aster-0230",
+            "noise/aster-0290",
+            "noise/aster-0350",
+            "noise/aster-0410",
+            "noise/aster-0470",
+            "noise/aster-0530"
+          ],
+          "verified_evidence": {
+            "devices/rover": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.49,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "lookup-prefix",
+          "category": "metadata_and_tokens",
+          "query": "cred rot",
+          "question": "cred rot",
+          "relevance": {
+            "security/atlas-keys": 2
+          },
+          "required_evidence": {
+            "security/atlas-keys": [
+              "Atlas API credentials rotate every 90 days."
+            ]
+          },
+          "retrieved": [
+            "security/atlas-keys",
+            "noise/aster-0020",
+            "noise/aster-0080",
+            "projects/atlas",
+            "noise/aster-0140",
+            "noise/aster-0200",
+            "noise/aster-0260",
+            "noise/aster-0320",
+            "noise/aster-0380",
+            "noise/aster-0440"
+          ],
+          "verified_evidence": {
+            "security/atlas-keys": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.707,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "lookup-accent",
+          "category": "metadata_and_tokens",
+          "query": "cafe etoile",
+          "question": "cafe etoile",
+          "relevance": {
+            "guides/cafe": 2
+          },
+          "required_evidence": {
+            "guides/cafe": [
+              "New hires visit Café Étoile on Tuesday for equipment collection."
+            ]
+          },
+          "retrieved": [
+            "guides/cafe"
+          ],
+          "verified_evidence": {
+            "guides/cafe": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.169,
+          "retrieval_http_calls": 2
+        },
+        {
+          "id": "lookup-cjk",
+          "category": "metadata_and_tokens",
+          "query": "避難場所",
+          "question": "避難場所",
+          "relevance": {
+            "policies/tokyo": 2
+          },
+          "required_evidence": {
+            "policies/tokyo": [
+              "東京オフィスの避難場所は中央公園です。"
+            ]
+          },
+          "retrieved": [],
+          "verified_evidence": {},
+          "missing_at_5": [
+            "policies/tokyo"
+          ],
+          "metrics": {
+            "hit@1": 0,
+            "recall@1": 0.0,
+            "precision@1": 0.0,
+            "ndcg@1": 0.0,
+            "evidence_complete@1": 0,
+            "hit@5": 0,
+            "recall@5": 0.0,
+            "precision@5": 0.0,
+            "ndcg@5": 0.0,
+            "evidence_complete@5": 0,
+            "hit@10": 0,
+            "recall@10": 0.0,
+            "precision@10": 0.0,
+            "ndcg@10": 0.0,
+            "evidence_complete@10": 0,
+            "mrr@10": 0.0
+          },
+          "latency_ms": 0.597,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "question-atlas-db",
+          "category": "natural_question",
+          "query": "Which database does Atlas use in production?",
+          "question": "Which database does Atlas use in production?",
+          "relevance": {
+            "projects/atlas-architecture": 2
+          },
+          "required_evidence": {
+            "projects/atlas-architecture": [
+              "Atlas uses PostgreSQL 16 as its primary database."
+            ]
+          },
+          "retrieved": [
+            "projects/atlas-architecture",
+            "decisions/atlas-database-draft",
+            "incidents/atlas-pool-exhaustion",
+            "projects/atlas",
+            "security/atlas-keys",
+            "operations/atlas-runbook",
+            "people/mira-sen",
+            "decisions/vector-search",
+            "services/cedar",
+            "operations/remote-access"
+          ],
+          "verified_evidence": {
+            "projects/atlas-architecture": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.773,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "question-atlas-owner",
+          "category": "natural_question",
+          "query": "Who owns Atlas?",
+          "question": "Who owns Atlas?",
+          "relevance": {
+            "projects/atlas": 2
+          },
+          "required_evidence": {
+            "projects/atlas": [
+              "Mira Sen owns Atlas."
+            ]
+          },
+          "retrieved": [
+            "projects/atlas",
+            "security/atlas-keys",
+            "operations/atlas-runbook",
+            "people/mira-sen",
+            "projects/atlas-architecture",
+            "decisions/atlas-database-draft",
+            "incidents/atlas-pool-exhaustion",
+            "services/harbor",
+            "projects/boreal"
+          ],
+          "verified_evidence": {
+            "projects/atlas": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 3.545,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "question-boreal-logs",
+          "category": "natural_question",
+          "query": "How long are raw Boreal logs kept?",
+          "question": "How long are raw Boreal logs kept?",
+          "relevance": {
+            "policies/boreal-retention": 2
+          },
+          "required_evidence": {
+            "policies/boreal-retention": [
+              "Boreal retains raw logs for 30 days and aggregated metrics for 90 days."
+            ]
+          },
+          "retrieved": [
+            "policies/boreal-retention",
+            "projects/boreal",
+            "people/jon-iyer",
+            "security/service-tokens"
+          ],
+          "verified_evidence": {
+            "policies/boreal-retention": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.661,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "question-rotation",
+          "category": "natural_question",
+          "query": "How often should Atlas API credentials rotate?",
+          "question": "How often should Atlas API credentials rotate?",
+          "relevance": {
+            "security/atlas-keys": 2
+          },
+          "required_evidence": {
+            "security/atlas-keys": [
+              "Atlas API credentials rotate every 90 days."
+            ]
+          },
+          "retrieved": [
+            "security/atlas-keys",
+            "projects/atlas-architecture",
+            "projects/atlas",
+            "incidents/atlas-pool-exhaustion",
+            "decisions/atlas-database-draft",
+            "operations/atlas-runbook",
+            "people/mira-sen",
+            "security/service-tokens"
+          ],
+          "verified_evidence": {
+            "security/atlas-keys": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.98,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "question-budget",
+          "category": "natural_question",
+          "query": "What is the approved infrastructure budget for 2026?",
+          "question": "What is the approved infrastructure budget for 2026?",
+          "relevance": {
+            "finance/infra-2026": 2
+          },
+          "required_evidence": {
+            "finance/infra-2026": [
+              "The approved 2026 infrastructure budget is USD 48000 per month."
+            ]
+          },
+          "retrieved": [
+            "finance/infra-2026",
+            "finance/infra-2025",
+            "incidents/atlas-pool-exhaustion",
+            "projects/atlas-architecture",
+            "noise/aster-0030",
+            "noise/aster-0090",
+            "noise/aster-0150",
+            "noise/aster-0210",
+            "noise/aster-0270",
+            "noise/aster-0330"
+          ],
+          "verified_evidence": {
+            "finance/infra-2026": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 3.924,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "question-mira",
+          "category": "natural_question",
+          "query": "Where is Mira Sen based?",
+          "question": "Where is Mira Sen based?",
+          "relevance": {
+            "people/mira-sen": 2
+          },
+          "required_evidence": {
+            "people/mira-sen": [
+              "Mira is based in Pune."
+            ]
+          },
+          "retrieved": [
+            "people/mira-sen",
+            "projects/atlas",
+            "incidents/atlas-pool-exhaustion",
+            "companies/nimbus",
+            "operations/atlas-runbook",
+            "projects/atlas-architecture",
+            "security/atlas-keys",
+            "people/jon-iyer"
+          ],
+          "verified_evidence": {
+            "people/mira-sen": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 3.051,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "question-vpn",
+          "category": "natural_question",
+          "query": "Which UDP port does WireGuard use?",
+          "question": "Which UDP port does WireGuard use?",
+          "relevance": {
+            "operations/remote-access": 2
+          },
+          "required_evidence": {
+            "operations/remote-access": [
+              "Remote production access uses WireGuard on UDP port 51820."
+            ]
+          },
+          "retrieved": [
+            "operations/remote-access",
+            "devices/rover",
+            "projects/atlas-architecture",
+            "incidents/atlas-pool-exhaustion",
+            "projects/atlas",
+            "decisions/atlas-database-draft",
+            "decisions/vector-search",
+            "services/cedar"
+          ],
+          "verified_evidence": {
+            "operations/remote-access": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.515,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "question-refund",
+          "category": "natural_question",
+          "query": "How many days after settlement can a merchant request a refund?",
+          "question": "How many days after settlement can a merchant request a refund?",
+          "relevance": {
+            "support/refunds": 2
+          },
+          "required_evidence": {
+            "support/refunds": [
+              "Merchant refunds are accepted within 14 days of settlement."
+            ]
+          },
+          "retrieved": [
+            "support/refunds",
+            "operations/atlas-runbook",
+            "policies/boreal-retention",
+            "projects/atlas",
+            "projects/boreal",
+            "security/service-tokens",
+            "devices/rover-battery",
+            "services/cedar",
+            "services/harbor",
+            "security/atlas-keys"
+          ],
+          "verified_evidence": {
+            "support/refunds": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.917,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "question-backup",
+          "category": "natural_question",
+          "query": "When do the daily database snapshots run?",
+          "question": "When do the daily database snapshots run?",
+          "relevance": {
+            "operations/backups": 2
+          },
+          "required_evidence": {
+            "operations/backups": [
+              "Database snapshots run daily at 02:00 UTC."
+            ]
+          },
+          "retrieved": [
+            "operations/backups",
+            "operations/atlas-runbook",
+            "projects/atlas",
+            "people/mira-sen",
+            "projects/atlas-architecture",
+            "security/atlas-keys",
+            "decisions/atlas-database-draft",
+            "noise/aster-0000",
+            "noise/aster-0060",
+            "noise/aster-0120"
+          ],
+          "verified_evidence": {
+            "operations/backups": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 3.408,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "question-camera",
+          "category": "natural_question",
+          "query": "What codec is supported by the Rover camera?",
+          "question": "What codec is supported by the Rover camera?",
+          "relevance": {
+            "devices/rover": 2
+          },
+          "required_evidence": {
+            "devices/rover": [
+              "H.264 is the supported codec."
+            ]
+          },
+          "retrieved": [
+            "devices/rover",
+            "devices/rover-battery",
+            "noise/aster-0050",
+            "noise/aster-0110",
+            "noise/aster-0170",
+            "noise/aster-0230",
+            "noise/aster-0290",
+            "noise/aster-0350",
+            "noise/aster-0410",
+            "noise/aster-0470"
+          ],
+          "verified_evidence": {
+            "devices/rover": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 3.582,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "question-rollback",
+          "category": "natural_question",
+          "query": "How do I recover from a failed release?",
+          "question": "How do I recover from a failed release?",
+          "relevance": {
+            "operations/deploy": 2
+          },
+          "required_evidence": {
+            "operations/deploy": [
+              "A failed release is reverted by redeploying the last healthy image digest."
+            ]
+          },
+          "retrieved": [
+            "operations/deploy",
+            "incidents/atlas-pool-exhaustion",
+            "operations/backups",
+            "services/harbor",
+            "projects/atlas-architecture",
+            "noise/aster-0040",
+            "noise/aster-0100",
+            "noise/aster-0160",
+            "noise/aster-0220",
+            "noise/aster-0280"
+          ],
+          "verified_evidence": {
+            "operations/deploy": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 3.325,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "question-contractor",
+          "category": "natural_question",
+          "query": "How long can a contractor access production?",
+          "question": "How long can a contractor access production?",
+          "relevance": {
+            "operations/remote-access": 2
+          },
+          "required_evidence": {
+            "operations/remote-access": [
+              "Contractors receive access for seven days."
+            ]
+          },
+          "retrieved": [
+            "operations/remote-access",
+            "security/atlas-keys",
+            "noise/aster-0020",
+            "projects/atlas",
+            "noise/aster-0080",
+            "noise/aster-0140",
+            "noise/aster-0200",
+            "noise/aster-0260",
+            "noise/aster-0320",
+            "noise/aster-0380"
+          ],
+          "verified_evidence": {
+            "operations/remote-access": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 3.65,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "paraphrase-datastore",
+          "category": "paraphrase",
+          "query": "Atlas persistence engine",
+          "question": "Atlas persistence engine",
+          "relevance": {
+            "projects/atlas-architecture": 2
+          },
+          "required_evidence": {
+            "projects/atlas-architecture": [
+              "Atlas uses PostgreSQL 16 as its primary database."
+            ]
+          },
+          "retrieved": [
+            "people/mira-sen",
+            "people/jon-iyer",
+            "projects/atlas",
+            "companies/nimbus",
+            "projects/boreal",
+            "operations/atlas-runbook",
+            "projects/atlas-architecture",
+            "security/atlas-keys",
+            "decisions/atlas-database-draft",
+            "incidents/atlas-pool-exhaustion"
+          ],
+          "verified_evidence": {
+            "projects/atlas-architecture": true
+          },
+          "missing_at_5": [
+            "projects/atlas-architecture"
+          ],
+          "metrics": {
+            "hit@1": 0,
+            "recall@1": 0.0,
+            "precision@1": 0.0,
+            "ndcg@1": 0.0,
+            "evidence_complete@1": 0,
+            "hit@5": 0,
+            "recall@5": 0.0,
+            "precision@5": 0.0,
+            "ndcg@5": 0.0,
+            "evidence_complete@5": 0,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 0.3333333333333333,
+            "evidence_complete@10": 1,
+            "mrr@10": 0.14285714285714285
+          },
+          "latency_ms": 2.27,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "paraphrase-owner",
+          "category": "paraphrase",
+          "query": "Atlas responsible engineer",
+          "question": "Atlas responsible engineer",
+          "relevance": {
+            "projects/atlas": 2
+          },
+          "required_evidence": {
+            "projects/atlas": [
+              "Mira Sen owns Atlas."
+            ]
+          },
+          "retrieved": [
+            "people/mira-sen",
+            "people/jon-iyer",
+            "projects/atlas",
+            "companies/nimbus",
+            "projects/boreal",
+            "operations/atlas-runbook",
+            "projects/atlas-architecture",
+            "security/atlas-keys",
+            "decisions/atlas-database-draft",
+            "incidents/atlas-pool-exhaustion"
+          ],
+          "verified_evidence": {
+            "projects/atlas": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 0,
+            "recall@1": 0.0,
+            "precision@1": 0.0,
+            "ndcg@1": 0.0,
+            "evidence_complete@1": 0,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 0.5,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 0.5,
+            "evidence_complete@10": 1,
+            "mrr@10": 0.3333333333333333
+          },
+          "latency_ms": 6.266,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "paraphrase-outage",
+          "category": "paraphrase",
+          "query": "Atlas outage cause",
+          "question": "Atlas outage cause",
+          "relevance": {
+            "incidents/atlas-pool-exhaustion": 2
+          },
+          "required_evidence": {
+            "incidents/atlas-pool-exhaustion": [
+              "On 2026-04-20 Atlas failed because idle transactions exhausted the database pool."
+            ]
+          },
+          "retrieved": [
+            "incidents/atlas-pool-exhaustion",
+            "projects/atlas",
+            "security/atlas-keys",
+            "projects/atlas-architecture",
+            "operations/atlas-runbook",
+            "people/mira-sen",
+            "decisions/atlas-database-draft"
+          ],
+          "verified_evidence": {
+            "incidents/atlas-pool-exhaustion": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 5.623,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "paraphrase-retention",
+          "category": "paraphrase",
+          "query": "Boreal log lifespan",
+          "question": "Boreal log lifespan",
+          "relevance": {
+            "policies/boreal-retention": 2
+          },
+          "required_evidence": {
+            "policies/boreal-retention": [
+              "Boreal retains raw logs for 30 days and aggregated metrics for 90 days."
+            ]
+          },
+          "retrieved": [
+            "policies/boreal-retention",
+            "projects/boreal",
+            "people/jon-iyer",
+            "security/service-tokens",
+            "noise/aster-0010",
+            "noise/aster-0070",
+            "noise/aster-0130",
+            "noise/aster-0190",
+            "noise/aster-0250",
+            "noise/aster-0310"
+          ],
+          "verified_evidence": {
+            "policies/boreal-retention": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 6.377,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "paraphrase-backup",
+          "category": "paraphrase",
+          "query": "disaster recovery copies schedule",
+          "question": "disaster recovery copies schedule",
+          "relevance": {
+            "operations/backups": 2
+          },
+          "required_evidence": {
+            "operations/backups": [
+              "Database snapshots run daily at 02:00 UTC."
+            ]
+          },
+          "retrieved": [
+            "operations/backups",
+            "operations/deploy",
+            "noise/aster-0040",
+            "services/harbor",
+            "noise/aster-0100",
+            "noise/aster-0160",
+            "noise/aster-0220",
+            "noise/aster-0280",
+            "noise/aster-0340",
+            "noise/aster-0400"
+          ],
+          "verified_evidence": {
+            "operations/backups": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 3.32,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "paraphrase-budget",
+          "category": "paraphrase",
+          "query": "monthly cloud allowance",
+          "question": "monthly cloud allowance",
+          "relevance": {
+            "finance/infra-2026": 2
+          },
+          "required_evidence": {
+            "finance/infra-2026": [
+              "The approved 2026 infrastructure budget is USD 48000 per month."
+            ]
+          },
+          "retrieved": [],
+          "verified_evidence": {},
+          "missing_at_5": [
+            "finance/infra-2026"
+          ],
+          "metrics": {
+            "hit@1": 0,
+            "recall@1": 0.0,
+            "precision@1": 0.0,
+            "ndcg@1": 0.0,
+            "evidence_complete@1": 0,
+            "hit@5": 0,
+            "recall@5": 0.0,
+            "precision@5": 0.0,
+            "ndcg@5": 0.0,
+            "evidence_complete@5": 0,
+            "hit@10": 0,
+            "recall@10": 0.0,
+            "precision@10": 0.0,
+            "ndcg@10": 0.0,
+            "evidence_complete@10": 0,
+            "mrr@10": 0.0
+          },
+          "latency_ms": 1.053,
+          "retrieval_http_calls": 1
+        },
+        {
+          "id": "paraphrase-credential",
+          "category": "paraphrase",
+          "query": "Atlas secret renewal interval",
+          "question": "Atlas secret renewal interval",
+          "relevance": {
+            "security/atlas-keys": 2
+          },
+          "required_evidence": {
+            "security/atlas-keys": [
+              "Atlas API credentials rotate every 90 days."
+            ]
+          },
+          "retrieved": [
+            "projects/atlas",
+            "security/atlas-keys",
+            "operations/atlas-runbook",
+            "people/mira-sen",
+            "projects/atlas-architecture",
+            "decisions/atlas-database-draft",
+            "incidents/atlas-pool-exhaustion",
+            "noise/aster-0010",
+            "noise/aster-0070",
+            "noise/aster-0130"
+          ],
+          "verified_evidence": {
+            "security/atlas-keys": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 0,
+            "recall@1": 0.0,
+            "precision@1": 0.0,
+            "ndcg@1": 0.0,
+            "evidence_complete@1": 0,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 0.6309297535714574,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 0.6309297535714574,
+            "evidence_complete@10": 1,
+            "mrr@10": 0.5
+          },
+          "latency_ms": 3.508,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "paraphrase-reimburse",
+          "category": "paraphrase",
+          "query": "staff lunch repayment ceiling",
+          "question": "staff lunch repayment ceiling",
+          "relevance": {
+            "policies/expenses": 2
+          },
+          "required_evidence": {
+            "policies/expenses": [
+              "Employee meal reimbursement is capped at INR 750 per day."
+            ]
+          },
+          "retrieved": [
+            "operations/remote-access"
+          ],
+          "verified_evidence": {},
+          "missing_at_5": [
+            "policies/expenses"
+          ],
+          "metrics": {
+            "hit@1": 0,
+            "recall@1": 0.0,
+            "precision@1": 0.0,
+            "ndcg@1": 0.0,
+            "evidence_complete@1": 0,
+            "hit@5": 0,
+            "recall@5": 0.0,
+            "precision@5": 0.0,
+            "ndcg@5": 0.0,
+            "evidence_complete@5": 0,
+            "hit@10": 0,
+            "recall@10": 0.0,
+            "precision@10": 0.0,
+            "ndcg@10": 0.0,
+            "evidence_complete@10": 0,
+            "mrr@10": 0.0
+          },
+          "latency_ms": 1.174,
+          "retrieval_http_calls": 2
+        },
+        {
+          "id": "paraphrase-codec",
+          "category": "paraphrase",
+          "query": "Rover video encoding",
+          "question": "Rover video encoding",
+          "relevance": {
+            "devices/rover": 2
+          },
+          "required_evidence": {
+            "devices/rover": [
+              "H.264 is the supported codec."
+            ]
+          },
+          "retrieved": [
+            "devices/rover",
+            "devices/rover-battery",
+            "noise/aster-0050",
+            "noise/aster-0110",
+            "noise/aster-0170",
+            "noise/aster-0230",
+            "noise/aster-0290",
+            "noise/aster-0350",
+            "noise/aster-0410",
+            "noise/aster-0470"
+          ],
+          "verified_evidence": {
+            "devices/rover": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.385,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "paraphrase-rollback",
+          "category": "paraphrase",
+          "query": "undo broken deployment",
+          "question": "undo broken deployment",
+          "relevance": {
+            "operations/deploy": 2
+          },
+          "required_evidence": {
+            "operations/deploy": [
+              "A failed release is reverted by redeploying the last healthy image digest."
+            ]
+          },
+          "retrieved": [
+            "operations/deploy",
+            "noise/aster-0040",
+            "noise/aster-0100",
+            "services/harbor",
+            "noise/aster-0160",
+            "noise/aster-0220",
+            "noise/aster-0280",
+            "noise/aster-0340",
+            "noise/aster-0400",
+            "noise/aster-0460"
+          ],
+          "verified_evidence": {
+            "operations/deploy": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.661,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "typo-atlas",
+          "category": "typo",
+          "query": "Atals database",
+          "question": "Atals database",
+          "relevance": {
+            "projects/atlas-architecture": 2
+          },
+          "required_evidence": {
+            "projects/atlas-architecture": [
+              "Atlas uses PostgreSQL 16 as its primary database."
+            ]
+          },
+          "retrieved": [
+            "decisions/atlas-database-draft",
+            "noise/aster-0000",
+            "noise/aster-0060",
+            "projects/atlas-architecture",
+            "noise/aster-0120",
+            "noise/aster-0180",
+            "noise/aster-0240",
+            "noise/aster-0300",
+            "noise/aster-0360",
+            "noise/aster-0420"
+          ],
+          "verified_evidence": {
+            "projects/atlas-architecture": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 0,
+            "recall@1": 0.0,
+            "precision@1": 0.0,
+            "ndcg@1": 0.0,
+            "evidence_complete@1": 0,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 0.4306765580733931,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 0.4306765580733931,
+            "evidence_complete@10": 1,
+            "mrr@10": 0.25
+          },
+          "latency_ms": 2.75,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "typo-boreal",
+          "category": "typo",
+          "query": "Boreel retention",
+          "question": "Boreel retention",
+          "relevance": {
+            "policies/boreal-retention": 2
+          },
+          "required_evidence": {
+            "policies/boreal-retention": [
+              "Boreal retains raw logs for 30 days and aggregated metrics for 90 days."
+            ]
+          },
+          "retrieved": [
+            "policies/boreal-retention",
+            "noise/aster-0010",
+            "noise/aster-0070",
+            "projects/boreal",
+            "noise/aster-0130",
+            "noise/aster-0190",
+            "noise/aster-0250",
+            "noise/aster-0310",
+            "noise/aster-0370",
+            "noise/aster-0430"
+          ],
+          "verified_evidence": {
+            "policies/boreal-retention": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.768,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "typo-wireguard",
+          "category": "typo",
+          "query": "Wiregaurd port",
+          "question": "Wiregaurd port",
+          "relevance": {
+            "operations/remote-access": 2
+          },
+          "required_evidence": {
+            "operations/remote-access": [
+              "Remote production access uses WireGuard on UDP port 51820."
+            ]
+          },
+          "retrieved": [
+            "devices/rover",
+            "operations/remote-access"
+          ],
+          "verified_evidence": {
+            "operations/remote-access": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 0,
+            "recall@1": 0.0,
+            "precision@1": 0.0,
+            "ndcg@1": 0.0,
+            "evidence_complete@1": 0,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 0.6309297535714574,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 0.6309297535714574,
+            "evidence_complete@10": 1,
+            "mrr@10": 0.5
+          },
+          "latency_ms": 1.817,
+          "retrieval_http_calls": 3
+        },
+        {
+          "id": "typo-snapshot",
+          "category": "typo",
+          "query": "snapshott schedule",
+          "question": "snapshott schedule",
+          "relevance": {
+            "operations/backups": 2
+          },
+          "required_evidence": {
+            "operations/backups": [
+              "Database snapshots run daily at 02:00 UTC."
+            ]
+          },
+          "retrieved": [
+            "operations/backups"
+          ],
+          "verified_evidence": {
+            "operations/backups": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 0.809,
+          "retrieval_http_calls": 2
+        },
+        {
+          "id": "typo-mira",
+          "category": "typo",
+          "query": "Mira Senn",
+          "question": "Mira Senn",
+          "relevance": {
+            "people/mira-sen": 2
+          },
+          "required_evidence": {
+            "people/mira-sen": [
+              "Mira is based in Pune."
+            ]
+          },
+          "retrieved": [
+            "people/mira-sen",
+            "projects/atlas",
+            "incidents/atlas-pool-exhaustion",
+            "companies/nimbus",
+            "operations/atlas-runbook",
+            "projects/atlas-architecture",
+            "security/atlas-keys"
+          ],
+          "verified_evidence": {
+            "people/mira-sen": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.38,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "typo-refund",
+          "category": "typo",
+          "query": "merhcant refunds",
+          "question": "merhcant refunds",
+          "relevance": {
+            "support/refunds": 2
+          },
+          "required_evidence": {
+            "support/refunds": [
+              "Merchant refunds are accepted within 14 days of settlement."
+            ]
+          },
+          "retrieved": [
+            "support/refunds"
+          ],
+          "verified_evidence": {
+            "support/refunds": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 1.0,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 1,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.2,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.1,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.454,
+          "retrieval_http_calls": 2
+        },
+        {
+          "id": "linked-atlas-team",
+          "category": "multiple_documents",
+          "query": "Atlas",
+          "question": "Which team does the owner of Atlas work on?",
+          "relevance": {
+            "projects/atlas": 2,
+            "people/mira-sen": 2
+          },
+          "required_evidence": {
+            "projects/atlas": [
+              "Mira Sen owns Atlas."
+            ],
+            "people/mira-sen": [
+              "Mira Sen works on the Platform team at Nimbus Labs."
+            ]
+          },
+          "retrieved": [
+            "projects/atlas",
+            "security/atlas-keys",
+            "operations/atlas-runbook",
+            "people/mira-sen",
+            "projects/atlas-architecture",
+            "decisions/atlas-database-draft",
+            "incidents/atlas-pool-exhaustion"
+          ],
+          "verified_evidence": {
+            "projects/atlas": true,
+            "people/mira-sen": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 0.5,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 0,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.4,
+            "ndcg@5": 0.8772153153380493,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.2,
+            "ndcg@10": 0.8772153153380493,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 2.093,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "linked-atlas-city",
+          "category": "multiple_documents",
+          "query": "atlaspay",
+          "question": "Where is the owner of Atlaspay based?",
+          "relevance": {
+            "projects/atlas": 2,
+            "people/mira-sen": 2
+          },
+          "required_evidence": {
+            "projects/atlas": [
+              "Mira Sen owns Atlas."
+            ],
+            "people/mira-sen": [
+              "Mira is based in Pune."
+            ]
+          },
+          "retrieved": [
+            "projects/atlas",
+            "operations/atlas-runbook",
+            "people/mira-sen",
+            "projects/atlas-architecture",
+            "security/atlas-keys"
+          ],
+          "verified_evidence": {
+            "projects/atlas": true,
+            "people/mira-sen": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 0.5,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 0,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.4,
+            "ndcg@5": 0.9197207891481876,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.2,
+            "ndcg@10": 0.9197207891481876,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 0.961,
+          "retrieval_http_calls": 2
+        },
+        {
+          "id": "linked-boreal-team",
+          "category": "multiple_documents",
+          "query": "Boreal",
+          "question": "Which team does the owner of Boreal work on?",
+          "relevance": {
+            "projects/boreal": 2,
+            "people/jon-iyer": 2
+          },
+          "required_evidence": {
+            "projects/boreal": [
+              "Jon Iyer owns Boreal."
+            ],
+            "people/jon-iyer": [
+              "Jon Iyer works on the Infrastructure team at Nimbus Labs."
+            ]
+          },
+          "retrieved": [
+            "policies/boreal-retention",
+            "projects/boreal",
+            "people/jon-iyer"
+          ],
+          "verified_evidence": {
+            "projects/boreal": true,
+            "people/jon-iyer": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 0,
+            "recall@1": 0.0,
+            "precision@1": 0.0,
+            "ndcg@1": 0.0,
+            "evidence_complete@1": 0,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.4,
+            "ndcg@5": 0.6934264036172708,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.2,
+            "ndcg@10": 0.6934264036172708,
+            "evidence_complete@10": 1,
+            "mrr@10": 0.5
+          },
+          "latency_ms": 2.829,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "linked-boreal-city",
+          "category": "multiple_documents",
+          "query": "northstar",
+          "question": "Where is the owner of Northstar based?",
+          "relevance": {
+            "projects/boreal": 2,
+            "people/jon-iyer": 2
+          },
+          "required_evidence": {
+            "projects/boreal": [
+              "Jon Iyer owns Boreal."
+            ],
+            "people/jon-iyer": [
+              "Jon is based in Delhi."
+            ]
+          },
+          "retrieved": [
+            "projects/boreal",
+            "people/jon-iyer",
+            "policies/boreal-retention"
+          ],
+          "verified_evidence": {
+            "projects/boreal": true,
+            "people/jon-iyer": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 0.5,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 0,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.4,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.2,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.671,
+          "retrieval_http_calls": 2
+        },
+        {
+          "id": "linked-boreal-retention",
+          "category": "multiple_documents",
+          "query": "northstar",
+          "question": "What is Northstar and how long does it retain logs?",
+          "relevance": {
+            "projects/boreal": 2,
+            "policies/boreal-retention": 2
+          },
+          "required_evidence": {
+            "projects/boreal": [
+              "Boreal collects device telemetry."
+            ],
+            "policies/boreal-retention": [
+              "Boreal retains raw logs for 30 days and aggregated metrics for 90 days."
+            ]
+          },
+          "retrieved": [
+            "projects/boreal",
+            "people/jon-iyer",
+            "policies/boreal-retention"
+          ],
+          "verified_evidence": {
+            "projects/boreal": true,
+            "policies/boreal-retention": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 0.5,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 0,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.4,
+            "ndcg@5": 0.9197207891481876,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.2,
+            "ndcg@10": 0.9197207891481876,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.633,
+          "retrieval_http_calls": 2
+        },
+        {
+          "id": "linked-atlas-limits",
+          "category": "multiple_documents",
+          "query": "atlaspay",
+          "question": "What does Atlaspay do and how long are its retry keys valid?",
+          "relevance": {
+            "projects/atlas": 2,
+            "operations/atlas-runbook": 2
+          },
+          "required_evidence": {
+            "projects/atlas": [
+              "Atlas handles merchant payment authorization."
+            ],
+            "operations/atlas-runbook": [
+              "Retry keys remain valid for 48 hours."
+            ]
+          },
+          "retrieved": [
+            "projects/atlas",
+            "operations/atlas-runbook",
+            "people/mira-sen",
+            "projects/atlas-architecture",
+            "security/atlas-keys"
+          ],
+          "verified_evidence": {
+            "projects/atlas": true,
+            "operations/atlas-runbook": true
+          },
+          "missing_at_5": [],
+          "metrics": {
+            "hit@1": 1,
+            "recall@1": 0.5,
+            "precision@1": 1.0,
+            "ndcg@1": 1.0,
+            "evidence_complete@1": 0,
+            "hit@5": 1,
+            "recall@5": 1.0,
+            "precision@5": 0.4,
+            "ndcg@5": 1.0,
+            "evidence_complete@5": 1,
+            "hit@10": 1,
+            "recall@10": 1.0,
+            "precision@10": 0.2,
+            "ndcg@10": 1.0,
+            "evidence_complete@10": 1,
+            "mrr@10": 1.0
+          },
+          "latency_ms": 1.769,
+          "retrieval_http_calls": 2
+        },
+        {
+          "id": "unknown-unknown-project",
+          "category": "unanswerable",
+          "query": "Zephyr database",
+          "question": "Zephyr database",
+          "relevance": {},
+          "required_evidence": {},
+          "retrieved": [
+            "decisions/atlas-database-draft",
+            "noise/aster-0000",
+            "noise/aster-0060",
+            "projects/atlas-architecture",
+            "noise/aster-0120",
+            "noise/aster-0180",
+            "noise/aster-0240",
+            "noise/aster-0300",
+            "noise/aster-0360",
+            "noise/aster-0420"
+          ],
+          "verified_evidence": {},
+          "missing_at_5": [],
+          "metrics": null,
+          "latency_ms": 3.445,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "unknown-unrecorded-owner",
+          "category": "unanswerable",
+          "query": "Cedar owner",
+          "question": "Cedar owner",
+          "relevance": {},
+          "required_evidence": {},
+          "retrieved": [
+            "services/cedar",
+            "people/jon-iyer",
+            "people/mira-sen",
+            "projects/boreal",
+            "companies/nimbus",
+            "projects/atlas"
+          ],
+          "verified_evidence": {},
+          "missing_at_5": [],
+          "metrics": null,
+          "latency_ms": 3.437,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "unknown-unrecorded-rotation",
+          "category": "unanswerable",
+          "query": "Boreal credential rotation",
+          "question": "Boreal credential rotation",
+          "relevance": {},
+          "required_evidence": {},
+          "retrieved": [
+            "policies/boreal-retention",
+            "projects/boreal",
+            "people/jon-iyer",
+            "security/atlas-keys",
+            "noise/aster-0020",
+            "noise/aster-0080",
+            "noise/aster-0140",
+            "noise/aster-0200",
+            "noise/aster-0260",
+            "noise/aster-0320"
+          ],
+          "verified_evidence": {},
+          "missing_at_5": [],
+          "metrics": null,
+          "latency_ms": 3.299,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "unknown-unknown-year",
+          "category": "unanswerable",
+          "query": "2027 infrastructure budget",
+          "question": "2027 infrastructure budget",
+          "relevance": {},
+          "required_evidence": {},
+          "retrieved": [
+            "finance/infra-2025",
+            "finance/infra-2026",
+            "noise/aster-0030",
+            "noise/aster-0090",
+            "noise/aster-0150",
+            "noise/aster-0210",
+            "noise/aster-0270",
+            "noise/aster-0330",
+            "noise/aster-0390",
+            "noise/aster-0450"
+          ],
+          "verified_evidence": {},
+          "missing_at_5": [],
+          "metrics": null,
+          "latency_ms": 2.414,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "unknown-unrecorded-CEO",
+          "category": "unanswerable",
+          "query": "Nimbus CEO",
+          "question": "Nimbus CEO",
+          "relevance": {},
+          "required_evidence": {},
+          "retrieved": [
+            "companies/nimbus",
+            "people/mira-sen",
+            "people/jon-iyer",
+            "projects/atlas",
+            "projects/boreal"
+          ],
+          "verified_evidence": {},
+          "missing_at_5": [],
+          "metrics": null,
+          "latency_ms": 1.481,
+          "retrieval_http_calls": 4
+        },
+        {
+          "id": "unknown-unknown-protocol",
+          "category": "unanswerable",
+          "query": "quasar handshake",
+          "question": "quasar handshake",
+          "relevance": {},
+          "required_evidence": {},
+          "retrieved": [],
+          "verified_evidence": {},
+          "missing_at_5": [],
+          "metrics": null,
+          "latency_ms": 0.663,
+          "retrieval_http_calls": 1
+        }
+      ]
+    }
+  }
+}

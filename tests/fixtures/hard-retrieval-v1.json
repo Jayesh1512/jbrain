@@ -1,0 +1,971 @@
+{
+  "name": "hard-retrieval-v1",
+  "description": "Adversarial, hand-authored with implementation knowledge. Frozen before first requests; no tuning of production Rust code. Not an independent blind benchmark.",
+  "epl": [
+    {
+      "id": "control-0",
+      "category": "control",
+      "question": "West Bromwich Albion 2010/11 wins",
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "West Bromwich Albion",
+          "source_club": "West Brom",
+          "year": 2010,
+          "metric": "won"
+        }
+      ]
+    },
+    {
+      "id": "control-1",
+      "category": "control",
+      "question": "Hull City 2013/14 draws",
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Hull City",
+          "source_club": "Hull",
+          "year": 2013,
+          "metric": "drawn"
+        }
+      ]
+    },
+    {
+      "id": "control-2",
+      "category": "control",
+      "question": "Middlesbrough 2016/17 goals conceded",
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Middlesbrough",
+          "source_club": "Middlesbrough",
+          "year": 2016,
+          "metric": "goals_against"
+        }
+      ]
+    },
+    {
+      "id": "control-3",
+      "category": "control",
+      "question": "Watford 2018/19 points",
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Watford",
+          "source_club": "Watford",
+          "year": 2018,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "language-0",
+      "category": "language",
+      "question": "How many goals did Stoke City bag in 2014/15?",
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Stoke City",
+          "source_club": "Stoke",
+          "year": 2014,
+          "metric": "goals_for"
+        }
+      ]
+    },
+    {
+      "id": "language-1",
+      "category": "language",
+      "question": "How often did Newcastle United taste defeat during 2002/03?",
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Newcastle United",
+          "source_club": "Newcastle",
+          "year": 2002,
+          "metric": "lost"
+        }
+      ]
+    },
+    {
+      "id": "language-2",
+      "category": "language",
+      "question": "Count Blackburn Rovers losses in 2011/12.",
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Blackburn Rovers",
+          "source_club": "Blackburn",
+          "year": 2011,
+          "metric": "lost"
+        }
+      ]
+    },
+    {
+      "id": "language-3",
+      "category": "language",
+      "question": "Birminghma City victories in 2010/11?",
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Birmingham City",
+          "source_club": "Birmingham",
+          "year": 2010,
+          "metric": "won"
+        }
+      ]
+    },
+    {
+      "id": "language-4",
+      "category": "language",
+      "question": "In the 2013-2014 campaign, how many points did the Hammers earn?",
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "West Ham United",
+          "source_club": "West Ham",
+          "year": 2013,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "language-5",
+      "category": "language",
+      "question": "How many times did Swansea City let one in across 2014/15?",
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Swansea City",
+          "source_club": "Swansea",
+          "year": 2014,
+          "metric": "goals_against"
+        }
+      ]
+    },
+    {
+      "id": "compound-0",
+      "category": "composition",
+      "question": "How many goals did Swansea City concede in 2015/16 and how many did West Ham United score in 2020/21?",
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Swansea City",
+          "source_club": "Swansea",
+          "year": 2015,
+          "metric": "goals_against"
+        },
+        {
+          "kind": "season_stat",
+          "club": "West Ham United",
+          "source_club": "West Ham",
+          "year": 2020,
+          "metric": "goals_for"
+        }
+      ]
+    },
+    {
+      "id": "compound-1",
+      "category": "composition",
+      "question": "Give wins and draws for Norwich City, Watford and Bournemouth in 2015/16.",
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Norwich City",
+          "source_club": "Norwich",
+          "year": 2015,
+          "metric": "won"
+        },
+        {
+          "kind": "season_stat",
+          "club": "Norwich City",
+          "source_club": "Norwich",
+          "year": 2015,
+          "metric": "drawn"
+        },
+        {
+          "kind": "season_stat",
+          "club": "Watford",
+          "source_club": "Watford",
+          "year": 2015,
+          "metric": "won"
+        },
+        {
+          "kind": "season_stat",
+          "club": "Watford",
+          "source_club": "Watford",
+          "year": 2015,
+          "metric": "drawn"
+        },
+        {
+          "kind": "season_stat",
+          "club": "Bournemouth",
+          "source_club": "Bournemouth",
+          "year": 2015,
+          "metric": "won"
+        },
+        {
+          "kind": "season_stat",
+          "club": "Bournemouth",
+          "source_club": "Bournemouth",
+          "year": 2015,
+          "metric": "drawn"
+        }
+      ]
+    },
+    {
+      "id": "compound-2",
+      "category": "composition",
+      "question": "For 2020/21, Fulham wins; for 2018/19, Huddersfield Town goals scored.",
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Fulham",
+          "source_club": "Fulham",
+          "year": 2020,
+          "metric": "won"
+        },
+        {
+          "kind": "season_stat",
+          "club": "Huddersfield Town",
+          "source_club": "Huddersfield",
+          "year": 2018,
+          "metric": "goals_for"
+        }
+      ]
+    },
+    {
+      "id": "compound-3",
+      "category": "composition",
+      "question": "Compare Crystal Palace wins and Aston Villa losses in 2019/20, respectively.",
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Crystal Palace",
+          "source_club": "Crystal Palace",
+          "year": 2019,
+          "metric": "won"
+        },
+        {
+          "kind": "season_stat",
+          "club": "Aston Villa",
+          "source_club": "Aston Villa",
+          "year": 2019,
+          "metric": "lost"
+        }
+      ]
+    },
+    {
+      "id": "compound-4",
+      "category": "composition",
+      "question": "West Bromwich Albion goals scored in 2010/11, goals conceded in 2011/12, and points in 2012/13.",
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "West Bromwich Albion",
+          "source_club": "West Brom",
+          "year": 2010,
+          "metric": "goals_for"
+        },
+        {
+          "kind": "season_stat",
+          "club": "West Bromwich Albion",
+          "source_club": "West Brom",
+          "year": 2011,
+          "metric": "goals_against"
+        },
+        {
+          "kind": "season_stat",
+          "club": "West Bromwich Albion",
+          "source_club": "West Brom",
+          "year": 2012,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "compound-5",
+      "category": "composition",
+      "question": "Compare Norwich City 2011/12 points, Swansea City 2012/13 wins, Stoke City 2013/14 draws, and Sunderland 2014/15 losses.",
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Norwich City",
+          "source_club": "Norwich",
+          "year": 2011,
+          "metric": "points"
+        },
+        {
+          "kind": "season_stat",
+          "club": "Swansea City",
+          "source_club": "Swansea",
+          "year": 2012,
+          "metric": "won"
+        },
+        {
+          "kind": "season_stat",
+          "club": "Stoke City",
+          "source_club": "Stoke",
+          "year": 2013,
+          "metric": "drawn"
+        },
+        {
+          "kind": "season_stat",
+          "club": "Sunderland",
+          "source_club": "Sunderland",
+          "year": 2014,
+          "metric": "lost"
+        }
+      ]
+    },
+    {
+      "id": "dates-0",
+      "category": "multiple_dates",
+      "question": "Compare the full-time scores in Arsenal versus Tottenham Hotspur on 2012-11-17 and 2013-03-03.",
+      "needs": [
+        {
+          "kind": "match",
+          "source_home": "Arsenal",
+          "source_away": "Tottenham",
+          "date": "2012-11-17",
+          "metric": "score"
+        },
+        {
+          "kind": "match",
+          "source_home": "Tottenham",
+          "source_away": "Arsenal",
+          "date": "2013-03-03",
+          "metric": "score"
+        }
+      ]
+    },
+    {
+      "id": "implicit-0",
+      "category": "implicit_entity",
+      "question": "Who did Arsenal host on 2012-11-17, and how many points did that opponent earn in 2012/13?",
+      "needs": [
+        {
+          "kind": "match",
+          "source_home": "Arsenal",
+          "source_away": "Tottenham",
+          "date": "2012-11-17",
+          "metric": "score"
+        },
+        {
+          "kind": "season_stat",
+          "club": "Tottenham Hotspur",
+          "source_club": "Tottenham",
+          "year": 2012,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "dates-1",
+      "category": "multiple_dates",
+      "question": "Compare the full-time scores in Chelsea versus Manchester City on 2014-09-21 and 2015-01-31.",
+      "needs": [
+        {
+          "kind": "match",
+          "source_home": "Man City",
+          "source_away": "Chelsea",
+          "date": "2014-09-21",
+          "metric": "score"
+        },
+        {
+          "kind": "match",
+          "source_home": "Chelsea",
+          "source_away": "Man City",
+          "date": "2015-01-31",
+          "metric": "score"
+        }
+      ]
+    },
+    {
+      "id": "implicit-1",
+      "category": "implicit_entity",
+      "question": "Who did Manchester City host on 2014-09-21, and how many points did that opponent earn in 2014/15?",
+      "needs": [
+        {
+          "kind": "match",
+          "source_home": "Man City",
+          "source_away": "Chelsea",
+          "date": "2014-09-21",
+          "metric": "score"
+        },
+        {
+          "kind": "season_stat",
+          "club": "Chelsea",
+          "source_club": "Chelsea",
+          "year": 2014,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "dates-2",
+      "category": "multiple_dates",
+      "question": "Compare the full-time scores in Liverpool versus Everton on 2016-12-19 and 2017-04-01.",
+      "needs": [
+        {
+          "kind": "match",
+          "source_home": "Everton",
+          "source_away": "Liverpool",
+          "date": "2016-12-19",
+          "metric": "score"
+        },
+        {
+          "kind": "match",
+          "source_home": "Liverpool",
+          "source_away": "Everton",
+          "date": "2017-04-01",
+          "metric": "score"
+        }
+      ]
+    },
+    {
+      "id": "implicit-2",
+      "category": "implicit_entity",
+      "question": "Who did Everton host on 2016-12-19, and how many points did that opponent earn in 2016/17?",
+      "needs": [
+        {
+          "kind": "match",
+          "source_home": "Everton",
+          "source_away": "Liverpool",
+          "date": "2016-12-19",
+          "metric": "score"
+        },
+        {
+          "kind": "season_stat",
+          "club": "Liverpool",
+          "source_club": "Liverpool",
+          "year": 2016,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "dates-3",
+      "category": "multiple_dates",
+      "question": "Compare the full-time scores in Manchester United versus West Ham United on 2017-08-13 and 2018-05-10.",
+      "needs": [
+        {
+          "kind": "match",
+          "source_home": "Man United",
+          "source_away": "West Ham",
+          "date": "2017-08-13",
+          "metric": "score"
+        },
+        {
+          "kind": "match",
+          "source_home": "West Ham",
+          "source_away": "Man United",
+          "date": "2018-05-10",
+          "metric": "score"
+        }
+      ]
+    },
+    {
+      "id": "implicit-3",
+      "category": "implicit_entity",
+      "question": "Who did Manchester United host on 2017-08-13, and how many points did that opponent earn in 2017/18?",
+      "needs": [
+        {
+          "kind": "match",
+          "source_home": "Man United",
+          "source_away": "West Ham",
+          "date": "2017-08-13",
+          "metric": "score"
+        },
+        {
+          "kind": "season_stat",
+          "club": "West Ham United",
+          "source_club": "West Ham",
+          "year": 2017,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "split-0",
+      "category": "subset_statistics",
+      "question": "How many wins did Bournemouth have at home in 2016/17?",
+      "needs": [
+        {
+          "kind": "subset",
+          "club": "Bournemouth",
+          "source_club": "Bournemouth",
+          "year": 2016,
+          "side": "home",
+          "metric": "won"
+        }
+      ]
+    },
+    {
+      "id": "split-1",
+      "category": "subset_statistics",
+      "question": "How many goals did Watford have away from home in 2017/18?",
+      "needs": [
+        {
+          "kind": "subset",
+          "club": "Watford",
+          "source_club": "Watford",
+          "year": 2017,
+          "side": "away",
+          "metric": "goals_for"
+        }
+      ]
+    },
+    {
+      "id": "split-2",
+      "category": "subset_statistics",
+      "question": "How many defeats did Fulham have at home in 2013/14?",
+      "needs": [
+        {
+          "kind": "subset",
+          "club": "Fulham",
+          "source_club": "Fulham",
+          "year": 2013,
+          "side": "home",
+          "metric": "lost"
+        }
+      ]
+    },
+    {
+      "id": "split-3",
+      "category": "subset_statistics",
+      "question": "How many draws did Southampton have away from home in 2019/20?",
+      "needs": [
+        {
+          "kind": "subset",
+          "club": "Southampton",
+          "source_club": "Southampton",
+          "year": 2019,
+          "side": "away",
+          "metric": "drawn"
+        }
+      ]
+    },
+    {
+      "id": "ranking-0",
+      "category": "league_comparison",
+      "question": "Which club had the fewest defeats in 2008/09?",
+      "needs": [
+        {
+          "kind": "league_table",
+          "year": 2008,
+          "metric": "lost"
+        }
+      ]
+    },
+    {
+      "id": "ranking-1",
+      "category": "league_comparison",
+      "question": "Did Watford have the fewest wins of all clubs in 2019/20?",
+      "needs": [
+        {
+          "kind": "league_table",
+          "year": 2019,
+          "metric": "won"
+        }
+      ]
+    },
+    {
+      "id": "ranking-2",
+      "category": "league_comparison",
+      "question": "Which club earned the most points in 2000/01?",
+      "needs": [
+        {
+          "kind": "league_table",
+          "year": 2000,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "ranking-3",
+      "category": "league_comparison",
+      "question": "Did Liverpool score more goals than every other club in 2013/14?",
+      "needs": [
+        {
+          "kind": "league_table",
+          "year": 2013,
+          "metric": "goals_for"
+        }
+      ]
+    },
+    {
+      "id": "negation-0",
+      "category": "negation",
+      "question": "How many matches did West Ham United not lose in 2016/17?",
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "West Ham United",
+          "source_club": "West Ham",
+          "year": 2016,
+          "metric": "won"
+        },
+        {
+          "kind": "season_stat",
+          "club": "West Ham United",
+          "source_club": "West Ham",
+          "year": 2016,
+          "metric": "drawn"
+        }
+      ]
+    },
+    {
+      "id": "negation-1",
+      "category": "negation",
+      "question": "How many matches did Stoke City not lose in 2012/13?",
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Stoke City",
+          "source_club": "Stoke",
+          "year": 2012,
+          "metric": "won"
+        },
+        {
+          "kind": "season_stat",
+          "club": "Stoke City",
+          "source_club": "Stoke",
+          "year": 2012,
+          "metric": "drawn"
+        }
+      ]
+    },
+    {
+      "id": "negation-2",
+      "category": "negation",
+      "question": "How many matches did Swansea City not lose in 2015/16?",
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Swansea City",
+          "source_club": "Swansea",
+          "year": 2015,
+          "metric": "won"
+        },
+        {
+          "kind": "season_stat",
+          "club": "Swansea City",
+          "source_club": "Swansea",
+          "year": 2015,
+          "metric": "drawn"
+        }
+      ]
+    },
+    {
+      "id": "negation-3",
+      "category": "negation",
+      "question": "How many matches did Norwich City not lose in 2011/12?",
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Norwich City",
+          "source_club": "Norwich",
+          "year": 2011,
+          "metric": "won"
+        },
+        {
+          "kind": "season_stat",
+          "club": "Norwich City",
+          "source_club": "Norwich",
+          "year": 2011,
+          "metric": "drawn"
+        }
+      ]
+    },
+    {
+      "id": "unsupported-0",
+      "category": "unsupported",
+      "question": "How many FA Cup goals did Chelsea score in 2020/21?",
+      "needs": [],
+      "reason": "Requested competition, granularity, entity, field or season is absent from the corpus."
+    },
+    {
+      "id": "unsupported-1",
+      "category": "unsupported",
+      "question": "How many Champions League points did Manchester City earn in 2022/23?",
+      "needs": [],
+      "reason": "Requested competition, granularity, entity, field or season is absent from the corpus."
+    },
+    {
+      "id": "unsupported-2",
+      "category": "unsupported",
+      "question": "Which player scored the most goals for Liverpool in 2013/14?",
+      "needs": [],
+      "reason": "Requested competition, granularity, entity, field or season is absent from the corpus."
+    },
+    {
+      "id": "unsupported-3",
+      "category": "unsupported",
+      "question": "How many goals did Arsenal score from penalties in 2010/11?",
+      "needs": [],
+      "reason": "Requested competition, granularity, entity, field or season is absent from the corpus."
+    },
+    {
+      "id": "unsupported-4",
+      "category": "unsupported",
+      "question": "How many goals did Tottenham score in the first 15 minutes of games in 2016/17?",
+      "needs": [],
+      "reason": "Requested competition, granularity, entity, field or season is absent from the corpus."
+    },
+    {
+      "id": "unsupported-5",
+      "category": "unsupported",
+      "question": "How many league points did Everton officially finish with after deductions in 2023/24?",
+      "needs": [],
+      "reason": "Requested competition, granularity, entity, field or season is absent from the corpus."
+    },
+    {
+      "id": "unsupported-6",
+      "category": "unsupported",
+      "question": "How many offside calls did Sunderland receive in 2014/15?",
+      "needs": [],
+      "reason": "Requested competition, granularity, entity, field or season is absent from the corpus."
+    },
+    {
+      "id": "unsupported-7",
+      "category": "unsupported",
+      "question": "Who was Stoke City manager in 2013/14?",
+      "needs": [],
+      "reason": "Requested competition, granularity, entity, field or season is absent from the corpus."
+    },
+    {
+      "id": "unsupported-8",
+      "category": "unsupported",
+      "question": "How many points did Wrexham earn in 2020/21?",
+      "needs": [],
+      "reason": "Requested competition, granularity, entity, field or season is absent from the corpus."
+    },
+    {
+      "id": "unsupported-9",
+      "category": "unsupported",
+      "question": "How many goals did Liverpool score in the second division in 2019/20?",
+      "needs": [],
+      "reason": "Requested competition, granularity, entity, field or season is absent from the corpus."
+    },
+    {
+      "id": "unsupported-10",
+      "category": "unsupported",
+      "question": "What was Manchester United expected goals total in 2012/13?",
+      "needs": [],
+      "reason": "Requested competition, granularity, entity, field or season is absent from the corpus."
+    },
+    {
+      "id": "unsupported-11",
+      "category": "unsupported",
+      "question": "How many points did Bournemouth earn in 1992/93?",
+      "needs": [],
+      "reason": "Requested competition, granularity, entity, field or season is absent from the corpus."
+    }
+  ],
+  "nasa": [
+    {
+      "id": "n-0",
+      "category": "control",
+      "question": "Mars gravity",
+      "needs": [
+        {
+          "kind": "planet",
+          "body": "Mars",
+          "metric": "gravity"
+        }
+      ],
+      "manual_control": true
+    },
+    {
+      "id": "n-1",
+      "category": "control",
+      "question": "Earth diameter",
+      "needs": [
+        {
+          "kind": "planet",
+          "body": "Earth",
+          "metric": "diameter"
+        }
+      ],
+      "manual_control": true
+    },
+    {
+      "id": "n-2",
+      "category": "control",
+      "question": "Saturn mass",
+      "needs": [
+        {
+          "kind": "planet",
+          "body": "Saturn",
+          "metric": "mass"
+        }
+      ],
+      "manual_control": true
+    },
+    {
+      "id": "n-3",
+      "category": "control",
+      "question": "Neptune density",
+      "needs": [
+        {
+          "kind": "planet",
+          "body": "Neptune",
+          "metric": "density"
+        }
+      ],
+      "manual_control": true
+    },
+    {
+      "id": "n-4",
+      "category": "generic_comparison",
+      "question": "Compare Venus rotation period and length of day in hours.",
+      "needs": [
+        {
+          "kind": "planet",
+          "body": "Venus",
+          "metric": "rotation_period"
+        },
+        {
+          "kind": "planet",
+          "body": "Venus",
+          "metric": "length_of_day"
+        }
+      ],
+      "manual_control": true
+    },
+    {
+      "id": "n-5",
+      "category": "generic_comparison",
+      "question": "Compare gravity on Mercury and Mars.",
+      "needs": [
+        {
+          "kind": "planet",
+          "body": "Mercury",
+          "metric": "gravity"
+        },
+        {
+          "kind": "planet",
+          "body": "Mars",
+          "metric": "gravity"
+        }
+      ],
+      "manual_control": true
+    },
+    {
+      "id": "n-6",
+      "category": "generic_language",
+      "question": "How wide is Jupiter at its equator?",
+      "needs": [
+        {
+          "kind": "planet",
+          "body": "Jupiter",
+          "metric": "diameter"
+        }
+      ],
+      "manual_control": false
+    },
+    {
+      "id": "n-7",
+      "category": "generic_language",
+      "question": "Neptuen mean temperature in Celsius",
+      "needs": [
+        {
+          "kind": "planet",
+          "body": "Neptune",
+          "metric": "mean_temperature"
+        }
+      ],
+      "manual_control": true
+    },
+    {
+      "id": "n-8",
+      "category": "generic_language",
+      "question": "How long does Venus take to spin once relative to the stars?",
+      "needs": [
+        {
+          "kind": "planet",
+          "body": "Venus",
+          "metric": "rotation_period"
+        }
+      ],
+      "manual_control": false
+    },
+    {
+      "id": "n-9",
+      "category": "generic_comparison",
+      "question": "Which is larger across the equator, Uranus or Neptune?",
+      "needs": [
+        {
+          "kind": "planet",
+          "body": "Uranus",
+          "metric": "diameter"
+        },
+        {
+          "kind": "planet",
+          "body": "Neptune",
+          "metric": "diameter"
+        }
+      ],
+      "manual_control": false
+    },
+    {
+      "id": "n-10",
+      "category": "generic_scope",
+      "question": "What is the Moon orbital period around Earth in days?",
+      "needs": [
+        {
+          "kind": "planet",
+          "body": "Moon",
+          "metric": "orbital_period"
+        }
+      ],
+      "manual_control": false
+    },
+    {
+      "id": "n-11",
+      "category": "generic_comparison",
+      "question": "Compare Earth and Venus surface pressure.",
+      "needs": [
+        {
+          "kind": "planet",
+          "body": "Earth",
+          "metric": "surface_pressure"
+        },
+        {
+          "kind": "planet",
+          "body": "Venus",
+          "metric": "surface_pressure"
+        }
+      ],
+      "manual_control": true
+    },
+    {
+      "id": "n-12",
+      "category": "unsupported",
+      "question": "Give a known numerical solid-surface pressure for Jupiter.",
+      "needs": [],
+      "reason": "Unknown, stale relative to requested date, body absent, or measure absent from the frozen table."
+    },
+    {
+      "id": "n-13",
+      "category": "unsupported",
+      "question": "How many confirmed moons does Saturn have as of 2026-10-26?",
+      "needs": [],
+      "reason": "Unknown, stale relative to requested date, body absent, or measure absent from the frozen table."
+    },
+    {
+      "id": "n-14",
+      "category": "unsupported",
+      "question": "What is the gravity of Titan?",
+      "needs": [],
+      "reason": "Unknown, stale relative to requested date, body absent, or measure absent from the frozen table."
+    },
+    {
+      "id": "n-15",
+      "category": "unsupported",
+      "question": "What is the measured magnetic field strength of Pluto in teslas?",
+      "needs": [],
+      "reason": "Unknown, stale relative to requested date, body absent, or measure absent from the frozen table."
+    }
+  ]
+}

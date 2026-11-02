@@ -1,0 +1,18 @@
+{
+  "label": "rust-1000",
+  "documents": 1000,
+  "history": "off",
+  "startupSeconds": 0.014,
+  "empty": {
+    "rssMiB": 8.62,
+    "cpuSeconds": 0.01
+  },
+  "loaded": {
+    "rssMiB": 11.81,
+    "cpuSeconds": 2.94
+  },
+  "writeSeconds": 8.271,
+  "read200Seconds": 0.058,
+  "idleCpuSecondsOver5s": 0.0,
+  "storageMiB": 24.48
+}

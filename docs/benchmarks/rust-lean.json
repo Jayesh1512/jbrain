@@ -1,0 +1,18 @@
+{
+  "label": "rust-lean",
+  "documents": 100,
+  "history": "off",
+  "startupSeconds": 0.576,
+  "empty": {
+    "rssMiB": 8.56,
+    "cpuSeconds": 0.01
+  },
+  "loaded": {
+    "rssMiB": 11.31,
+    "cpuSeconds": 0.27
+  },
+  "writeSeconds": 0.777,
+  "read200Seconds": 0.062,
+  "idleCpuSecondsOver5s": 0.0,
+  "storageMiB": 3.49
+}

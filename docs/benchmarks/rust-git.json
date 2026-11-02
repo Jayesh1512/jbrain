@@ -1,0 +1,18 @@
+{
+  "label": "rust-git",
+  "documents": 100,
+  "history": "git",
+  "startupSeconds": 0.067,
+  "empty": {
+    "rssMiB": 8.75,
+    "cpuSeconds": 0.01
+  },
+  "loaded": {
+    "rssMiB": 11.44,
+    "cpuSeconds": 0.28
+  },
+  "writeSeconds": 6.415,
+  "read200Seconds": 0.039,
+  "idleCpuSecondsOver5s": 0.0,
+  "storageMiB": 3.71
+}

@@ -1,0 +1,2962 @@
+{
+  "manifest": {
+    "frozen_at": "2026-10-25T19:49:32.570998+00:00",
+    "fixture_sha256": "8b5c0009490da93f5235418b16ca8d0d026b75ba5b3d3719e5b0a98d1d484397",
+    "binary_sha256": "69f760177fd7e80bd8d469cf8a3df38e2a61db19b66389fe4ddf937cdc953ebd",
+    "epl_corpus_sha256": "96696b53d223f0856ee7301269f7d028064379f7dfb268df676559d9e995955d",
+    "nasa_html_sha256": "42bdc3f1dae470b85580c6ac66c353964a05d544ad2ac970a6b7d908337a6c3c",
+    "nasa_notes_sha256": "32cd4f20e1f22c9efac5d1274946f05804c582267300cf3328058e5300873005",
+    "nasa_source": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/",
+    "nasa_notes": "https://nssdc.gsfc.nasa.gov/planetary/factsheet/planetfact_notes.html",
+    "nasa_table_date": "2025-03-18",
+    "nasa_documents": 11,
+    "cases": {
+      "epl": 48,
+      "nasa": 16
+    }
+  },
+  "epl": {
+    "summary": {
+      "cases": 48,
+      "answerable": 36,
+      "unsupported": 12,
+      "complete_documents_at_5": 21,
+      "complete_visible_evidence": 16,
+      "complete_requested_facts_or_inputs": 9,
+      "false_complete": 17,
+      "reported_complete": 26,
+      "complete_precision": 0.34615384615384615,
+      "unsupported_safely_not_complete": 5
+    },
+    "categories": {
+      "control": {
+        "cases": 4,
+        "answerable": 4,
+        "unsupported": 0,
+        "complete_documents_at_5": 4,
+        "complete_visible_evidence": 4,
+        "complete_requested_facts_or_inputs": 4,
+        "false_complete": 0,
+        "reported_complete": 4,
+        "complete_precision": 1.0,
+        "unsupported_safely_not_complete": 0
+      },
+      "language": {
+        "cases": 6,
+        "answerable": 6,
+        "unsupported": 0,
+        "complete_documents_at_5": 4,
+        "complete_visible_evidence": 3,
+        "complete_requested_facts_or_inputs": 3,
+        "false_complete": 0,
+        "reported_complete": 3,
+        "complete_precision": 1.0,
+        "unsupported_safely_not_complete": 0
+      },
+      "composition": {
+        "cases": 6,
+        "answerable": 6,
+        "unsupported": 0,
+        "complete_documents_at_5": 5,
+        "complete_visible_evidence": 5,
+        "complete_requested_facts_or_inputs": 2,
+        "false_complete": 4,
+        "reported_complete": 6,
+        "complete_precision": 0.3333333333333333,
+        "unsupported_safely_not_complete": 0
+      },
+      "multiple_dates": {
+        "cases": 4,
+        "answerable": 4,
+        "unsupported": 0,
+        "complete_documents_at_5": 0,
+        "complete_visible_evidence": 0,
+        "complete_requested_facts_or_inputs": 0,
+        "false_complete": 0,
+        "reported_complete": 0,
+        "complete_precision": null,
+        "unsupported_safely_not_complete": 0
+      },
+      "implicit_entity": {
+        "cases": 4,
+        "answerable": 4,
+        "unsupported": 0,
+        "complete_documents_at_5": 0,
+        "complete_visible_evidence": 0,
+        "complete_requested_facts_or_inputs": 0,
+        "false_complete": 0,
+        "reported_complete": 0,
+        "complete_precision": null,
+        "unsupported_safely_not_complete": 0
+      },
+      "subset_statistics": {
+        "cases": 4,
+        "answerable": 4,
+        "unsupported": 0,
+        "complete_documents_at_5": 4,
+        "complete_visible_evidence": 0,
+        "complete_requested_facts_or_inputs": 0,
+        "false_complete": 4,
+        "reported_complete": 4,
+        "complete_precision": 0.0,
+        "unsupported_safely_not_complete": 0
+      },
+      "league_comparison": {
+        "cases": 4,
+        "answerable": 4,
+        "unsupported": 0,
+        "complete_documents_at_5": 0,
+        "complete_visible_evidence": 0,
+        "complete_requested_facts_or_inputs": 0,
+        "false_complete": 2,
+        "reported_complete": 2,
+        "complete_precision": 0.0,
+        "unsupported_safely_not_complete": 0
+      },
+      "negation": {
+        "cases": 4,
+        "answerable": 4,
+        "unsupported": 0,
+        "complete_documents_at_5": 4,
+        "complete_visible_evidence": 4,
+        "complete_requested_facts_or_inputs": 0,
+        "false_complete": 0,
+        "reported_complete": 0,
+        "complete_precision": null,
+        "unsupported_safely_not_complete": 0
+      },
+      "unsupported": {
+        "cases": 12,
+        "answerable": 0,
+        "unsupported": 12,
+        "complete_documents_at_5": 0,
+        "complete_visible_evidence": 0,
+        "complete_requested_facts_or_inputs": 0,
+        "false_complete": 7,
+        "reported_complete": 7,
+        "complete_precision": 0.0,
+        "unsupported_safely_not_complete": 5
+      }
+    },
+    "failures": [
+      {
+        "id": "language-2",
+        "question": "Count Blackburn Rovers losses in 2011/12.",
+        "score": {
+          "complete_documents_at_5": false,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              false
+            ],
+            "visible": [
+              false
+            ],
+            "facts_or_inputs": [
+              false
+            ]
+          },
+          "false_complete": false,
+          "safe_noncompletion": true
+        },
+        "status": "needs_verification",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "blackburn rovers"
+              ],
+              "kind": null,
+              "metrics": [],
+              "period": "2011/12",
+              "terms": [
+                "count",
+                "blackburn",
+                "rovers",
+                "losses",
+                "2011",
+                "12"
+              ],
+              "text": "blackburn rovers losses in 2011 12"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/matches/2011-12/2011-09-17-blackburn-rovers-vs-arsenal",
+            "facts": []
+          },
+          {
+            "id": "epl/matches/2011-12/2011-12-11-sunderland-vs-blackburn-rovers",
+            "facts": []
+          },
+          {
+            "id": "epl/matches/2011-12/2011-12-26-liverpool-vs-blackburn-rovers",
+            "facts": []
+          },
+          {
+            "id": "epl/matches/2011-12/2011-11-05-blackburn-rovers-vs-chelsea",
+            "facts": []
+          },
+          {
+            "id": "epl/matches/2011-12/2011-08-27-blackburn-rovers-vs-everton",
+            "facts": []
+          }
+        ]
+      },
+      {
+        "id": "language-4",
+        "question": "In the 2013-2014 campaign, how many points did the Hammers earn?",
+        "score": {
+          "complete_documents_at_5": false,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              false
+            ],
+            "visible": [
+              false
+            ],
+            "facts_or_inputs": [
+              false
+            ]
+          },
+          "false_complete": false,
+          "safe_noncompletion": true
+        },
+        "status": "needs_verification",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [],
+              "kind": null,
+              "metrics": [
+                "points"
+              ],
+              "period": "2013/14",
+              "terms": [],
+              "text": "in the 2013 2014 campaign how many points did the hammers earn"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2013-14/arsenal",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "points",
+                "pointer": "/metadata/computed_statistics/points",
+                "quote": "Arsenal played 38 matches: won 24, drew 7, lost 7. Goals scored: 68; goals conceded: 41; goal difference: 27. Points earned from match results: 79.",
+                "value": 79
+              }
+            ]
+          },
+          {
+            "id": "epl/club-seasons/2013-14/aston-villa",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "points",
+                "pointer": "/metadata/computed_statistics/points",
+                "quote": "Aston Villa played 38 matches: won 10, drew 8, lost 20. Goals scored: 39; goals conceded: 61; goal difference: -22. Points earned from match results: 38.",
+                "value": 38
+              }
+            ]
+          },
+          {
+            "id": "epl/club-seasons/2013-14/cardiff-city",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "points",
+                "pointer": "/metadata/computed_statistics/points",
+                "quote": "Cardiff City played 38 matches: won 7, drew 9, lost 22. Goals scored: 32; goals conceded: 74; goal difference: -42. Points earned from match results: 30.",
+                "value": 30
+              }
+            ]
+          },
+          {
+            "id": "epl/club-seasons/2013-14/chelsea",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "points",
+                "pointer": "/metadata/computed_statistics/points",
+                "quote": "Chelsea played 38 matches: won 25, drew 7, lost 6. Goals scored: 71; goals conceded: 27; goal difference: 44. Points earned from match results: 82.",
+                "value": 82
+              }
+            ]
+          },
+          {
+            "id": "epl/club-seasons/2013-14/crystal-palace",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "points",
+                "pointer": "/metadata/computed_statistics/points",
+                "quote": "Crystal Palace played 38 matches: won 13, drew 6, lost 19. Goals scored: 33; goals conceded: 48; goal difference: -15. Points earned from match results: 45.",
+                "value": 45
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "language-5",
+        "question": "How many times did Swansea City let one in across 2014/15?",
+        "score": {
+          "complete_documents_at_5": true,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              true
+            ],
+            "visible": [
+              false
+            ],
+            "facts_or_inputs": [
+              false
+            ]
+          },
+          "false_complete": false,
+          "safe_noncompletion": true
+        },
+        "status": "needs_verification",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "swansea city"
+              ],
+              "kind": null,
+              "metrics": [],
+              "period": "2014/15",
+              "terms": [
+                "times",
+                "swansea",
+                "city",
+                "let",
+                "one",
+                "across",
+                "2014",
+                "15"
+              ],
+              "text": "swansea city let one in across 2014 15"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2014-15/swansea-city",
+            "facts": []
+          },
+          {
+            "id": "epl/matches/2014-15/2014-08-23-swansea-city-vs-burnley",
+            "facts": []
+          },
+          {
+            "id": "epl/matches/2014-15/2014-11-09-swansea-city-vs-arsenal",
+            "facts": []
+          },
+          {
+            "id": "epl/matches/2014-15/2014-09-20-swansea-city-vs-southampton",
+            "facts": []
+          },
+          {
+            "id": "epl/matches/2014-15/2014-10-25-swansea-city-vs-leicester-city",
+            "facts": []
+          }
+        ]
+      },
+      {
+        "id": "compound-2",
+        "question": "For 2020/21, Fulham wins; for 2018/19, Huddersfield Town goals scored.",
+        "score": {
+          "complete_documents_at_5": false,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              true,
+              false
+            ],
+            "visible": [
+              true,
+              false
+            ],
+            "facts_or_inputs": [
+              false,
+              false
+            ]
+          },
+          "false_complete": true,
+          "safe_noncompletion": false
+        },
+        "status": "complete",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "fulham"
+              ],
+              "kind": null,
+              "metrics": [
+                "goals_for"
+              ],
+              "period": "2020/21",
+              "terms": [],
+              "text": "2020 21"
+            },
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "fulham"
+              ],
+              "kind": null,
+              "metrics": [
+                "won"
+              ],
+              "period": "2018/19",
+              "terms": [],
+              "text": "fulham wins for 2018 19"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2020-21/fulham",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "goals_for",
+                "pointer": "/metadata/computed_statistics/goals_for",
+                "quote": "Fulham played 38 matches: won 5, drew 13, lost 20. Goals scored: 27; goals conceded: 53; goal difference: -26. Points earned from match results: 28.",
+                "value": 27
+              }
+            ]
+          },
+          {
+            "id": "epl/club-seasons/2018-19/fulham",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "won",
+                "pointer": "/metadata/computed_statistics/won",
+                "quote": "Fulham played 38 matches: won 7, drew 5, lost 26. Goals scored: 34; goals conceded: 81; goal difference: -47. Points earned from match results: 26.",
+                "value": 7
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "compound-3",
+        "question": "Compare Crystal Palace wins and Aston Villa losses in 2019/20, respectively.",
+        "score": {
+          "complete_documents_at_5": true,
+          "complete_visible_evidence": true,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              true,
+              true
+            ],
+            "visible": [
+              true,
+              true
+            ],
+            "facts_or_inputs": [
+              true,
+              false
+            ]
+          },
+          "false_complete": true,
+          "safe_noncompletion": false
+        },
+        "status": "complete",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "crystal palace"
+              ],
+              "kind": null,
+              "metrics": [
+                "won"
+              ],
+              "period": "2019/20",
+              "terms": [],
+              "text": "aston villa losses in 2019 20 respectively"
+            },
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "aston villa"
+              ],
+              "kind": null,
+              "metrics": [
+                "won"
+              ],
+              "period": "2019/20",
+              "terms": [],
+              "text": "aston villa losses in 2019 20 respectively"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2019-20/crystal-palace",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "won",
+                "pointer": "/metadata/computed_statistics/won",
+                "quote": "Crystal Palace played 38 matches: won 11, drew 10, lost 17. Goals scored: 31; goals conceded: 50; goal difference: -19. Points earned from match results: 43.",
+                "value": 11
+              }
+            ]
+          },
+          {
+            "id": "epl/club-seasons/2019-20/aston-villa",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "won",
+                "pointer": "/metadata/computed_statistics/won",
+                "quote": "Aston Villa played 38 matches: won 9, drew 8, lost 21. Goals scored: 41; goals conceded: 67; goal difference: -26. Points earned from match results: 35.",
+                "value": 9
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "compound-4",
+        "question": "West Bromwich Albion goals scored in 2010/11, goals conceded in 2011/12, and points in 2012/13.",
+        "score": {
+          "complete_documents_at_5": true,
+          "complete_visible_evidence": true,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              true,
+              true,
+              true
+            ],
+            "visible": [
+              true,
+              true,
+              true
+            ],
+            "facts_or_inputs": [
+              false,
+              true,
+              true
+            ]
+          },
+          "false_complete": true,
+          "safe_noncompletion": false
+        },
+        "status": "complete",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "west bromwich albion"
+              ],
+              "kind": null,
+              "metrics": [
+                "goals_against"
+              ],
+              "period": "2010/11",
+              "terms": [],
+              "text": "west bromwich albion goals scored in 2010 11 goals conceded in"
+            },
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "west bromwich albion"
+              ],
+              "kind": null,
+              "metrics": [
+                "points",
+                "goals_against"
+              ],
+              "period": "2011/12",
+              "terms": [],
+              "text": "goals conceded in 2011 12 and points in"
+            },
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "west bromwich albion"
+              ],
+              "kind": null,
+              "metrics": [
+                "points"
+              ],
+              "period": "2012/13",
+              "terms": [],
+              "text": "and points in 2012 13"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2010-11/west-bromwich-albion",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "goals_against",
+                "pointer": "/metadata/computed_statistics/goals_against",
+                "quote": "West Bromwich Albion played 38 matches: won 12, drew 11, lost 15. Goals scored: 56; goals conceded: 71; goal difference: -15. Points earned from match results: 47.",
+                "value": 71
+              }
+            ]
+          },
+          {
+            "id": "epl/club-seasons/2011-12/west-bromwich-albion",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "points",
+                "pointer": "/metadata/computed_statistics/points",
+                "quote": "West Bromwich Albion played 38 matches: won 13, drew 8, lost 17. Goals scored: 45; goals conceded: 52; goal difference: -7. Points earned from match results: 47.",
+                "value": 47
+              },
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "goals_against",
+                "pointer": "/metadata/computed_statistics/goals_against",
+                "quote": "West Bromwich Albion played 38 matches: won 13, drew 8, lost 17. Goals scored: 45; goals conceded: 52; goal difference: -7. Points earned from match results: 47.",
+                "value": 52
+              }
+            ]
+          },
+          {
+            "id": "epl/club-seasons/2012-13/west-bromwich-albion",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "points",
+                "pointer": "/metadata/computed_statistics/points",
+                "quote": "West Bromwich Albion played 38 matches: won 14, drew 7, lost 17. Goals scored: 53; goals conceded: 57; goal difference: -4. Points earned from match results: 49.",
+                "value": 49
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "compound-5",
+        "question": "Compare Norwich City 2011/12 points, Swansea City 2012/13 wins, Stoke City 2013/14 draws, and Sunderland 2014/15 losses.",
+        "score": {
+          "complete_documents_at_5": true,
+          "complete_visible_evidence": true,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "visible": [
+              true,
+              true,
+              true,
+              true
+            ],
+            "facts_or_inputs": [
+              true,
+              true,
+              true,
+              false
+            ]
+          },
+          "false_complete": true,
+          "safe_noncompletion": false
+        },
+        "status": "complete",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "norwich city"
+              ],
+              "kind": null,
+              "metrics": [
+                "points"
+              ],
+              "period": "2011/12",
+              "terms": [],
+              "text": "norwich city 2011 12 points"
+            },
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "swansea city"
+              ],
+              "kind": null,
+              "metrics": [
+                "won"
+              ],
+              "period": "2012/13",
+              "terms": [],
+              "text": "swansea city 2012 13 wins"
+            },
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "stoke city"
+              ],
+              "kind": null,
+              "metrics": [
+                "drawn"
+              ],
+              "period": "2013/14",
+              "terms": [],
+              "text": "stoke city 2013 14 draws and"
+            },
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "sunderland"
+              ],
+              "kind": null,
+              "metrics": [
+                "points",
+                "won",
+                "drawn"
+              ],
+              "period": "2014/15",
+              "terms": [],
+              "text": "sunderland 2014 15 losses"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2011-12/norwich-city",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "points",
+                "pointer": "/metadata/computed_statistics/points",
+                "quote": "Norwich City played 38 matches: won 12, drew 11, lost 15. Goals scored: 52; goals conceded: 66; goal difference: -14. Points earned from match results: 47.",
+                "value": 47
+              }
+            ]
+          },
+          {
+            "id": "epl/club-seasons/2012-13/swansea-city",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "won",
+                "pointer": "/metadata/computed_statistics/won",
+                "quote": "Swansea City played 38 matches: won 11, drew 13, lost 14. Goals scored: 47; goals conceded: 51; goal difference: -4. Points earned from match results: 46.",
+                "value": 11
+              }
+            ]
+          },
+          {
+            "id": "epl/club-seasons/2013-14/stoke-city",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "drawn",
+                "pointer": "/metadata/computed_statistics/drawn",
+                "quote": "Stoke City played 38 matches: won 13, drew 11, lost 14. Goals scored: 45; goals conceded: 52; goal difference: -7. Points earned from match results: 50.",
+                "value": 11
+              }
+            ]
+          },
+          {
+            "id": "epl/club-seasons/2014-15/sunderland",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "points",
+                "pointer": "/metadata/computed_statistics/points",
+                "quote": "Sunderland played 38 matches: won 7, drew 17, lost 14. Goals scored: 31; goals conceded: 53; goal difference: -22. Points earned from match results: 38.",
+                "value": 38
+              },
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "won",
+                "pointer": "/metadata/computed_statistics/won",
+                "quote": "Sunderland played 38 matches: won 7, drew 17, lost 14. Goals scored: 31; goals conceded: 53; goal difference: -22. Points earned from match results: 38.",
+                "value": 7
+              },
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "drawn",
+                "pointer": "/metadata/computed_statistics/drawn",
+                "quote": "Sunderland played 38 matches: won 7, drew 17, lost 14. Goals scored: 31; goals conceded: 53; goal difference: -22. Points earned from match results: 38.",
+                "value": 17
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "dates-0",
+        "question": "Compare the full-time scores in Arsenal versus Tottenham Hotspur on 2012-11-17 and 2013-03-03.",
+        "score": {
+          "complete_documents_at_5": false,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              true,
+              false
+            ],
+            "visible": [
+              true,
+              false
+            ],
+            "facts_or_inputs": [
+              true,
+              false
+            ]
+          },
+          "false_complete": false,
+          "safe_noncompletion": true
+        },
+        "status": "needs_verification",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": "2012-11-17",
+              "entities": [
+                "arsenal",
+                "tottenham hotspur"
+              ],
+              "kind": null,
+              "metrics": [
+                "score"
+              ],
+              "period": null,
+              "terms": [],
+              "text": "Compare the full-time scores in Arsenal versus Tottenham Hotspur on 2012-11-17 and 2013-03-03."
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/matches/2012-13/2012-11-17-arsenal-vs-tottenham-hotspur",
+            "facts": [
+              {
+                "basis": "",
+                "metric": "score",
+                "pointer": "/body",
+                "quote": "Full-time score: 5-2.",
+                "value": "5-2"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "implicit-0",
+        "question": "Who did Arsenal host on 2012-11-17, and how many points did that opponent earn in 2012/13?",
+        "score": {
+          "complete_documents_at_5": false,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              false,
+              false
+            ],
+            "visible": [
+              false,
+              false
+            ],
+            "facts_or_inputs": [
+              false,
+              false
+            ]
+          },
+          "false_complete": false,
+          "safe_noncompletion": true
+        },
+        "status": "unsupported",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": "2012-11-17",
+              "entities": [
+                "arsenal"
+              ],
+              "kind": null,
+              "metrics": [
+                "points"
+              ],
+              "period": "2012/13",
+              "terms": [],
+              "text": "Who did Arsenal host on 2012-11-17, and how many points did that opponent earn in 2012/13?"
+            }
+          ]
+        },
+        "facts": []
+      },
+      {
+        "id": "dates-1",
+        "question": "Compare the full-time scores in Chelsea versus Manchester City on 2014-09-21 and 2015-01-31.",
+        "score": {
+          "complete_documents_at_5": false,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              true,
+              false
+            ],
+            "visible": [
+              true,
+              false
+            ],
+            "facts_or_inputs": [
+              true,
+              false
+            ]
+          },
+          "false_complete": false,
+          "safe_noncompletion": true
+        },
+        "status": "needs_verification",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": "2014-09-21",
+              "entities": [
+                "chelsea",
+                "manchester city"
+              ],
+              "kind": null,
+              "metrics": [
+                "score"
+              ],
+              "period": null,
+              "terms": [],
+              "text": "Compare the full-time scores in Chelsea versus Manchester City on 2014-09-21 and 2015-01-31."
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/matches/2014-15/2014-09-21-manchester-city-vs-chelsea",
+            "facts": [
+              {
+                "basis": "",
+                "metric": "score",
+                "pointer": "/body",
+                "quote": "Full-time score: 1-1.",
+                "value": "1-1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "implicit-1",
+        "question": "Who did Manchester City host on 2014-09-21, and how many points did that opponent earn in 2014/15?",
+        "score": {
+          "complete_documents_at_5": false,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              false,
+              false
+            ],
+            "visible": [
+              false,
+              false
+            ],
+            "facts_or_inputs": [
+              false,
+              false
+            ]
+          },
+          "false_complete": false,
+          "safe_noncompletion": true
+        },
+        "status": "unsupported",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": "2014-09-21",
+              "entities": [
+                "manchester city"
+              ],
+              "kind": null,
+              "metrics": [
+                "points"
+              ],
+              "period": "2014/15",
+              "terms": [],
+              "text": "Who did Manchester City host on 2014-09-21, and how many points did that opponent earn in 2014/15?"
+            }
+          ]
+        },
+        "facts": []
+      },
+      {
+        "id": "dates-2",
+        "question": "Compare the full-time scores in Liverpool versus Everton on 2016-12-19 and 2017-04-01.",
+        "score": {
+          "complete_documents_at_5": false,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              true,
+              false
+            ],
+            "visible": [
+              true,
+              false
+            ],
+            "facts_or_inputs": [
+              true,
+              false
+            ]
+          },
+          "false_complete": false,
+          "safe_noncompletion": true
+        },
+        "status": "needs_verification",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": "2016-12-19",
+              "entities": [
+                "everton",
+                "liverpool"
+              ],
+              "kind": null,
+              "metrics": [
+                "score"
+              ],
+              "period": null,
+              "terms": [],
+              "text": "Compare the full-time scores in Liverpool versus Everton on 2016-12-19 and 2017-04-01."
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/matches/2016-17/2016-12-19-everton-vs-liverpool",
+            "facts": [
+              {
+                "basis": "",
+                "metric": "score",
+                "pointer": "/body",
+                "quote": "Full-time score: 0-1.",
+                "value": "0-1"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "implicit-2",
+        "question": "Who did Everton host on 2016-12-19, and how many points did that opponent earn in 2016/17?",
+        "score": {
+          "complete_documents_at_5": false,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              false,
+              false
+            ],
+            "visible": [
+              false,
+              false
+            ],
+            "facts_or_inputs": [
+              false,
+              false
+            ]
+          },
+          "false_complete": false,
+          "safe_noncompletion": true
+        },
+        "status": "unsupported",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": "2016-12-19",
+              "entities": [
+                "everton"
+              ],
+              "kind": null,
+              "metrics": [
+                "points"
+              ],
+              "period": "2016/17",
+              "terms": [],
+              "text": "Who did Everton host on 2016-12-19, and how many points did that opponent earn in 2016/17?"
+            }
+          ]
+        },
+        "facts": []
+      },
+      {
+        "id": "dates-3",
+        "question": "Compare the full-time scores in Manchester United versus West Ham United on 2017-08-13 and 2018-05-10.",
+        "score": {
+          "complete_documents_at_5": false,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              true,
+              false
+            ],
+            "visible": [
+              true,
+              false
+            ],
+            "facts_or_inputs": [
+              true,
+              false
+            ]
+          },
+          "false_complete": false,
+          "safe_noncompletion": true
+        },
+        "status": "needs_verification",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": "2017-08-13",
+              "entities": [
+                "manchester united",
+                "west ham united"
+              ],
+              "kind": null,
+              "metrics": [
+                "score"
+              ],
+              "period": null,
+              "terms": [],
+              "text": "Compare the full-time scores in Manchester United versus West Ham United on 2017-08-13 and 2018-05-10."
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/matches/2017-18/2017-08-13-manchester-united-vs-west-ham-united",
+            "facts": [
+              {
+                "basis": "",
+                "metric": "score",
+                "pointer": "/body",
+                "quote": "Full-time score: 4-0.",
+                "value": "4-0"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "implicit-3",
+        "question": "Who did Manchester United host on 2017-08-13, and how many points did that opponent earn in 2017/18?",
+        "score": {
+          "complete_documents_at_5": false,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              false,
+              false
+            ],
+            "visible": [
+              false,
+              false
+            ],
+            "facts_or_inputs": [
+              false,
+              false
+            ]
+          },
+          "false_complete": false,
+          "safe_noncompletion": true
+        },
+        "status": "unsupported",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": "2017-08-13",
+              "entities": [
+                "manchester united"
+              ],
+              "kind": null,
+              "metrics": [
+                "points"
+              ],
+              "period": "2017/18",
+              "terms": [],
+              "text": "Who did Manchester United host on 2017-08-13, and how many points did that opponent earn in 2017/18?"
+            }
+          ]
+        },
+        "facts": []
+      },
+      {
+        "id": "split-0",
+        "question": "How many wins did Bournemouth have at home in 2016/17?",
+        "score": {
+          "complete_documents_at_5": true,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              true
+            ],
+            "visible": [
+              false
+            ],
+            "facts_or_inputs": [
+              false
+            ]
+          },
+          "false_complete": true,
+          "safe_noncompletion": false
+        },
+        "status": "complete",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "bournemouth"
+              ],
+              "kind": null,
+              "metrics": [
+                "won"
+              ],
+              "period": "2016/17",
+              "terms": [],
+              "text": "bournemouth have at home in 2016 17"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2016-17/bournemouth",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "won",
+                "pointer": "/metadata/computed_statistics/won",
+                "quote": "Bournemouth played 38 matches: won 12, drew 10, lost 16. Goals scored: 55; goals conceded: 67; goal difference: -12. Points earned from match results: 46.",
+                "value": 12
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "split-1",
+        "question": "How many goals did Watford have away from home in 2017/18?",
+        "score": {
+          "complete_documents_at_5": true,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              true
+            ],
+            "visible": [
+              false
+            ],
+            "facts_or_inputs": [
+              false
+            ]
+          },
+          "false_complete": true,
+          "safe_noncompletion": false
+        },
+        "status": "complete",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "watford"
+              ],
+              "kind": null,
+              "metrics": [
+                "goals_for"
+              ],
+              "period": "2017/18",
+              "terms": [],
+              "text": "watford have away from home in 2017 18"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2017-18/watford",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "goals_for",
+                "pointer": "/metadata/computed_statistics/goals_for",
+                "quote": "Watford played 38 matches: won 11, drew 8, lost 19. Goals scored: 44; goals conceded: 64; goal difference: -20. Points earned from match results: 41.",
+                "value": 44
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "split-2",
+        "question": "How many defeats did Fulham have at home in 2013/14?",
+        "score": {
+          "complete_documents_at_5": true,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              true
+            ],
+            "visible": [
+              false
+            ],
+            "facts_or_inputs": [
+              false
+            ]
+          },
+          "false_complete": true,
+          "safe_noncompletion": false
+        },
+        "status": "complete",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "fulham"
+              ],
+              "kind": null,
+              "metrics": [
+                "lost"
+              ],
+              "period": "2013/14",
+              "terms": [],
+              "text": "fulham have at home in 2013 14"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2013-14/fulham",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "lost",
+                "pointer": "/metadata/computed_statistics/lost",
+                "quote": "Fulham played 38 matches: won 9, drew 5, lost 24. Goals scored: 40; goals conceded: 85; goal difference: -45. Points earned from match results: 32.",
+                "value": 24
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "split-3",
+        "question": "How many draws did Southampton have away from home in 2019/20?",
+        "score": {
+          "complete_documents_at_5": true,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              true
+            ],
+            "visible": [
+              false
+            ],
+            "facts_or_inputs": [
+              false
+            ]
+          },
+          "false_complete": true,
+          "safe_noncompletion": false
+        },
+        "status": "complete",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "southampton"
+              ],
+              "kind": null,
+              "metrics": [
+                "drawn"
+              ],
+              "period": "2019/20",
+              "terms": [],
+              "text": "southampton have away from home in 2019 20"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2019-20/southampton",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "drawn",
+                "pointer": "/metadata/computed_statistics/drawn",
+                "quote": "Southampton played 38 matches: won 15, drew 7, lost 16. Goals scored: 51; goals conceded: 60; goal difference: -9. Points earned from match results: 52.",
+                "value": 7
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ranking-0",
+        "question": "Which club had the fewest defeats in 2008/09?",
+        "score": {
+          "complete_documents_at_5": false,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              false
+            ],
+            "visible": [
+              false
+            ],
+            "facts_or_inputs": [
+              false
+            ]
+          },
+          "false_complete": false,
+          "safe_noncompletion": true
+        },
+        "status": "needs_verification",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [],
+              "kind": null,
+              "metrics": [
+                "lost"
+              ],
+              "period": "2008/09",
+              "terms": [],
+              "text": "which club had the fewest defeats in 2008 09"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2008-09/arsenal",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "lost",
+                "pointer": "/metadata/computed_statistics/lost",
+                "quote": "Arsenal played 38 matches: won 20, drew 12, lost 6. Goals scored: 68; goals conceded: 37; goal difference: 31. Points earned from match results: 72.",
+                "value": 6
+              }
+            ]
+          },
+          {
+            "id": "epl/club-seasons/2008-09/aston-villa",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "lost",
+                "pointer": "/metadata/computed_statistics/lost",
+                "quote": "Aston Villa played 38 matches: won 17, drew 11, lost 10. Goals scored: 54; goals conceded: 48; goal difference: 6. Points earned from match results: 62.",
+                "value": 10
+              }
+            ]
+          },
+          {
+            "id": "epl/club-seasons/2008-09/blackburn-rovers",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "lost",
+                "pointer": "/metadata/computed_statistics/lost",
+                "quote": "Blackburn Rovers played 38 matches: won 10, drew 11, lost 17. Goals scored: 40; goals conceded: 60; goal difference: -20. Points earned from match results: 41.",
+                "value": 17
+              }
+            ]
+          },
+          {
+            "id": "epl/club-seasons/2008-09/bolton-wanderers",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "lost",
+                "pointer": "/metadata/computed_statistics/lost",
+                "quote": "Bolton Wanderers played 38 matches: won 11, drew 8, lost 19. Goals scored: 41; goals conceded: 53; goal difference: -12. Points earned from match results: 41.",
+                "value": 19
+              }
+            ]
+          },
+          {
+            "id": "epl/club-seasons/2008-09/chelsea",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "lost",
+                "pointer": "/metadata/computed_statistics/lost",
+                "quote": "Chelsea played 38 matches: won 25, drew 8, lost 5. Goals scored: 68; goals conceded: 24; goal difference: 44. Points earned from match results: 83.",
+                "value": 5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ranking-1",
+        "question": "Did Watford have the fewest wins of all clubs in 2019/20?",
+        "score": {
+          "complete_documents_at_5": false,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              false
+            ],
+            "visible": [
+              false
+            ],
+            "facts_or_inputs": [
+              false
+            ]
+          },
+          "false_complete": true,
+          "safe_noncompletion": false
+        },
+        "status": "complete",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "watford"
+              ],
+              "kind": null,
+              "metrics": [
+                "won"
+              ],
+              "period": "2019/20",
+              "terms": [],
+              "text": "watford have the fewest wins of all clubs in 2019 20"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2019-20/watford",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "won",
+                "pointer": "/metadata/computed_statistics/won",
+                "quote": "Watford played 38 matches: won 8, drew 10, lost 20. Goals scored: 36; goals conceded: 64; goal difference: -28. Points earned from match results: 34.",
+                "value": 8
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ranking-2",
+        "question": "Which club earned the most points in 2000/01?",
+        "score": {
+          "complete_documents_at_5": false,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              false
+            ],
+            "visible": [
+              false
+            ],
+            "facts_or_inputs": [
+              false
+            ]
+          },
+          "false_complete": false,
+          "safe_noncompletion": true
+        },
+        "status": "needs_verification",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [],
+              "kind": null,
+              "metrics": [
+                "points"
+              ],
+              "period": "2000/01",
+              "terms": [],
+              "text": "which club earned the most points in 2000 01"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2000-01/arsenal",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "points",
+                "pointer": "/metadata/computed_statistics/points",
+                "quote": "Arsenal played 38 matches: won 20, drew 10, lost 8. Goals scored: 63; goals conceded: 38; goal difference: 25. Points earned from match results: 70.",
+                "value": 70
+              }
+            ]
+          },
+          {
+            "id": "epl/club-seasons/2000-01/aston-villa",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "points",
+                "pointer": "/metadata/computed_statistics/points",
+                "quote": "Aston Villa played 38 matches: won 13, drew 15, lost 10. Goals scored: 46; goals conceded: 43; goal difference: 3. Points earned from match results: 54.",
+                "value": 54
+              }
+            ]
+          },
+          {
+            "id": "epl/club-seasons/2000-01/bradford-city",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "points",
+                "pointer": "/metadata/computed_statistics/points",
+                "quote": "Bradford City played 38 matches: won 5, drew 11, lost 22. Goals scored: 30; goals conceded: 70; goal difference: -40. Points earned from match results: 26.",
+                "value": 26
+              }
+            ]
+          },
+          {
+            "id": "epl/club-seasons/2000-01/charlton-athletic",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "points",
+                "pointer": "/metadata/computed_statistics/points",
+                "quote": "Charlton Athletic played 38 matches: won 14, drew 10, lost 14. Goals scored: 50; goals conceded: 57; goal difference: -7. Points earned from match results: 52.",
+                "value": 52
+              }
+            ]
+          },
+          {
+            "id": "epl/club-seasons/2000-01/chelsea",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "points",
+                "pointer": "/metadata/computed_statistics/points",
+                "quote": "Chelsea played 38 matches: won 17, drew 10, lost 11. Goals scored: 68; goals conceded: 45; goal difference: 23. Points earned from match results: 61.",
+                "value": 61
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "ranking-3",
+        "question": "Did Liverpool score more goals than every other club in 2013/14?",
+        "score": {
+          "complete_documents_at_5": false,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              false
+            ],
+            "visible": [
+              false
+            ],
+            "facts_or_inputs": [
+              false
+            ]
+          },
+          "false_complete": true,
+          "safe_noncompletion": false
+        },
+        "status": "complete",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "liverpool"
+              ],
+              "kind": null,
+              "metrics": [
+                "goals_for"
+              ],
+              "period": "2013/14",
+              "terms": [],
+              "text": "liverpool score more goals than every other club in 2013 14"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2013-14/liverpool",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "goals_for",
+                "pointer": "/metadata/computed_statistics/goals_for",
+                "quote": "Liverpool played 38 matches: won 26, drew 6, lost 6. Goals scored: 101; goals conceded: 50; goal difference: 51. Points earned from match results: 84.",
+                "value": 101
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "negation-0",
+        "question": "How many matches did West Ham United not lose in 2016/17?",
+        "score": {
+          "complete_documents_at_5": true,
+          "complete_visible_evidence": true,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              true,
+              true
+            ],
+            "visible": [
+              true,
+              true
+            ],
+            "facts_or_inputs": [
+              false,
+              false
+            ]
+          },
+          "false_complete": false,
+          "safe_noncompletion": true
+        },
+        "status": "needs_verification",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "west ham united"
+              ],
+              "kind": null,
+              "metrics": [
+                "lost"
+              ],
+              "period": "2016/17",
+              "terms": [],
+              "text": "west ham united not lose in 2016 17"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2016-17/west-ham-united",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "lost",
+                "pointer": "/metadata/computed_statistics/lost",
+                "quote": "West Ham United played 38 matches: won 12, drew 9, lost 17. Goals scored: 47; goals conceded: 64; goal difference: -17. Points earned from match results: 45.",
+                "value": 17
+              }
+            ]
+          },
+          {
+            "id": "epl/matches/2016-17/2016-08-15-chelsea-vs-west-ham-united",
+            "facts": []
+          },
+          {
+            "id": "epl/matches/2016-17/2016-08-21-west-ham-united-vs-bournemouth",
+            "facts": []
+          },
+          {
+            "id": "epl/matches/2016-17/2016-08-28-manchester-city-vs-west-ham-united",
+            "facts": []
+          },
+          {
+            "id": "epl/matches/2016-17/2016-09-10-west-ham-united-vs-watford",
+            "facts": []
+          }
+        ]
+      },
+      {
+        "id": "negation-1",
+        "question": "How many matches did Stoke City not lose in 2012/13?",
+        "score": {
+          "complete_documents_at_5": true,
+          "complete_visible_evidence": true,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              true,
+              true
+            ],
+            "visible": [
+              true,
+              true
+            ],
+            "facts_or_inputs": [
+              false,
+              false
+            ]
+          },
+          "false_complete": false,
+          "safe_noncompletion": true
+        },
+        "status": "needs_verification",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "stoke city"
+              ],
+              "kind": null,
+              "metrics": [
+                "lost"
+              ],
+              "period": "2012/13",
+              "terms": [],
+              "text": "stoke city not lose in 2012 13"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2012-13/stoke-city",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "lost",
+                "pointer": "/metadata/computed_statistics/lost",
+                "quote": "Stoke City played 38 matches: won 9, drew 15, lost 14. Goals scored: 34; goals conceded: 45; goal difference: -11. Points earned from match results: 42.",
+                "value": 14
+              }
+            ]
+          },
+          {
+            "id": "epl/matches/2012-13/2012-08-18-reading-vs-stoke-city",
+            "facts": []
+          },
+          {
+            "id": "epl/matches/2012-13/2012-08-26-stoke-city-vs-arsenal",
+            "facts": []
+          },
+          {
+            "id": "epl/matches/2012-13/2012-09-01-wigan-athletic-vs-stoke-city",
+            "facts": []
+          },
+          {
+            "id": "epl/matches/2012-13/2012-09-15-stoke-city-vs-manchester-city",
+            "facts": []
+          }
+        ]
+      },
+      {
+        "id": "negation-2",
+        "question": "How many matches did Swansea City not lose in 2015/16?",
+        "score": {
+          "complete_documents_at_5": true,
+          "complete_visible_evidence": true,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              true,
+              true
+            ],
+            "visible": [
+              true,
+              true
+            ],
+            "facts_or_inputs": [
+              false,
+              false
+            ]
+          },
+          "false_complete": false,
+          "safe_noncompletion": true
+        },
+        "status": "needs_verification",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "swansea city"
+              ],
+              "kind": null,
+              "metrics": [
+                "lost"
+              ],
+              "period": "2015/16",
+              "terms": [],
+              "text": "swansea city not lose in 2015 16"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2015-16/swansea-city",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "lost",
+                "pointer": "/metadata/computed_statistics/lost",
+                "quote": "Swansea City played 38 matches: won 12, drew 11, lost 15. Goals scored: 42; goals conceded: 52; goal difference: -10. Points earned from match results: 47.",
+                "value": 15
+              }
+            ]
+          },
+          {
+            "id": "epl/matches/2015-16/2015-08-08-chelsea-vs-swansea-city",
+            "facts": []
+          },
+          {
+            "id": "epl/matches/2015-16/2015-08-15-swansea-city-vs-newcastle-united",
+            "facts": []
+          },
+          {
+            "id": "epl/matches/2015-16/2015-08-22-sunderland-vs-swansea-city",
+            "facts": []
+          },
+          {
+            "id": "epl/matches/2015-16/2015-08-30-swansea-city-vs-manchester-united",
+            "facts": []
+          }
+        ]
+      },
+      {
+        "id": "negation-3",
+        "question": "How many matches did Norwich City not lose in 2011/12?",
+        "score": {
+          "complete_documents_at_5": true,
+          "complete_visible_evidence": true,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              true,
+              true
+            ],
+            "visible": [
+              true,
+              true
+            ],
+            "facts_or_inputs": [
+              false,
+              false
+            ]
+          },
+          "false_complete": false,
+          "safe_noncompletion": true
+        },
+        "status": "needs_verification",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "norwich city"
+              ],
+              "kind": null,
+              "metrics": [
+                "lost"
+              ],
+              "period": "2011/12",
+              "terms": [],
+              "text": "norwich city not lose in 2011 12"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2011-12/norwich-city",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "lost",
+                "pointer": "/metadata/computed_statistics/lost",
+                "quote": "Norwich City played 38 matches: won 12, drew 11, lost 15. Goals scored: 52; goals conceded: 66; goal difference: -14. Points earned from match results: 47.",
+                "value": 15
+              }
+            ]
+          },
+          {
+            "id": "epl/matches/2011-12/2011-08-13-wigan-athletic-vs-norwich-city",
+            "facts": []
+          },
+          {
+            "id": "epl/matches/2011-12/2011-08-21-norwich-city-vs-stoke-city",
+            "facts": []
+          },
+          {
+            "id": "epl/matches/2011-12/2011-08-27-chelsea-vs-norwich-city",
+            "facts": []
+          },
+          {
+            "id": "epl/matches/2011-12/2011-09-11-norwich-city-vs-west-bromwich-albion",
+            "facts": []
+          }
+        ]
+      },
+      {
+        "id": "unsupported-0",
+        "question": "How many FA Cup goals did Chelsea score in 2020/21?",
+        "score": {
+          "complete_documents_at_5": null,
+          "complete_visible_evidence": null,
+          "complete_requested_facts_or_inputs": null,
+          "per_group": {
+            "documents": [],
+            "visible": [],
+            "facts_or_inputs": []
+          },
+          "false_complete": true,
+          "safe_noncompletion": false
+        },
+        "status": "complete",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "chelsea"
+              ],
+              "kind": null,
+              "metrics": [
+                "goals_for"
+              ],
+              "period": "2020/21",
+              "terms": [],
+              "text": "chelsea score in 2020 21"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2020-21/chelsea",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "goals_for",
+                "pointer": "/metadata/computed_statistics/goals_for",
+                "quote": "Chelsea played 38 matches: won 19, drew 10, lost 9. Goals scored: 58; goals conceded: 36; goal difference: 22. Points earned from match results: 67.",
+                "value": 58
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "unsupported-1",
+        "question": "How many Champions League points did Manchester City earn in 2022/23?",
+        "score": {
+          "complete_documents_at_5": null,
+          "complete_visible_evidence": null,
+          "complete_requested_facts_or_inputs": null,
+          "per_group": {
+            "documents": [],
+            "visible": [],
+            "facts_or_inputs": []
+          },
+          "false_complete": true,
+          "safe_noncompletion": false
+        },
+        "status": "complete",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "manchester city"
+              ],
+              "kind": null,
+              "metrics": [
+                "points"
+              ],
+              "period": "2022/23",
+              "terms": [],
+              "text": "manchester city earn in 2022 23"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2022-23/manchester-city",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "points",
+                "pointer": "/metadata/computed_statistics/points",
+                "quote": "Manchester City played 38 matches: won 28, drew 5, lost 5. Goals scored: 94; goals conceded: 33; goal difference: 61. Points earned from match results: 89.",
+                "value": 89
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "unsupported-2",
+        "question": "Which player scored the most goals for Liverpool in 2013/14?",
+        "score": {
+          "complete_documents_at_5": null,
+          "complete_visible_evidence": null,
+          "complete_requested_facts_or_inputs": null,
+          "per_group": {
+            "documents": [],
+            "visible": [],
+            "facts_or_inputs": []
+          },
+          "false_complete": true,
+          "safe_noncompletion": false
+        },
+        "status": "complete",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "liverpool"
+              ],
+              "kind": null,
+              "metrics": [
+                "goals_for"
+              ],
+              "period": "2013/14",
+              "terms": [],
+              "text": "liverpool in 2013 14"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2013-14/liverpool",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "goals_for",
+                "pointer": "/metadata/computed_statistics/goals_for",
+                "quote": "Liverpool played 38 matches: won 26, drew 6, lost 6. Goals scored: 101; goals conceded: 50; goal difference: 51. Points earned from match results: 84.",
+                "value": 101
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "unsupported-3",
+        "question": "How many goals did Arsenal score from penalties in 2010/11?",
+        "score": {
+          "complete_documents_at_5": null,
+          "complete_visible_evidence": null,
+          "complete_requested_facts_or_inputs": null,
+          "per_group": {
+            "documents": [],
+            "visible": [],
+            "facts_or_inputs": []
+          },
+          "false_complete": true,
+          "safe_noncompletion": false
+        },
+        "status": "complete",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "arsenal"
+              ],
+              "kind": null,
+              "metrics": [
+                "goals_for"
+              ],
+              "period": "2010/11",
+              "terms": [],
+              "text": "arsenal score from penalties in 2010 11"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2010-11/arsenal",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "goals_for",
+                "pointer": "/metadata/computed_statistics/goals_for",
+                "quote": "Arsenal played 38 matches: won 19, drew 11, lost 8. Goals scored: 72; goals conceded: 43; goal difference: 29. Points earned from match results: 68.",
+                "value": 72
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "unsupported-4",
+        "question": "How many goals did Tottenham score in the first 15 minutes of games in 2016/17?",
+        "score": {
+          "complete_documents_at_5": null,
+          "complete_visible_evidence": null,
+          "complete_requested_facts_or_inputs": null,
+          "per_group": {
+            "documents": [],
+            "visible": [],
+            "facts_or_inputs": []
+          },
+          "false_complete": true,
+          "safe_noncompletion": false
+        },
+        "status": "complete",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "tottenham hotspur"
+              ],
+              "kind": null,
+              "metrics": [
+                "goals_for"
+              ],
+              "period": "2016/17",
+              "terms": [],
+              "text": "tottenham score in the first 15 minutes of games in 2016 17"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2016-17/tottenham-hotspur",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "goals_for",
+                "pointer": "/metadata/computed_statistics/goals_for",
+                "quote": "Tottenham Hotspur played 38 matches: won 26, drew 8, lost 4. Goals scored: 86; goals conceded: 26; goal difference: 60. Points earned from match results: 86.",
+                "value": 86
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "unsupported-9",
+        "question": "How many goals did Liverpool score in the second division in 2019/20?",
+        "score": {
+          "complete_documents_at_5": null,
+          "complete_visible_evidence": null,
+          "complete_requested_facts_or_inputs": null,
+          "per_group": {
+            "documents": [],
+            "visible": [],
+            "facts_or_inputs": []
+          },
+          "false_complete": true,
+          "safe_noncompletion": false
+        },
+        "status": "complete",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "liverpool"
+              ],
+              "kind": null,
+              "metrics": [
+                "goals_for"
+              ],
+              "period": "2019/20",
+              "terms": [],
+              "text": "liverpool score in the second division in 2019 20"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2019-20/liverpool",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "goals_for",
+                "pointer": "/metadata/computed_statistics/goals_for",
+                "quote": "Liverpool played 38 matches: won 32, drew 3, lost 3. Goals scored: 85; goals conceded: 33; goal difference: 52. Points earned from match results: 99.",
+                "value": 85
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "unsupported-10",
+        "question": "What was Manchester United expected goals total in 2012/13?",
+        "score": {
+          "complete_documents_at_5": null,
+          "complete_visible_evidence": null,
+          "complete_requested_facts_or_inputs": null,
+          "per_group": {
+            "documents": [],
+            "visible": [],
+            "facts_or_inputs": []
+          },
+          "false_complete": true,
+          "safe_noncompletion": false
+        },
+        "status": "complete",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "manchester united"
+              ],
+              "kind": null,
+              "metrics": [
+                "goals_for"
+              ],
+              "period": "2012/13",
+              "terms": [],
+              "text": "manchester united expected goals total in 2012 13"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "epl/club-seasons/2012-13/manchester-united",
+            "facts": [
+              {
+                "basis": "earned_before_adjustments",
+                "metric": "goals_for",
+                "pointer": "/metadata/computed_statistics/goals_for",
+                "quote": "Manchester United played 38 matches: won 28, drew 5, lost 5. Goals scored: 86; goals conceded: 43; goal difference: 43. Points earned from match results: 89.",
+                "value": 86
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "nasa": {
+    "summary": {
+      "cases": 16,
+      "answerable": 12,
+      "unsupported": 4,
+      "complete_documents_at_5": 7,
+      "complete_visible_evidence": 3,
+      "complete_requested_facts_or_inputs": 5,
+      "false_complete": 0,
+      "reported_complete": 0,
+      "complete_precision": null,
+      "unsupported_safely_not_complete": 4
+    },
+    "categories": {
+      "control": {
+        "cases": 4,
+        "answerable": 4,
+        "unsupported": 0,
+        "complete_documents_at_5": 4,
+        "complete_visible_evidence": 2,
+        "complete_requested_facts_or_inputs": 4,
+        "false_complete": 0,
+        "reported_complete": 0,
+        "complete_precision": null,
+        "unsupported_safely_not_complete": 0
+      },
+      "generic_comparison": {
+        "cases": 4,
+        "answerable": 4,
+        "unsupported": 0,
+        "complete_documents_at_5": 1,
+        "complete_visible_evidence": 0,
+        "complete_requested_facts_or_inputs": 0,
+        "false_complete": 0,
+        "reported_complete": 0,
+        "complete_precision": null,
+        "unsupported_safely_not_complete": 0
+      },
+      "generic_language": {
+        "cases": 3,
+        "answerable": 3,
+        "unsupported": 0,
+        "complete_documents_at_5": 2,
+        "complete_visible_evidence": 1,
+        "complete_requested_facts_or_inputs": 1,
+        "false_complete": 0,
+        "reported_complete": 0,
+        "complete_precision": null,
+        "unsupported_safely_not_complete": 0
+      },
+      "generic_scope": {
+        "cases": 1,
+        "answerable": 1,
+        "unsupported": 0,
+        "complete_documents_at_5": 0,
+        "complete_visible_evidence": 0,
+        "complete_requested_facts_or_inputs": 0,
+        "false_complete": 0,
+        "reported_complete": 0,
+        "complete_precision": null,
+        "unsupported_safely_not_complete": 0
+      },
+      "unsupported": {
+        "cases": 4,
+        "answerable": 0,
+        "unsupported": 4,
+        "complete_documents_at_5": 0,
+        "complete_visible_evidence": 0,
+        "complete_requested_facts_or_inputs": 0,
+        "false_complete": 0,
+        "reported_complete": 0,
+        "complete_precision": null,
+        "unsupported_safely_not_complete": 4
+      }
+    },
+    "failures": [
+      {
+        "id": "n-4",
+        "question": "Compare Venus rotation period and length of day in hours.",
+        "score": {
+          "complete_documents_at_5": true,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              true,
+              true
+            ],
+            "visible": [
+              false,
+              false
+            ],
+            "facts_or_inputs": [
+              true,
+              false
+            ]
+          },
+          "false_complete": false,
+          "safe_noncompletion": true
+        },
+        "status": "needs_verification",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "venus"
+              ],
+              "kind": null,
+              "metrics": [
+                "rotation_period"
+              ],
+              "period": null,
+              "terms": [
+                "rotation",
+                "period",
+                "length",
+                "day",
+                "hours"
+              ],
+              "text": "Compare Venus rotation period and length of day in hours."
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "planetary/venus",
+            "facts": [
+              {
+                "basis": "hours_signed_sidereal",
+                "metric": "rotation_period",
+                "pointer": "/metadata/facts/rotation_period",
+                "quote": "",
+                "value": -5832.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "n-5",
+        "question": "Compare gravity on Mercury and Mars.",
+        "score": {
+          "complete_documents_at_5": false,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              false,
+              false
+            ],
+            "visible": [
+              false,
+              false
+            ],
+            "facts_or_inputs": [
+              false,
+              false
+            ]
+          },
+          "false_complete": false,
+          "safe_noncompletion": true
+        },
+        "status": "unsupported",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "mars",
+                "mercury"
+              ],
+              "kind": null,
+              "metrics": [
+                "gravity"
+              ],
+              "period": null,
+              "terms": [
+                "gravity"
+              ],
+              "text": "Compare gravity on Mercury and Mars."
+            }
+          ]
+        },
+        "facts": []
+      },
+      {
+        "id": "n-6",
+        "question": "How wide is Jupiter at its equator?",
+        "score": {
+          "complete_documents_at_5": true,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              true
+            ],
+            "visible": [
+              false
+            ],
+            "facts_or_inputs": [
+              false
+            ]
+          },
+          "false_complete": false,
+          "safe_noncompletion": true
+        },
+        "status": "needs_verification",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "jupiter"
+              ],
+              "kind": null,
+              "metrics": [],
+              "period": null,
+              "terms": [
+                "wide",
+                "equator"
+              ],
+              "text": "How wide is Jupiter at its equator?"
+            }
+          ]
+        },
+        "facts": [
+          {
+            "id": "planetary/jupiter",
+            "facts": []
+          }
+        ]
+      },
+      {
+        "id": "n-8",
+        "question": "How long does Venus take to spin once relative to the stars?",
+        "score": {
+          "complete_documents_at_5": false,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              false
+            ],
+            "visible": [
+              false
+            ],
+            "facts_or_inputs": [
+              false
+            ]
+          },
+          "false_complete": false,
+          "safe_noncompletion": true
+        },
+        "status": "unsupported",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "venus"
+              ],
+              "kind": null,
+              "metrics": [],
+              "period": null,
+              "terms": [
+                "long",
+                "take",
+                "spin",
+                "once",
+                "relative",
+                "stars"
+              ],
+              "text": "How long does Venus take to spin once relative to the stars?"
+            }
+          ]
+        },
+        "facts": []
+      },
+      {
+        "id": "n-9",
+        "question": "Which is larger across the equator, Uranus or Neptune?",
+        "score": {
+          "complete_documents_at_5": false,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              false,
+              false
+            ],
+            "visible": [
+              false,
+              false
+            ],
+            "facts_or_inputs": [
+              false,
+              false
+            ]
+          },
+          "false_complete": false,
+          "safe_noncompletion": true
+        },
+        "status": "unsupported",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "neptune",
+                "uranus"
+              ],
+              "kind": null,
+              "metrics": [],
+              "period": null,
+              "terms": [
+                "larger",
+                "across",
+                "equator",
+                "or"
+              ],
+              "text": "Which is larger across the equator, Uranus or Neptune?"
+            }
+          ]
+        },
+        "facts": []
+      },
+      {
+        "id": "n-10",
+        "question": "What is the Moon orbital period around Earth in days?",
+        "score": {
+          "complete_documents_at_5": false,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              false
+            ],
+            "visible": [
+              false
+            ],
+            "facts_or_inputs": [
+              false
+            ]
+          },
+          "false_complete": false,
+          "safe_noncompletion": true
+        },
+        "status": "unsupported",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "earth",
+                "moon"
+              ],
+              "kind": null,
+              "metrics": [
+                "orbital_period"
+              ],
+              "period": null,
+              "terms": [
+                "orbital",
+                "period",
+                "around",
+                "days"
+              ],
+              "text": "What is the Moon orbital period around Earth in days?"
+            }
+          ]
+        },
+        "facts": []
+      },
+      {
+        "id": "n-11",
+        "question": "Compare Earth and Venus surface pressure.",
+        "score": {
+          "complete_documents_at_5": false,
+          "complete_visible_evidence": false,
+          "complete_requested_facts_or_inputs": false,
+          "per_group": {
+            "documents": [
+              false,
+              false
+            ],
+            "visible": [
+              false,
+              false
+            ],
+            "facts_or_inputs": [
+              false,
+              false
+            ]
+          },
+          "false_complete": false,
+          "safe_noncompletion": true
+        },
+        "status": "unsupported",
+        "plan": {
+          "clauses": [
+            {
+              "basis": null,
+              "date": null,
+              "entities": [
+                "earth",
+                "venus"
+              ],
+              "kind": null,
+              "metrics": [
+                "surface_pressure"
+              ],
+              "period": null,
+              "terms": [
+                "surface",
+                "pressure"
+              ],
+              "text": "Compare Earth and Venus surface pressure."
+            }
+          ]
+        },
+        "facts": []
+      }
+    ]
+  },
+  "nasa_manual_plan_control": {
+    "summary": {
+      "cases": 8,
+      "answerable": 8,
+      "unsupported": 0,
+      "complete_documents_at_5": 8,
+      "complete_visible_evidence": 0,
+      "complete_requested_facts_or_inputs": 8,
+      "false_complete": 0,
+      "reported_complete": 8,
+      "complete_precision": 1.0,
+      "unsupported_safely_not_complete": 0
+    },
+    "categories": {
+      "control": {
+        "cases": 4,
+        "answerable": 4,
+        "unsupported": 0,
+        "complete_documents_at_5": 4,
+        "complete_visible_evidence": 0,
+        "complete_requested_facts_or_inputs": 4,
+        "false_complete": 0,
+        "reported_complete": 4,
+        "complete_precision": 1.0,
+        "unsupported_safely_not_complete": 0
+      },
+      "generic_comparison": {
+        "cases": 3,
+        "answerable": 3,
+        "unsupported": 0,
+        "complete_documents_at_5": 3,
+        "complete_visible_evidence": 0,
+        "complete_requested_facts_or_inputs": 3,
+        "false_complete": 0,
+        "reported_complete": 3,
+        "complete_precision": 1.0,
+        "unsupported_safely_not_complete": 0
+      },
+      "generic_language": {
+        "cases": 1,
+        "answerable": 1,
+        "unsupported": 0,
+        "complete_documents_at_5": 1,
+        "complete_visible_evidence": 0,
+        "complete_requested_facts_or_inputs": 1,
+        "false_complete": 0,
+        "reported_complete": 1,
+        "complete_precision": 1.0,
+        "unsupported_safely_not_complete": 0
+      }
+    },
+    "failures": []
+  },
+  "epl_latency": [
+    {
+      "clients": 1,
+      "requests": 132,
+      "errors": 0,
+      "response_ms": {
+        "n": 132,
+        "mean": 7.342187523494376,
+        "p50": 6.180249998578802,
+        "p95": 18.07329201255925,
+        "p99": 21.56374999321997,
+        "max": 23.51670799544081
+      },
+      "queries_per_second": 135.16168524631922,
+      "cpu_seconds": 0.9000000000000004,
+      "rss_before_mib": 13.203,
+      "rss_after_mib": 13.219,
+      "mean_bytes": 3016.8560606060605
+    },
+    {
+      "clients": 4,
+      "requests": 132,
+      "errors": 0,
+      "response_ms": {
+        "n": 132,
+        "mean": 34.17572858531705,
+        "p50": 32.48549997806549,
+        "p95": 58.95800000871532,
+        "p99": 74.84062502044253,
+        "max": 80.436499993084
+      },
+      "queries_per_second": 116.19908391223208,
+      "cpu_seconds": 1.0,
+      "rss_before_mib": 13.219,
+      "rss_after_mib": 13.219,
+      "mean_bytes": 3016.712121212121
+    },
+    {
+      "clients": 16,
+      "requests": 132,
+      "errors": 0,
+      "response_ms": {
+        "n": 132,
+        "mean": 309.18696117309577,
+        "p50": 146.18379197781906,
+        "p95": 963.4398329944815,
+        "p99": 1073.8495830155443,
+        "max": 1084.4172920042183
+      },
+      "queries_per_second": 50.49699691457979,
+      "cpu_seconds": 1.1399999999999988,
+      "rss_before_mib": 13.219,
+      "rss_after_mib": 13.328,
+      "mean_bytes": 3017.007575757576
+    }
+  ],
+  "nasa_after_quality_resource": {
+    "rss_mib": 11.406,
+    "cpu_seconds": 0.03
+  },
+  "model_calls": 0
+}

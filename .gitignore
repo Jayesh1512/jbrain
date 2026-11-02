@@ -1,0 +1,9 @@
+node_modules/
+.jbrain/
+coverage/
+.env
+.env.*
+!.env.example
+*.tsbuildinfo
+target/
+__pycache__/

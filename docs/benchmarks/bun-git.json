@@ -1,0 +1,18 @@
+{
+  "label": "bun-baseline",
+  "documents": 100,
+  "history": "git",
+  "startupSeconds": 0.273,
+  "empty": {
+    "rssMiB": 42.38,
+    "cpuSeconds": 0.11
+  },
+  "loaded": {
+    "rssMiB": 70.69,
+    "cpuSeconds": 1.07
+  },
+  "writeSeconds": 9.877,
+  "read200Seconds": 0.147,
+  "idleCpuSecondsOver5s": 0.01,
+  "storageMiB": 4.55
+}

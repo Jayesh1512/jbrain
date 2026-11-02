@@ -1,0 +1,1232 @@
+{
+  "schemaVersion": 1,
+  "name": "epl-retrieval-v1",
+  "description": "Public hand-authored diagnostic queries against a pre-existing frozen real-match corpus. Prewritten keyword plans are assisted controls, not an implemented model or a held-out evaluation. Repeated fact variants are correlated. No plans may contain expected values or target IDs.",
+  "corpus_sha256": "96696b53d223f0856ee7301269f7d028064379f7dfb268df676559d9e995955d",
+  "cases": [
+    {
+      "id": "keyword-arsenal-points",
+      "category": "keyword_controls",
+      "question": "Arsenal 2003/04 points",
+      "keyword_queries": [
+        "Arsenal 2003/04 points"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Arsenal",
+          "club": "Arsenal",
+          "year": 2003,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "keyword-city-goals",
+      "category": "keyword_controls",
+      "question": "Manchester City 2017/18 goals",
+      "keyword_queries": [
+        "Manchester City 2017/18 goals"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Man City",
+          "club": "Manchester City",
+          "year": 2017,
+          "metric": "goals_for"
+        }
+      ]
+    },
+    {
+      "id": "keyword-chelsea-defense",
+      "category": "keyword_controls",
+      "question": "Chelsea 2004/05 goals conceded",
+      "keyword_queries": [
+        "Chelsea 2004/05 goals conceded"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Chelsea",
+          "club": "Chelsea",
+          "year": 2004,
+          "metric": "goals_against"
+        }
+      ]
+    },
+    {
+      "id": "keyword-derby-points",
+      "category": "keyword_controls",
+      "question": "Derby County 2007/08 points",
+      "keyword_queries": [
+        "Derby County 2007/08 points"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Derby",
+          "club": "Derby County",
+          "year": 2007,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "keyword-leicester-draws",
+      "category": "keyword_controls",
+      "question": "Leicester City 2015/16 drew",
+      "keyword_queries": [
+        "Leicester City 2015/16 drew"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Leicester",
+          "club": "Leicester City",
+          "year": 2015,
+          "metric": "drawn"
+        }
+      ]
+    },
+    {
+      "id": "keyword-sunderland-losses",
+      "category": "keyword_controls",
+      "question": "Sunderland 2005/06 lost",
+      "keyword_queries": [
+        "Sunderland 2005/06 lost"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Sunderland",
+          "club": "Sunderland",
+          "year": 2005,
+          "metric": "lost"
+        }
+      ]
+    },
+    {
+      "id": "keyword-blackburn-points",
+      "category": "keyword_controls",
+      "question": "Blackburn Rovers 1994/95 points",
+      "keyword_queries": [
+        "Blackburn Rovers 1994/95 points"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Blackburn",
+          "club": "Blackburn Rovers",
+          "year": 1994,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "keyword-blackpool-goals",
+      "category": "keyword_controls",
+      "question": "Blackpool 2010/11 goals",
+      "keyword_queries": [
+        "Blackpool 2010/11 goals"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Blackpool",
+          "club": "Blackpool",
+          "year": 2010,
+          "metric": "goals_for"
+        }
+      ]
+    },
+    {
+      "id": "keyword-brentford-points",
+      "category": "keyword_controls",
+      "question": "Brentford 2022/23 points",
+      "keyword_queries": [
+        "Brentford 2022/23 points"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Brentford",
+          "club": "Brentford",
+          "year": 2022,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "keyword-barnsley-losses",
+      "category": "keyword_controls",
+      "question": "Barnsley 1997/98 lost",
+      "keyword_queries": [
+        "Barnsley 1997/98 lost"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Barnsley",
+          "club": "Barnsley",
+          "year": 1997,
+          "metric": "lost"
+        }
+      ]
+    },
+    {
+      "id": "keyword-ipswich-points",
+      "category": "keyword_controls",
+      "question": "Ipswich Town 2024/25 points",
+      "keyword_queries": [
+        "Ipswich Town 2024/25 points"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Ipswich",
+          "club": "Ipswich Town",
+          "year": 2024,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "keyword-newcastle-goals",
+      "category": "keyword_controls",
+      "question": "Newcastle United 1995/96 goals",
+      "keyword_queries": [
+        "Newcastle United 1995/96 goals"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Newcastle",
+          "club": "Newcastle United",
+          "year": 1995,
+          "metric": "goals_for"
+        }
+      ]
+    },
+    {
+      "id": "question-liverpool-points",
+      "category": "natural_season_questions",
+      "question": "How many points did Liverpool earn in 2019/20?",
+      "keyword_queries": [
+        "Liverpool 2019 20 points"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Liverpool",
+          "club": "Liverpool",
+          "year": 2019,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "question-chelsea-wins",
+      "category": "natural_season_questions",
+      "question": "How many league matches did Chelsea win in 2016/17?",
+      "keyword_queries": [
+        "Chelsea 2016 17 won"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Chelsea",
+          "club": "Chelsea",
+          "year": 2016,
+          "metric": "won"
+        }
+      ]
+    },
+    {
+      "id": "question-united-points",
+      "category": "natural_season_questions",
+      "question": "How many points did Manchester United earn in 2012/13?",
+      "keyword_queries": [
+        "Manchester United 2012 13 points"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Man United",
+          "club": "Manchester United",
+          "year": 2012,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "question-arsenal-losses",
+      "category": "natural_season_questions",
+      "question": "Did Arsenal lose any league games in 2003/04?",
+      "keyword_queries": [
+        "Arsenal 2003 04 lost"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Arsenal",
+          "club": "Arsenal",
+          "year": 2003,
+          "metric": "lost"
+        }
+      ]
+    },
+    {
+      "id": "question-city-goals",
+      "category": "natural_season_questions",
+      "question": "How many goals did Manchester City score in 2023/24?",
+      "keyword_queries": [
+        "Manchester City 2023 24 goals"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Man City",
+          "club": "Manchester City",
+          "year": 2023,
+          "metric": "goals_for"
+        }
+      ]
+    },
+    {
+      "id": "question-spurs-draws",
+      "category": "natural_season_questions",
+      "question": "How many matches did Tottenham Hotspur draw in 2016/17?",
+      "keyword_queries": [
+        "Tottenham Hotspur 2016 17 drew"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Tottenham",
+          "club": "Tottenham Hotspur",
+          "year": 2016,
+          "metric": "drawn"
+        }
+      ]
+    },
+    {
+      "id": "question-everton-earned",
+      "category": "natural_season_questions",
+      "question": "How many points did Everton earn before deductions in 2023/24?",
+      "keyword_queries": [
+        "Everton 2023 24 points"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Everton",
+          "club": "Everton",
+          "year": 2023,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "question-forest-earned",
+      "category": "natural_season_questions",
+      "question": "How many points did Nottingham Forest earn before deductions in 2023/24?",
+      "keyword_queries": [
+        "Nottingham Forest 2023 24 points"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Nott'm Forest",
+          "club": "Nottingham Forest",
+          "year": 2023,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "question-villa-defense",
+      "category": "natural_season_questions",
+      "question": "How many goals did Aston Villa concede in 2015/16?",
+      "keyword_queries": [
+        "Aston Villa 2015 16 goals"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Aston Villa",
+          "club": "Aston Villa",
+          "year": 2015,
+          "metric": "goals_against"
+        }
+      ]
+    },
+    {
+      "id": "question-swindon-games",
+      "category": "natural_season_questions",
+      "question": "How many league matches did Swindon Town play in 1993/94?",
+      "keyword_queries": [
+        "Swindon Town 1993 94 played"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Swindon",
+          "club": "Swindon Town",
+          "year": 1993,
+          "metric": "played"
+        }
+      ]
+    },
+    {
+      "id": "question-fulham-wins",
+      "category": "natural_season_questions",
+      "question": "How many wins did Fulham record in 2020/21?",
+      "keyword_queries": [
+        "Fulham 2020 21 won"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Fulham",
+          "club": "Fulham",
+          "year": 2020,
+          "metric": "won"
+        }
+      ]
+    },
+    {
+      "id": "question-brighton-goals",
+      "category": "natural_season_questions",
+      "question": "How many goals did Brighton score in 2022/23?",
+      "keyword_queries": [
+        "Brighton 2022 23 goals"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Brighton",
+          "club": "Brighton and Hove Albion",
+          "year": 2022,
+          "metric": "goals_for"
+        }
+      ]
+    },
+    {
+      "id": "question-palace-points",
+      "category": "natural_season_questions",
+      "question": "What was Crystal Palace's earned points total in 2024/25?",
+      "keyword_queries": [
+        "Crystal Palace 2024 25 points"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Crystal Palace",
+          "club": "Crystal Palace",
+          "year": 2024,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "question-reading-draws",
+      "category": "natural_season_questions",
+      "question": "How many draws did Reading have in 2006/07?",
+      "keyword_queries": [
+        "Reading 2006 07 drew"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Reading",
+          "club": "Reading",
+          "year": 2006,
+          "metric": "drawn"
+        }
+      ]
+    },
+    {
+      "id": "question-portsmouth-earned",
+      "category": "natural_season_questions",
+      "question": "How many points did Portsmouth earn before deductions in 2009/10?",
+      "keyword_queries": [
+        "Portsmouth 2009 10 points"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Portsmouth",
+          "club": "Portsmouth",
+          "year": 2009,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "question-wolves-goals",
+      "category": "natural_season_questions",
+      "question": "How many goals did Wolverhampton Wanderers score in 2018/19?",
+      "keyword_queries": [
+        "Wolverhampton Wanderers 2018 19 goals"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Wolves",
+          "club": "Wolverhampton Wanderers",
+          "year": 2018,
+          "metric": "goals_for"
+        }
+      ]
+    },
+    {
+      "id": "match-united-liverpool-score",
+      "category": "natural_match_questions",
+      "question": "What was the score when Manchester United hosted Liverpool on 24 October 2021?",
+      "keyword_queries": [
+        "Manchester United Liverpool 2021 10 24 score"
+      ],
+      "needs": [
+        {
+          "kind": "match",
+          "source_home": "Man United",
+          "source_away": "Liverpool",
+          "date": "2021-10-24",
+          "metric": "score"
+        }
+      ]
+    },
+    {
+      "id": "match-liverpool-united-score",
+      "category": "natural_match_questions",
+      "question": "What was the score between Liverpool and Manchester United on 5 March 2023?",
+      "keyword_queries": [
+        "Liverpool Manchester United 2023 03 05 score"
+      ],
+      "needs": [
+        {
+          "kind": "match",
+          "source_home": "Liverpool",
+          "source_away": "Man United",
+          "date": "2023-03-05",
+          "metric": "score"
+        }
+      ]
+    },
+    {
+      "id": "match-city-qpr-score",
+      "category": "natural_match_questions",
+      "question": "What was the score when Manchester City hosted QPR on 13 May 2012?",
+      "keyword_queries": [
+        "Manchester City Queens Park Rangers 2012 05 13 score"
+      ],
+      "needs": [
+        {
+          "kind": "match",
+          "source_home": "Man City",
+          "source_away": "QPR",
+          "date": "2012-05-13",
+          "metric": "score"
+        }
+      ]
+    },
+    {
+      "id": "match-saints-leicester-score",
+      "category": "natural_match_questions",
+      "question": "How did Southampton versus Leicester City finish on 25 October 2019?",
+      "keyword_queries": [
+        "Southampton Leicester City 2019 10 25 score"
+      ],
+      "needs": [
+        {
+          "kind": "match",
+          "source_home": "Southampton",
+          "source_away": "Leicester",
+          "date": "2019-10-25",
+          "metric": "score"
+        }
+      ]
+    },
+    {
+      "id": "match-arsenal-chelsea-ref",
+      "category": "natural_match_questions",
+      "question": "Who refereed Chelsea versus Arsenal on 22 March 2014?",
+      "keyword_queries": [
+        "Chelsea Arsenal 2014 03 22 referee"
+      ],
+      "needs": [
+        {
+          "kind": "match",
+          "source_home": "Chelsea",
+          "source_away": "Arsenal",
+          "date": "2014-03-22",
+          "metric": "referee"
+        }
+      ]
+    },
+    {
+      "id": "match-united-arsenal-half",
+      "category": "natural_match_questions",
+      "question": "What was the half-time score in Manchester United versus Arsenal on 28 August 2011?",
+      "keyword_queries": [
+        "Manchester United Arsenal 2011 08 28 half time"
+      ],
+      "needs": [
+        {
+          "kind": "match",
+          "source_home": "Man United",
+          "source_away": "Arsenal",
+          "date": "2011-08-28",
+          "metric": "half_time"
+        }
+      ]
+    },
+    {
+      "id": "match-liverpool-palace-corners",
+      "category": "natural_match_questions",
+      "question": "How many corners did each side take in Liverpool versus Crystal Palace on 25 May 2025?",
+      "keyword_queries": [
+        "Liverpool Crystal Palace 2025 05 25 corners"
+      ],
+      "needs": [
+        {
+          "kind": "match",
+          "source_home": "Liverpool",
+          "source_away": "Crystal Palace",
+          "date": "2025-05-25",
+          "metric": "corners"
+        }
+      ]
+    },
+    {
+      "id": "match-brighton-united-shots",
+      "category": "natural_match_questions",
+      "question": "How many shots did each team have when Brighton hosted Manchester United on 7 May 2022?",
+      "keyword_queries": [
+        "Brighton Manchester United 2022 05 07 shots"
+      ],
+      "needs": [
+        {
+          "kind": "match",
+          "source_home": "Brighton",
+          "source_away": "Man United",
+          "date": "2022-05-07",
+          "metric": "shots"
+        }
+      ]
+    },
+    {
+      "id": "match-brentford-united-cards",
+      "category": "natural_match_questions",
+      "question": "How many yellow cards did each team receive in Brentford versus Manchester United on 13 August 2022?",
+      "keyword_queries": [
+        "Brentford Manchester United 2022 08 13 yellow cards"
+      ],
+      "needs": [
+        {
+          "kind": "match",
+          "source_home": "Brentford",
+          "source_away": "Man United",
+          "date": "2022-08-13",
+          "metric": "yellow_cards"
+        }
+      ]
+    },
+    {
+      "id": "match-spurs-wigan-score",
+      "category": "natural_match_questions",
+      "question": "What was the final score of Tottenham versus Wigan on 22 November 2009?",
+      "keyword_queries": [
+        "Tottenham Wigan 2009 11 22 score"
+      ],
+      "needs": [
+        {
+          "kind": "match",
+          "source_home": "Tottenham",
+          "source_away": "Wigan",
+          "date": "2009-11-22",
+          "metric": "score"
+        }
+      ]
+    },
+    {
+      "id": "match-portsmouth-reading-score",
+      "category": "natural_match_questions",
+      "question": "What was the result of Portsmouth versus Reading on 29 September 2007?",
+      "keyword_queries": [
+        "Portsmouth Reading 2007 09 29 score"
+      ],
+      "needs": [
+        {
+          "kind": "match",
+          "source_home": "Portsmouth",
+          "source_away": "Reading",
+          "date": "2007-09-29",
+          "metric": "score"
+        }
+      ]
+    },
+    {
+      "id": "match-newcastle-liverpool-score",
+      "category": "natural_match_questions",
+      "question": "What was the score when Liverpool hosted Newcastle on 3 April 1996?",
+      "keyword_queries": [
+        "Liverpool Newcastle 1996 04 03 score"
+      ],
+      "needs": [
+        {
+          "kind": "match",
+          "source_home": "Liverpool",
+          "source_away": "Newcastle",
+          "date": "1996-04-03",
+          "metric": "score"
+        }
+      ]
+    },
+    {
+      "id": "alias-manutd",
+      "category": "aliases",
+      "question": "Man Utd 2012/13 points",
+      "keyword_queries": [
+        "Manchester United 2012 13 points"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Man United",
+          "club": "Manchester United",
+          "year": 2012,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "alias-spurs",
+      "category": "aliases",
+      "question": "Spurs 2016/17 goals",
+      "keyword_queries": [
+        "Tottenham Hotspur 2016 17 goals"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Tottenham",
+          "club": "Tottenham Hotspur",
+          "year": 2016,
+          "metric": "goals_for"
+        }
+      ]
+    },
+    {
+      "id": "alias-qpr",
+      "category": "aliases",
+      "question": "QPR 2011/12 lost",
+      "keyword_queries": [
+        "Queens Park Rangers 2011 12 lost"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "QPR",
+          "club": "Queens Park Rangers",
+          "year": 2011,
+          "metric": "lost"
+        }
+      ]
+    },
+    {
+      "id": "alias-westbrom",
+      "category": "aliases",
+      "question": "West Brom 2017/18 points",
+      "keyword_queries": [
+        "West Bromwich Albion 2017 18 points"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "West Brom",
+          "club": "West Bromwich Albion",
+          "year": 2017,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "alias-wolves",
+      "category": "aliases",
+      "question": "Wolves 2019/20 points",
+      "keyword_queries": [
+        "Wolverhampton Wanderers 2019 20 points"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Wolves",
+          "club": "Wolverhampton Wanderers",
+          "year": 2019,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "alias-forest",
+      "category": "aliases",
+      "question": "Nottm Forest 2022/23 goals",
+      "keyword_queries": [
+        "Nottingham Forest 2022 23 goals"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Nott'm Forest",
+          "club": "Nottingham Forest",
+          "year": 2022,
+          "metric": "goals_for"
+        }
+      ]
+    },
+    {
+      "id": "alias-brighton",
+      "category": "aliases",
+      "question": "Brighton & Hove Albion 2023/24 points",
+      "keyword_queries": [
+        "Brighton 2023 24 points"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Brighton",
+          "club": "Brighton and Hove Albion",
+          "year": 2023,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "alias-afcbournemouth",
+      "category": "aliases",
+      "question": "AFC Bournemouth 2015/16 points",
+      "keyword_queries": [
+        "Bournemouth 2015 16 points"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Bournemouth",
+          "club": "Bournemouth",
+          "year": 2015,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "typo-arsenal",
+      "category": "typos",
+      "question": "Arsneal 2003/04 points",
+      "keyword_queries": [
+        "Arsenal 2003 04 points"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Arsenal",
+          "club": "Arsenal",
+          "year": 2003,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "typo-liverpool",
+      "category": "typos",
+      "question": "Liverpol 2019/20 goals",
+      "keyword_queries": [
+        "Liverpool 2019 20 goals"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Liverpool",
+          "club": "Liverpool",
+          "year": 2019,
+          "metric": "goals_for"
+        }
+      ]
+    },
+    {
+      "id": "typo-chelsea",
+      "category": "typos",
+      "question": "Chelesa 2004/05 goals conceded",
+      "keyword_queries": [
+        "Chelsea 2004 05 goals"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Chelsea",
+          "club": "Chelsea",
+          "year": 2004,
+          "metric": "goals_against"
+        }
+      ]
+    },
+    {
+      "id": "typo-leicester",
+      "category": "typos",
+      "question": "Leicster City 2015/16 points",
+      "keyword_queries": [
+        "Leicester City 2015 16 points"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Leicester",
+          "club": "Leicester City",
+          "year": 2015,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "typo-sunderland",
+      "category": "typos",
+      "question": "Sunderand 2005/06 lost",
+      "keyword_queries": [
+        "Sunderland 2005 06 lost"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Sunderland",
+          "club": "Sunderland",
+          "year": 2005,
+          "metric": "lost"
+        }
+      ]
+    },
+    {
+      "id": "typo-newcastle",
+      "category": "typos",
+      "question": "Newcaslte United 1995/96 points",
+      "keyword_queries": [
+        "Newcastle United 1995 96 points"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Newcastle",
+          "club": "Newcastle United",
+          "year": 1995,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "paraphrase-defense",
+      "category": "paraphrases",
+      "question": "How often was Chelsea's net breached in the 2004/05 campaign?",
+      "keyword_queries": [
+        "Chelsea 2004 05 goals"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Chelsea",
+          "club": "Chelsea",
+          "year": 2004,
+          "metric": "goals_against"
+        }
+      ]
+    },
+    {
+      "id": "paraphrase-attack",
+      "category": "paraphrases",
+      "question": "How many times did Manchester City find the net during 2017/18?",
+      "keyword_queries": [
+        "Manchester City 2017 18 goals"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Man City",
+          "club": "Manchester City",
+          "year": 2017,
+          "metric": "goals_for"
+        }
+      ]
+    },
+    {
+      "id": "paraphrase-defeats",
+      "category": "paraphrases",
+      "question": "How many defeats did Derby County suffer in the 2007/08 campaign?",
+      "keyword_queries": [
+        "Derby County 2007 08 lost"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Derby",
+          "club": "Derby County",
+          "year": 2007,
+          "metric": "lost"
+        }
+      ]
+    },
+    {
+      "id": "paraphrase-stalemates",
+      "category": "paraphrases",
+      "question": "How many stalemates did Arsenal finish with during 2003/04?",
+      "keyword_queries": [
+        "Arsenal 2003 04 drew"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Arsenal",
+          "club": "Arsenal",
+          "year": 2003,
+          "metric": "drawn"
+        }
+      ]
+    },
+    {
+      "id": "paraphrase-victories",
+      "category": "paraphrases",
+      "question": "How many victories did Leicester City notch up during 2015/16?",
+      "keyword_queries": [
+        "Leicester City 2015 16 won"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Leicester",
+          "club": "Leicester City",
+          "year": 2015,
+          "metric": "won"
+        }
+      ]
+    },
+    {
+      "id": "paraphrase-conceded",
+      "category": "paraphrases",
+      "question": "How often did opponents find the net against Liverpool in 2018/19?",
+      "keyword_queries": [
+        "Liverpool 2018 19 goals"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Liverpool",
+          "club": "Liverpool",
+          "year": 2018,
+          "metric": "goals_against"
+        }
+      ]
+    },
+    {
+      "id": "compare-defense-attack",
+      "category": "multiple_facts",
+      "question": "How many goals did Chelsea concede in 2004/05, and how many did Manchester City score in 2017/18?",
+      "keyword_queries": [
+        "Chelsea 2004 05 goals",
+        "Manchester City 2017 18 goals"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Chelsea",
+          "club": "Chelsea",
+          "year": 2004,
+          "metric": "goals_against"
+        },
+        {
+          "kind": "season_stat",
+          "source_club": "Man City",
+          "club": "Manchester City",
+          "year": 2017,
+          "metric": "goals_for"
+        }
+      ]
+    },
+    {
+      "id": "compare-liverpool-years",
+      "category": "multiple_facts",
+      "question": "Compare Liverpool's goals scored in 2018/19 and 2019/20.",
+      "keyword_queries": [
+        "Liverpool 2018 19 goals",
+        "Liverpool 2019 20 goals"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Liverpool",
+          "club": "Liverpool",
+          "year": 2018,
+          "metric": "goals_for"
+        },
+        {
+          "kind": "season_stat",
+          "source_club": "Liverpool",
+          "club": "Liverpool",
+          "year": 2019,
+          "metric": "goals_for"
+        }
+      ]
+    },
+    {
+      "id": "compare-arsenal-leicester",
+      "category": "multiple_facts",
+      "question": "Compare Arsenal's draws in 2003/04 with Leicester City's draws in 2015/16.",
+      "keyword_queries": [
+        "Arsenal 2003 04 drew",
+        "Leicester City 2015 16 drew"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Arsenal",
+          "club": "Arsenal",
+          "year": 2003,
+          "metric": "drawn"
+        },
+        {
+          "kind": "season_stat",
+          "source_club": "Leicester",
+          "club": "Leicester City",
+          "year": 2015,
+          "metric": "drawn"
+        }
+      ]
+    },
+    {
+      "id": "compare-derby-villa",
+      "category": "multiple_facts",
+      "question": "Compare Derby County's defeats in 2007/08 with Aston Villa's defeats in 2015/16.",
+      "keyword_queries": [
+        "Derby County 2007 08 lost",
+        "Aston Villa 2015 16 lost"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Derby",
+          "club": "Derby County",
+          "year": 2007,
+          "metric": "lost"
+        },
+        {
+          "kind": "season_stat",
+          "source_club": "Aston Villa",
+          "club": "Aston Villa",
+          "year": 2015,
+          "metric": "lost"
+        }
+      ]
+    },
+    {
+      "id": "compare-spurs-newcastle",
+      "category": "multiple_facts",
+      "question": "Compare Tottenham's goals conceded in 2016/17 with Newcastle's goals conceded in 1995/96.",
+      "keyword_queries": [
+        "Tottenham 2016 17 goals",
+        "Newcastle 1995 96 goals"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Tottenham",
+          "club": "Tottenham Hotspur",
+          "year": 2016,
+          "metric": "goals_against"
+        },
+        {
+          "kind": "season_stat",
+          "source_club": "Newcastle",
+          "club": "Newcastle United",
+          "year": 1995,
+          "metric": "goals_against"
+        }
+      ]
+    },
+    {
+      "id": "compare-forest-everton",
+      "category": "multiple_facts",
+      "question": "Compare Nottingham Forest's earned points in 2023/24 with Everton's earned points in 2022/23, before any deductions.",
+      "keyword_queries": [
+        "Nottingham Forest 2023 24 points",
+        "Everton 2022 23 points"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "source_club": "Nott'm Forest",
+          "club": "Nottingham Forest",
+          "year": 2023,
+          "metric": "points"
+        },
+        {
+          "kind": "season_stat",
+          "source_club": "Everton",
+          "club": "Everton",
+          "year": 2022,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "unknown-inaugural",
+      "category": "out_of_scope",
+      "question": "How many points did Arsenal earn in 1992/93?",
+      "keyword_queries": [
+        "Arsenal 1992 93 points"
+      ],
+      "needs": []
+    },
+    {
+      "id": "unknown-later-season",
+      "category": "out_of_scope",
+      "question": "How many points did Liverpool earn in 2025/26?",
+      "keyword_queries": [
+        "Liverpool 2025 26 points"
+      ],
+      "needs": []
+    },
+    {
+      "id": "unknown-scorer",
+      "category": "out_of_scope",
+      "question": "Who was the Premier League top scorer in 2003/04?",
+      "keyword_queries": [
+        "2003 04 top scorer"
+      ],
+      "needs": []
+    },
+    {
+      "id": "unknown-manager",
+      "category": "out_of_scope",
+      "question": "Who managed Leicester City in 2015/16?",
+      "keyword_queries": [
+        "Leicester City 2015 16 manager"
+      ],
+      "needs": []
+    },
+    {
+      "id": "unknown-deductions",
+      "category": "out_of_scope",
+      "question": "What was Everton's official final points total after deductions in 2023/24?",
+      "keyword_queries": [
+        "Everton 2023 24 official points deductions"
+      ],
+      "needs": []
+    },
+    {
+      "id": "unknown-cup",
+      "category": "out_of_scope",
+      "question": "What was the 2024 FA Cup final score between Manchester United and Manchester City?",
+      "keyword_queries": [
+        "Manchester United Manchester City 2024 FA Cup final score"
+      ],
+      "needs": []
+    }
+  ]
+}

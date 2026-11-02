@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 1,
+  "name": "epl-query-v2-validation",
+  "description": "Written before the first new-path EPL run. New entity/season facts and compositions; author has seen original public diagnostic. Not a blind independent test.",
+  "cases": [
+    {
+      "id": "h-01",
+      "category": "new_season",
+      "question": "How many points did West Ham United earn in 2020/21?",
+      "keyword_queries": [
+        "How many points did West Ham United earn in 2020/21?"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "West Ham United",
+          "source_club": "West Ham",
+          "year": 2020,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "h-02",
+      "category": "new_season",
+      "question": "How many games did Birmingham City win during 2009/10?",
+      "keyword_queries": [
+        "How many games did Birmingham City win during 2009/10?"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Birmingham City",
+          "source_club": "Birmingham",
+          "year": 2009,
+          "metric": "won"
+        }
+      ]
+    },
+    {
+      "id": "h-03",
+      "category": "new_season",
+      "question": "How many defeats did Bolton Wanderers suffer in 2011/12?",
+      "keyword_queries": [
+        "How many defeats did Bolton Wanderers suffer in 2011/12?"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Bolton Wanderers",
+          "source_club": "Bolton",
+          "year": 2011,
+          "metric": "lost"
+        }
+      ]
+    },
+    {
+      "id": "h-04",
+      "category": "new_season",
+      "question": "How often did Stoke City draw in the 2013/14 campaign?",
+      "keyword_queries": [
+        "How often did Stoke City draw in the 2013/14 campaign?"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Stoke City",
+          "source_club": "Stoke",
+          "year": 2013,
+          "metric": "drawn"
+        }
+      ]
+    },
+    {
+      "id": "h-05",
+      "category": "new_season",
+      "question": "How many goals did Swansea City concede in 2016/17?",
+      "keyword_queries": [
+        "How many goals did Swansea City concede in 2016/17?"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Swansea City",
+          "source_club": "Swansea",
+          "year": 2016,
+          "metric": "goals_against"
+        }
+      ]
+    },
+    {
+      "id": "h-06",
+      "category": "new_season",
+      "question": "Bournemouth points in 2023/2024",
+      "keyword_queries": [
+        "Bournemouth points in 2023/2024"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Bournemouth",
+          "source_club": "Bournemouth",
+          "year": 2023,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "h-07",
+      "category": "new_season",
+      "question": "How many goals did Liverpol score in 2008/09?",
+      "keyword_queries": [
+        "How many goals did Liverpol score in 2008/09?"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Liverpool",
+          "source_club": "Liverpool",
+          "year": 2008,
+          "metric": "goals_for"
+        }
+      ]
+    },
+    {
+      "id": "h-08",
+      "category": "new_season",
+      "question": "What was Norwich City's goal difference in 2019/20?",
+      "keyword_queries": [
+        "What was Norwich City's goal difference in 2019/20?"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Norwich City",
+          "source_club": "Norwich",
+          "year": 2019,
+          "metric": "goal_difference"
+        }
+      ]
+    },
+    {
+      "id": "h-09",
+      "category": "new_season",
+      "question": "How many wins and draws did Crystal Palace have in 2023/24?",
+      "keyword_queries": [
+        "How many wins and draws did Crystal Palace have in 2023/24?"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Crystal Palace",
+          "source_club": "Crystal Palace",
+          "year": 2023,
+          "metric": "won"
+        },
+        {
+          "kind": "season_stat",
+          "club": "Crystal Palace",
+          "source_club": "Crystal Palace",
+          "year": 2023,
+          "metric": "drawn"
+        }
+      ]
+    },
+    {
+      "id": "h-10",
+      "category": "new_comparison",
+      "question": "Compare West Ham United and Newcastle United points in 2022/23.",
+      "keyword_queries": [
+        "West Ham Newcastle 2022 23 points"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "West Ham United",
+          "source_club": "West Ham",
+          "year": 2022,
+          "metric": "points"
+        },
+        {
+          "kind": "season_stat",
+          "club": "Newcastle United",
+          "source_club": "Newcastle",
+          "year": 2022,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "h-11",
+      "category": "new_comparison",
+      "question": "Compare Chelsea points in 2009/10 and 2014/15.",
+      "keyword_queries": [
+        "Chelsea points"
+      ],
+      "needs": [
+        {
+          "kind": "season_stat",
+          "club": "Chelsea",
+          "source_club": "Chelsea",
+          "year": 2009,
+          "metric": "points"
+        },
+        {
+          "kind": "season_stat",
+          "club": "Chelsea",
+          "source_club": "Chelsea",
+          "year": 2014,
+          "metric": "points"
+        }
+      ]
+    },
+    {
+      "id": "h-12",
+      "category": "new_match",
+      "question": "What was the score between Liverpool and Manchester City on 2019-11-10?",
+      "keyword_queries": [
+        "Liverpool Manchester City 2019 11 10 score"
+      ],
+      "needs": [
+        {
+          "kind": "match",
+          "source_home": "Liverpool",
+          "source_away": "Man City",
+          "date": "2019-11-10",
+          "metric": "score"
+        }
+      ]
+    },
+    {
+      "id": "h-13",
+      "category": "new_unsupported",
+      "question": "How many points did West Ham United earn in 2026/27?",
+      "keyword_queries": [
+        "How many points did West Ham United earn in 2026/27?"
+      ],
+      "needs": []
+    },
+    {
+      "id": "h-14",
+      "category": "new_unsupported",
+      "question": "Who managed Chelsea in 2009/10?",
+      "keyword_queries": [
+        "Who managed Chelsea in 2009/10?"
+      ],
+      "needs": []
+    },
+    {
+      "id": "h-15",
+      "category": "new_unsupported",
+      "question": "Who was the top scorer in 2022/23?",
+      "keyword_queries": [
+        "Who was the top scorer in 2022/23?"
+      ],
+      "needs": []
+    },
+    {
+      "id": "h-16",
+      "category": "new_unsupported",
+      "question": "What was Nottingham Forest's official points total after deductions in 2023/24?",
+      "keyword_queries": [
+        "What was Nottingham Forest's official points total after deductions in 2023/24?"
+      ],
+      "needs": []
+    },
+    {
+      "id": "h-17",
+      "category": "new_unsupported",
+      "question": "What was the FA Cup final score between Arsenal and Chelsea in 2020?",
+      "keyword_queries": [
+        "What was the FA Cup final score between Arsenal and Chelsea in 2020?"
+      ],
+      "needs": []
+    }
+  ]
+}

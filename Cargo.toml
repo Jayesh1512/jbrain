@@ -1,0 +1,28 @@
+[package]
+name = "jbrain"
+version = "0.2.0"
+edition = "2024"
+rust-version = "1.89"
+description = "A lightweight, multi-agent OKF knowledge service"
+publish = false
+
+[dependencies]
+axum = { version = "0.8.9", default-features = false, features = ["http1", "json", "query", "tokio"] }
+tokio = { version = "1.53", features = ["rt", "net", "sync", "signal", "macros", "io-std", "io-util"] }
+rusqlite = { version = "0.40.2", features = ["bundled"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["arbitrary_precision"] }
+serde-saphyr = { version = "2", default-features = false, features = ["deserialize"] }
+pulldown-cmark = { version = "0.13", default-features = false }
+sha2 = "0.10"
+percent-encoding = "2"
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+rmcp = { version = "=3.2.0", default-features = false, features = ["server", "transport-streamable-http-server", "transport-io"] }
+ureq = { version = "2.12", default-features = false, features = ["json", "tls"] }
+
+[profile.release]
+opt-level = "s"
+lto = "thin"
+codegen-units = 1
+strip = true
+

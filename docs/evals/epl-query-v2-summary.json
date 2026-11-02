@@ -1,0 +1,96 @@
+{
+  "protocol": "automatic deterministic POST /v1/query; limit 5; no plans, embeddings or model calls",
+  "binary_sha256": "69f760177fd7e80bd8d469cf8a3df38e2a61db19b66389fe4ddf937cdc953ebd",
+  "corpus_sha256": "96696b53d223f0856ee7301269f7d028064379f7dfb268df676559d9e995955d",
+  "fixtures_sha256": {
+    "epl-retrieval-v1.json": "8d241facdab9bb255227064c5ba41711c0e7f796db15afc5be138bc0724203de",
+    "epl-query-v2-validation.json": "f4ddf287a8819f1aec8f5d30c5ce4cd19057946e94d07b018fa3796f6ff3fcbd"
+  },
+  "quality": {
+    "epl-retrieval-v1.json": {
+      "summary": {
+        "queries": 72,
+        "answerable": 66,
+        "unsupported": 6,
+        "complete_document_evidence_at_5": 66,
+        "complete_response_evidence": 66,
+        "reported_complete_positive": 66,
+        "unsupported_correctly_not_complete": 6,
+        "unsupported_with_related_candidates": 1
+      },
+      "failures": []
+    },
+    "epl-query-v2-validation.json": {
+      "summary": {
+        "queries": 17,
+        "answerable": 12,
+        "unsupported": 5,
+        "complete_document_evidence_at_5": 12,
+        "complete_response_evidence": 12,
+        "reported_complete_positive": 12,
+        "unsupported_correctly_not_complete": 5,
+        "unsupported_with_related_candidates": 1
+      },
+      "failures": []
+    }
+  },
+  "latency": [
+    {
+      "concurrent_clients": 1,
+      "workflows": 360,
+      "http_calls_per_query": 1,
+      "errors": 0,
+      "elapsed_seconds": 3.107920042006299,
+      "queries_per_second": 115.8330958114367,
+      "response_ms": {
+        "n": 360,
+        "mean": 8.580149152678334,
+        "p50": 7.2822090005502105,
+        "p95": 17.12470900383778,
+        "p99": 35.61870800331235,
+        "max": 41.6047089966014
+      },
+      "mean_response_bytes": 1877.4361111111111,
+      "max_sampled_rss_mib": 13.406,
+      "service_cpu_seconds": 2.29
+    },
+    {
+      "concurrent_clients": 4,
+      "workflows": 360,
+      "http_calls_per_query": 1,
+      "errors": 0,
+      "elapsed_seconds": 1.9194423749868292,
+      "queries_per_second": 187.55447138780096,
+      "response_ms": {
+        "n": 360,
+        "mean": 21.215888300422293,
+        "p50": 19.53725001658313,
+        "p95": 34.086916013620794,
+        "p99": 42.01791700324975,
+        "max": 48.3102910220623
+      },
+      "mean_response_bytes": 1877.486111111111,
+      "max_sampled_rss_mib": 13.469,
+      "service_cpu_seconds": 1.8200000000000003
+    },
+    {
+      "concurrent_clients": 16,
+      "workflows": 360,
+      "http_calls_per_query": 1,
+      "errors": 0,
+      "elapsed_seconds": 1.771636582998326,
+      "queries_per_second": 203.20194528312027,
+      "response_ms": {
+        "n": 360,
+        "mean": 76.98389326930435,
+        "p50": 74.99624998308718,
+        "p95": 105.28870800044388,
+        "p99": 111.80837501888163,
+        "max": 118.0601249798201
+      },
+      "mean_response_bytes": 1877.3222222222223,
+      "max_sampled_rss_mib": 13.594,
+      "service_cpu_seconds": 1.71
+    }
+  ]
+}

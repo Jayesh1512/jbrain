@@ -1,0 +1,1102 @@
+{
+  "schemaVersion": 1,
+  "name": "jbrain-retrieval-v1-synthetic",
+  "description": "Hand-authored fictional operational knowledge. Queries and judgments are public and authored with the corpus; this is a diagnostic baseline, not a held-out or external benchmark. Relevance labels identify evidence-bearing documents, not every topically related document.",
+  "documents": [
+    {
+      "id": "projects/atlas",
+      "title": "Atlas payment gateway",
+      "type": "Reference",
+      "description": "Current project ownership and production location.",
+      "tags": [
+        "payments",
+        "production"
+      ],
+      "aliases": [
+        "atlaspay"
+      ],
+      "body": "Atlas handles merchant payment authorization. Mira Sen owns Atlas. Atlas runs in ap-south-1.\nSee [production architecture](/projects/atlas-architecture.md), [runbook](/operations/atlas-runbook.md), and [Mira](/people/mira-sen.md)."
+    },
+    {
+      "id": "projects/atlas-architecture",
+      "title": "Atlas production architecture",
+      "type": "Reference",
+      "description": "Current production datastore and connection limits.",
+      "tags": [
+        "database",
+        "architecture"
+      ],
+      "aliases": [],
+      "body": "Atlas uses PostgreSQL 16 as its primary database. Connection pooling uses PgBouncer with a maximum of 120 server connections. The API is written in Go.\nSee [Atlas](/projects/atlas.md) and [pool exhaustion incident](/incidents/atlas-pool-exhaustion.md)."
+    },
+    {
+      "id": "decisions/atlas-database-draft",
+      "title": "Atlas database proposal — archived",
+      "type": "Reference",
+      "description": "Obsolete database planning material.",
+      "tags": [
+        "archived",
+        "database"
+      ],
+      "aliases": [],
+      "body": "Archived 2023 proposal: Atlas would use MySQL 8. This proposal was superseded and is not the production decision.\nSee [current production architecture](/projects/atlas-architecture.md)."
+    },
+    {
+      "id": "operations/atlas-runbook",
+      "title": "Atlas operations runbook",
+      "type": "Reference",
+      "description": "Production reliability and request handling.",
+      "tags": [
+        "runbook",
+        "payments"
+      ],
+      "aliases": [
+        "payments-ops"
+      ],
+      "body": "Atlas has a 99.95 percent availability SLO. Retry keys remain valid for 48 hours. Webhook acknowledgements must finish within 10 seconds.\nSee [Atlas](/projects/atlas.md)."
+    },
+    {
+      "id": "security/atlas-keys",
+      "title": "Atlas credential rotation",
+      "type": "Reference",
+      "description": "Credential lifecycle and emergency access.",
+      "tags": [
+        "security"
+      ],
+      "aliases": [],
+      "body": "Atlas API credentials rotate every 90 days. Emergency credential revocation is owned by Leena Rao.\nSee [Atlas](/projects/atlas.md)."
+    },
+    {
+      "id": "incidents/atlas-pool-exhaustion",
+      "title": "Atlas pool exhaustion incident",
+      "type": "Reference",
+      "description": "Root cause and mitigation of the April outage.",
+      "tags": [
+        "incident",
+        "database"
+      ],
+      "aliases": [],
+      "body": "On 2026-04-20 Atlas failed because idle transactions exhausted the database pool. The mitigation was a 30 second idle transaction timeout. Mira Sen coordinated the incident.\nSee [architecture](/projects/atlas-architecture.md)."
+    },
+    {
+      "id": "projects/boreal",
+      "title": "Boreal telemetry collector",
+      "type": "Reference",
+      "description": "Telemetry collection ownership and storage.",
+      "tags": [
+        "telemetry",
+        "production"
+      ],
+      "aliases": [
+        "northstar"
+      ],
+      "body": "Jon Iyer owns Boreal. Boreal collects device telemetry. Raw events are stored in S3.\nSee [retention](/policies/boreal-retention.md) and [Jon](/people/jon-iyer.md)."
+    },
+    {
+      "id": "policies/boreal-retention",
+      "title": "Boreal data retention",
+      "type": "Reference",
+      "description": "Current log and metric retention policy.",
+      "tags": [
+        "retention",
+        "policy"
+      ],
+      "aliases": [],
+      "body": "Boreal retains raw logs for 30 days and aggregated metrics for 90 days. Legal holds suspend log deletion.\nSee [Boreal](/projects/boreal.md)."
+    },
+    {
+      "id": "people/mira-sen",
+      "title": "Mira Sen",
+      "type": "Reference",
+      "description": "Engineering ownership profile.",
+      "tags": [
+        "people"
+      ],
+      "aliases": [],
+      "body": "Mira Sen works on the Platform team at Nimbus Labs. Mira is based in Pune.\nSee [Atlas](/projects/atlas.md) and [Nimbus](/companies/nimbus.md)."
+    },
+    {
+      "id": "people/jon-iyer",
+      "title": "Jon Iyer",
+      "type": "Reference",
+      "description": "Engineering ownership profile.",
+      "tags": [
+        "people"
+      ],
+      "aliases": [],
+      "body": "Jon Iyer works on the Infrastructure team at Nimbus Labs. Jon is based in Delhi.\nSee [Boreal](/projects/boreal.md)."
+    },
+    {
+      "id": "companies/nimbus",
+      "title": "Nimbus Labs",
+      "type": "Reference",
+      "description": "Organization directory.",
+      "tags": [
+        "organization"
+      ],
+      "aliases": [],
+      "body": "Nimbus Labs is headquartered in Bengaluru. Zoya Shah is its security director. The company builds payment and telemetry software."
+    },
+    {
+      "id": "finance/infra-2026",
+      "title": "Infrastructure budget 2026",
+      "type": "Reference",
+      "description": "Current approved spending limits.",
+      "tags": [
+        "finance",
+        "approved"
+      ],
+      "aliases": [],
+      "body": "The approved 2026 infrastructure budget is USD 48000 per month. Leena Rao approves increases above USD 5000."
+    },
+    {
+      "id": "finance/infra-2025",
+      "title": "Infrastructure budget 2025 — archived",
+      "type": "Reference",
+      "description": "Previous year spending limits.",
+      "tags": [
+        "finance",
+        "archived"
+      ],
+      "aliases": [],
+      "body": "The 2025 infrastructure budget was USD 36000 per month. This historical budget is superseded by the 2026 approval."
+    },
+    {
+      "id": "operations/remote-access",
+      "title": "WireGuard remote access",
+      "type": "Reference",
+      "description": "VPN and production access controls.",
+      "tags": [
+        "vpn",
+        "security"
+      ],
+      "aliases": [
+        "staff-tunnel"
+      ],
+      "body": "Remote production access uses WireGuard on UDP port 51820. Multi-factor authentication is mandatory. Contractors receive access for seven days."
+    },
+    {
+      "id": "operations/backups",
+      "title": "Recovery snapshot policy",
+      "type": "Reference",
+      "description": "Backup schedule and retention.",
+      "tags": [
+        "backup",
+        "recovery"
+      ],
+      "aliases": [
+        "bluebird",
+        "rescuepoint"
+      ],
+      "body": "Database snapshots run daily at 02:00 UTC. Snapshots are retained for 14 days. A restore drill is required every quarter."
+    },
+    {
+      "id": "operations/deploy",
+      "title": "Deployment rollback procedure",
+      "type": "Reference",
+      "description": "Returning production to a working release.",
+      "tags": [
+        "deployment",
+        "recovery"
+      ],
+      "aliases": [],
+      "body": "A failed release is reverted by redeploying the last healthy image digest. Preserve the release marker before rollback."
+    },
+    {
+      "id": "policies/expenses",
+      "title": "Employee expenses",
+      "type": "Reference",
+      "description": "Expense reimbursement limits.",
+      "tags": [
+        "finance",
+        "policy"
+      ],
+      "aliases": [],
+      "body": "Employee meal reimbursement is capped at INR 750 per day. Receipts are mandatory above INR 200. Claims must be filed within 21 days."
+    },
+    {
+      "id": "support/refunds",
+      "title": "Merchant refund policy",
+      "type": "Reference",
+      "description": "Refund eligibility and exceptions.",
+      "tags": [
+        "payments",
+        "support"
+      ],
+      "aliases": [],
+      "body": "Merchant refunds are accepted within 14 days of settlement. Disputed transactions require manual review."
+    },
+    {
+      "id": "devices/rover",
+      "title": "Rover camera transport",
+      "type": "Reference",
+      "description": "Camera network protocol.",
+      "tags": [
+        "devices",
+        "video"
+      ],
+      "aliases": [
+        "field-camera"
+      ],
+      "body": "The Rover camera streams video over RTSP on TCP port 8554. H.264 is the supported codec."
+    },
+    {
+      "id": "devices/rover-battery",
+      "title": "Rover battery maintenance",
+      "type": "Reference",
+      "description": "Battery replacement and storage.",
+      "tags": [
+        "devices",
+        "maintenance"
+      ],
+      "aliases": [],
+      "body": "Replace a Rover battery after 300 charge cycles or when capacity falls below 80 percent. Store batteries at 50 percent charge."
+    },
+    {
+      "id": "services/harbor",
+      "title": "Harbor artifact registry",
+      "type": "Reference",
+      "description": "Build artifact retention.",
+      "tags": [
+        "deployment",
+        "storage"
+      ],
+      "aliases": [],
+      "body": "Harbor keeps deployment images for 60 days. Priya Das owns Harbor.\nSee [deployment rollback](/operations/deploy.md)."
+    },
+    {
+      "id": "services/cedar",
+      "title": "Cedar reporting service",
+      "type": "Reference",
+      "description": "Reporting service cache and output formats.",
+      "tags": [
+        "reporting",
+        "cache"
+      ],
+      "aliases": [],
+      "body": "Cedar uses Redis for short-lived report caches. Cache entries expire after 15 minutes. Cedar reports are exported as CSV."
+    },
+    {
+      "id": "guides/cafe",
+      "title": "Café onboarding guide",
+      "type": "Reference",
+      "description": "Equipment pickup instructions.",
+      "tags": [
+        "onboarding"
+      ],
+      "aliases": [],
+      "body": "New hires visit Café Étoile on Tuesday for equipment collection. The help desk opens at 09:30."
+    },
+    {
+      "id": "policies/tokyo",
+      "title": "東京オフィス安全方針",
+      "type": "Reference",
+      "description": "東京オフィスの安全情報。",
+      "tags": [
+        "安全"
+      ],
+      "aliases": [],
+      "body": "東京オフィスの避難場所は中央公園です。緊急連絡先は佐藤です。"
+    },
+    {
+      "id": "decisions/vector-search",
+      "title": "Search architecture decision",
+      "type": "Reference",
+      "description": "Retrieval architecture rationale.",
+      "tags": [
+        "search",
+        "architecture"
+      ],
+      "aliases": [],
+      "body": "The knowledge store uses keyword ranking and explicit document links. Semantic embeddings were deferred to keep the service small."
+    },
+    {
+      "id": "security/service-tokens",
+      "title": "Service token policy",
+      "type": "Reference",
+      "description": "Machine authentication requirements.",
+      "tags": [
+        "security",
+        "authentication"
+      ],
+      "aliases": [],
+      "body": "Service tokens expire after 24 hours. Machine credentials are supplied through environment variables. Never include tokens in logs."
+    }
+  ],
+  "queries": [
+    {
+      "id": "keyword-atlas-db",
+      "category": "keyword",
+      "query": "Atlas primary database",
+      "relevance": {
+        "projects/atlas-architecture": 2
+      },
+      "evidence": {
+        "projects/atlas-architecture": [
+          "Atlas uses PostgreSQL 16 as its primary database."
+        ]
+      }
+    },
+    {
+      "id": "keyword-atlas-owner",
+      "category": "keyword",
+      "query": "Atlas owns",
+      "relevance": {
+        "projects/atlas": 2
+      },
+      "evidence": {
+        "projects/atlas": [
+          "Mira Sen owns Atlas."
+        ]
+      }
+    },
+    {
+      "id": "keyword-boreal-owner",
+      "category": "keyword",
+      "query": "Boreal owns",
+      "relevance": {
+        "projects/boreal": 2
+      },
+      "evidence": {
+        "projects/boreal": [
+          "Jon Iyer owns Boreal."
+        ]
+      }
+    },
+    {
+      "id": "keyword-retention",
+      "category": "keyword",
+      "query": "Boreal raw logs",
+      "relevance": {
+        "policies/boreal-retention": 2
+      },
+      "evidence": {
+        "policies/boreal-retention": [
+          "Boreal retains raw logs for 30 days and aggregated metrics for 90 days."
+        ]
+      }
+    },
+    {
+      "id": "keyword-rotation",
+      "category": "keyword",
+      "query": "Atlas credentials rotate",
+      "relevance": {
+        "security/atlas-keys": 2
+      },
+      "evidence": {
+        "security/atlas-keys": [
+          "Atlas API credentials rotate every 90 days."
+        ]
+      }
+    },
+    {
+      "id": "keyword-budget",
+      "category": "keyword",
+      "query": "2026 infrastructure budget",
+      "relevance": {
+        "finance/infra-2026": 2
+      },
+      "evidence": {
+        "finance/infra-2026": [
+          "The approved 2026 infrastructure budget is USD 48000 per month."
+        ]
+      }
+    },
+    {
+      "id": "keyword-wireguard",
+      "category": "keyword",
+      "query": "WireGuard UDP port",
+      "relevance": {
+        "operations/remote-access": 2
+      },
+      "evidence": {
+        "operations/remote-access": [
+          "Remote production access uses WireGuard on UDP port 51820."
+        ]
+      }
+    },
+    {
+      "id": "keyword-backups",
+      "category": "keyword",
+      "query": "snapshots retained",
+      "relevance": {
+        "operations/backups": 2
+      },
+      "evidence": {
+        "operations/backups": [
+          "Snapshots are retained for 14 days."
+        ]
+      }
+    },
+    {
+      "id": "keyword-camera",
+      "category": "keyword",
+      "query": "Rover RTSP port",
+      "relevance": {
+        "devices/rover": 2
+      },
+      "evidence": {
+        "devices/rover": [
+          "The Rover camera streams video over RTSP on TCP port 8554."
+        ]
+      }
+    },
+    {
+      "id": "keyword-battery",
+      "category": "keyword",
+      "query": "Rover charge cycles",
+      "relevance": {
+        "devices/rover-battery": 2
+      },
+      "evidence": {
+        "devices/rover-battery": [
+          "Replace a Rover battery after 300 charge cycles or when capacity falls below 80 percent."
+        ]
+      }
+    },
+    {
+      "id": "keyword-refund",
+      "category": "keyword",
+      "query": "Merchant refunds settlement",
+      "relevance": {
+        "support/refunds": 2
+      },
+      "evidence": {
+        "support/refunds": [
+          "Merchant refunds are accepted within 14 days of settlement."
+        ]
+      }
+    },
+    {
+      "id": "keyword-token",
+      "category": "keyword",
+      "query": "Service tokens expire",
+      "relevance": {
+        "security/service-tokens": 2
+      },
+      "evidence": {
+        "security/service-tokens": [
+          "Service tokens expire after 24 hours."
+        ]
+      }
+    },
+    {
+      "id": "lookup-alias-atlas",
+      "category": "metadata_and_tokens",
+      "query": "atlaspay",
+      "relevance": {
+        "projects/atlas": 2
+      },
+      "evidence": {
+        "projects/atlas": [
+          "Mira Sen owns Atlas."
+        ]
+      }
+    },
+    {
+      "id": "lookup-alias-boreal",
+      "category": "metadata_and_tokens",
+      "query": "northstar",
+      "relevance": {
+        "projects/boreal": 2
+      },
+      "evidence": {
+        "projects/boreal": [
+          "Jon Iyer owns Boreal."
+        ]
+      }
+    },
+    {
+      "id": "lookup-alias-backup",
+      "category": "metadata_and_tokens",
+      "query": "bluebird",
+      "relevance": {
+        "operations/backups": 2
+      },
+      "evidence": {
+        "operations/backups": [
+          "Database snapshots run daily at 02:00 UTC."
+        ]
+      }
+    },
+    {
+      "id": "lookup-alias-vpn",
+      "category": "metadata_and_tokens",
+      "query": "staff-tunnel",
+      "relevance": {
+        "operations/remote-access": 2
+      },
+      "evidence": {
+        "operations/remote-access": [
+          "Multi-factor authentication is mandatory."
+        ]
+      }
+    },
+    {
+      "id": "lookup-alias-camera",
+      "category": "metadata_and_tokens",
+      "query": "field-camera",
+      "relevance": {
+        "devices/rover": 2
+      },
+      "evidence": {
+        "devices/rover": [
+          "H.264 is the supported codec."
+        ]
+      }
+    },
+    {
+      "id": "lookup-prefix",
+      "category": "metadata_and_tokens",
+      "query": "cred rot",
+      "relevance": {
+        "security/atlas-keys": 2
+      },
+      "evidence": {
+        "security/atlas-keys": [
+          "Atlas API credentials rotate every 90 days."
+        ]
+      }
+    },
+    {
+      "id": "lookup-accent",
+      "category": "metadata_and_tokens",
+      "query": "cafe etoile",
+      "relevance": {
+        "guides/cafe": 2
+      },
+      "evidence": {
+        "guides/cafe": [
+          "New hires visit Café Étoile on Tuesday for equipment collection."
+        ]
+      }
+    },
+    {
+      "id": "lookup-cjk",
+      "category": "metadata_and_tokens",
+      "query": "避難場所",
+      "relevance": {
+        "policies/tokyo": 2
+      },
+      "evidence": {
+        "policies/tokyo": [
+          "東京オフィスの避難場所は中央公園です。"
+        ]
+      }
+    },
+    {
+      "id": "question-atlas-db",
+      "category": "natural_question",
+      "query": "Which database does Atlas use in production?",
+      "relevance": {
+        "projects/atlas-architecture": 2
+      },
+      "evidence": {
+        "projects/atlas-architecture": [
+          "Atlas uses PostgreSQL 16 as its primary database."
+        ]
+      }
+    },
+    {
+      "id": "question-atlas-owner",
+      "category": "natural_question",
+      "query": "Who owns Atlas?",
+      "relevance": {
+        "projects/atlas": 2
+      },
+      "evidence": {
+        "projects/atlas": [
+          "Mira Sen owns Atlas."
+        ]
+      }
+    },
+    {
+      "id": "question-boreal-logs",
+      "category": "natural_question",
+      "query": "How long are raw Boreal logs kept?",
+      "relevance": {
+        "policies/boreal-retention": 2
+      },
+      "evidence": {
+        "policies/boreal-retention": [
+          "Boreal retains raw logs for 30 days and aggregated metrics for 90 days."
+        ]
+      }
+    },
+    {
+      "id": "question-rotation",
+      "category": "natural_question",
+      "query": "How often should Atlas API credentials rotate?",
+      "relevance": {
+        "security/atlas-keys": 2
+      },
+      "evidence": {
+        "security/atlas-keys": [
+          "Atlas API credentials rotate every 90 days."
+        ]
+      }
+    },
+    {
+      "id": "question-budget",
+      "category": "natural_question",
+      "query": "What is the approved infrastructure budget for 2026?",
+      "relevance": {
+        "finance/infra-2026": 2
+      },
+      "evidence": {
+        "finance/infra-2026": [
+          "The approved 2026 infrastructure budget is USD 48000 per month."
+        ]
+      }
+    },
+    {
+      "id": "question-mira",
+      "category": "natural_question",
+      "query": "Where is Mira Sen based?",
+      "relevance": {
+        "people/mira-sen": 2
+      },
+      "evidence": {
+        "people/mira-sen": [
+          "Mira is based in Pune."
+        ]
+      }
+    },
+    {
+      "id": "question-vpn",
+      "category": "natural_question",
+      "query": "Which UDP port does WireGuard use?",
+      "relevance": {
+        "operations/remote-access": 2
+      },
+      "evidence": {
+        "operations/remote-access": [
+          "Remote production access uses WireGuard on UDP port 51820."
+        ]
+      }
+    },
+    {
+      "id": "question-refund",
+      "category": "natural_question",
+      "query": "How many days after settlement can a merchant request a refund?",
+      "relevance": {
+        "support/refunds": 2
+      },
+      "evidence": {
+        "support/refunds": [
+          "Merchant refunds are accepted within 14 days of settlement."
+        ]
+      }
+    },
+    {
+      "id": "question-backup",
+      "category": "natural_question",
+      "query": "When do the daily database snapshots run?",
+      "relevance": {
+        "operations/backups": 2
+      },
+      "evidence": {
+        "operations/backups": [
+          "Database snapshots run daily at 02:00 UTC."
+        ]
+      }
+    },
+    {
+      "id": "question-camera",
+      "category": "natural_question",
+      "query": "What codec is supported by the Rover camera?",
+      "relevance": {
+        "devices/rover": 2
+      },
+      "evidence": {
+        "devices/rover": [
+          "H.264 is the supported codec."
+        ]
+      }
+    },
+    {
+      "id": "question-rollback",
+      "category": "natural_question",
+      "query": "How do I recover from a failed release?",
+      "relevance": {
+        "operations/deploy": 2
+      },
+      "evidence": {
+        "operations/deploy": [
+          "A failed release is reverted by redeploying the last healthy image digest."
+        ]
+      }
+    },
+    {
+      "id": "question-contractor",
+      "category": "natural_question",
+      "query": "How long can a contractor access production?",
+      "relevance": {
+        "operations/remote-access": 2
+      },
+      "evidence": {
+        "operations/remote-access": [
+          "Contractors receive access for seven days."
+        ]
+      }
+    },
+    {
+      "id": "paraphrase-datastore",
+      "category": "paraphrase",
+      "query": "Atlas persistence engine",
+      "relevance": {
+        "projects/atlas-architecture": 2
+      },
+      "evidence": {
+        "projects/atlas-architecture": [
+          "Atlas uses PostgreSQL 16 as its primary database."
+        ]
+      }
+    },
+    {
+      "id": "paraphrase-owner",
+      "category": "paraphrase",
+      "query": "Atlas responsible engineer",
+      "relevance": {
+        "projects/atlas": 2
+      },
+      "evidence": {
+        "projects/atlas": [
+          "Mira Sen owns Atlas."
+        ]
+      }
+    },
+    {
+      "id": "paraphrase-outage",
+      "category": "paraphrase",
+      "query": "Atlas outage cause",
+      "relevance": {
+        "incidents/atlas-pool-exhaustion": 2
+      },
+      "evidence": {
+        "incidents/atlas-pool-exhaustion": [
+          "On 2026-04-20 Atlas failed because idle transactions exhausted the database pool."
+        ]
+      }
+    },
+    {
+      "id": "paraphrase-retention",
+      "category": "paraphrase",
+      "query": "Boreal log lifespan",
+      "relevance": {
+        "policies/boreal-retention": 2
+      },
+      "evidence": {
+        "policies/boreal-retention": [
+          "Boreal retains raw logs for 30 days and aggregated metrics for 90 days."
+        ]
+      }
+    },
+    {
+      "id": "paraphrase-backup",
+      "category": "paraphrase",
+      "query": "disaster recovery copies schedule",
+      "relevance": {
+        "operations/backups": 2
+      },
+      "evidence": {
+        "operations/backups": [
+          "Database snapshots run daily at 02:00 UTC."
+        ]
+      }
+    },
+    {
+      "id": "paraphrase-budget",
+      "category": "paraphrase",
+      "query": "monthly cloud allowance",
+      "relevance": {
+        "finance/infra-2026": 2
+      },
+      "evidence": {
+        "finance/infra-2026": [
+          "The approved 2026 infrastructure budget is USD 48000 per month."
+        ]
+      }
+    },
+    {
+      "id": "paraphrase-credential",
+      "category": "paraphrase",
+      "query": "Atlas secret renewal interval",
+      "relevance": {
+        "security/atlas-keys": 2
+      },
+      "evidence": {
+        "security/atlas-keys": [
+          "Atlas API credentials rotate every 90 days."
+        ]
+      }
+    },
+    {
+      "id": "paraphrase-reimburse",
+      "category": "paraphrase",
+      "query": "staff lunch repayment ceiling",
+      "relevance": {
+        "policies/expenses": 2
+      },
+      "evidence": {
+        "policies/expenses": [
+          "Employee meal reimbursement is capped at INR 750 per day."
+        ]
+      }
+    },
+    {
+      "id": "paraphrase-codec",
+      "category": "paraphrase",
+      "query": "Rover video encoding",
+      "relevance": {
+        "devices/rover": 2
+      },
+      "evidence": {
+        "devices/rover": [
+          "H.264 is the supported codec."
+        ]
+      }
+    },
+    {
+      "id": "paraphrase-rollback",
+      "category": "paraphrase",
+      "query": "undo broken deployment",
+      "relevance": {
+        "operations/deploy": 2
+      },
+      "evidence": {
+        "operations/deploy": [
+          "A failed release is reverted by redeploying the last healthy image digest."
+        ]
+      }
+    },
+    {
+      "id": "typo-atlas",
+      "category": "typo",
+      "query": "Atals database",
+      "relevance": {
+        "projects/atlas-architecture": 2
+      },
+      "evidence": {
+        "projects/atlas-architecture": [
+          "Atlas uses PostgreSQL 16 as its primary database."
+        ]
+      }
+    },
+    {
+      "id": "typo-boreal",
+      "category": "typo",
+      "query": "Boreel retention",
+      "relevance": {
+        "policies/boreal-retention": 2
+      },
+      "evidence": {
+        "policies/boreal-retention": [
+          "Boreal retains raw logs for 30 days and aggregated metrics for 90 days."
+        ]
+      }
+    },
+    {
+      "id": "typo-wireguard",
+      "category": "typo",
+      "query": "Wiregaurd port",
+      "relevance": {
+        "operations/remote-access": 2
+      },
+      "evidence": {
+        "operations/remote-access": [
+          "Remote production access uses WireGuard on UDP port 51820."
+        ]
+      }
+    },
+    {
+      "id": "typo-snapshot",
+      "category": "typo",
+      "query": "snapshott schedule",
+      "relevance": {
+        "operations/backups": 2
+      },
+      "evidence": {
+        "operations/backups": [
+          "Database snapshots run daily at 02:00 UTC."
+        ]
+      }
+    },
+    {
+      "id": "typo-mira",
+      "category": "typo",
+      "query": "Mira Senn",
+      "relevance": {
+        "people/mira-sen": 2
+      },
+      "evidence": {
+        "people/mira-sen": [
+          "Mira is based in Pune."
+        ]
+      }
+    },
+    {
+      "id": "typo-refund",
+      "category": "typo",
+      "query": "merhcant refunds",
+      "relevance": {
+        "support/refunds": 2
+      },
+      "evidence": {
+        "support/refunds": [
+          "Merchant refunds are accepted within 14 days of settlement."
+        ]
+      }
+    },
+    {
+      "id": "linked-atlas-team",
+      "category": "multiple_documents",
+      "query": "Atlas",
+      "relevance": {
+        "projects/atlas": 2,
+        "people/mira-sen": 2
+      },
+      "evidence": {
+        "projects/atlas": [
+          "Mira Sen owns Atlas."
+        ],
+        "people/mira-sen": [
+          "Mira Sen works on the Platform team at Nimbus Labs."
+        ]
+      },
+      "question": "Which team does the owner of Atlas work on?"
+    },
+    {
+      "id": "linked-atlas-city",
+      "category": "multiple_documents",
+      "query": "atlaspay",
+      "relevance": {
+        "projects/atlas": 2,
+        "people/mira-sen": 2
+      },
+      "evidence": {
+        "projects/atlas": [
+          "Mira Sen owns Atlas."
+        ],
+        "people/mira-sen": [
+          "Mira is based in Pune."
+        ]
+      },
+      "question": "Where is the owner of Atlaspay based?"
+    },
+    {
+      "id": "linked-boreal-team",
+      "category": "multiple_documents",
+      "query": "Boreal",
+      "relevance": {
+        "projects/boreal": 2,
+        "people/jon-iyer": 2
+      },
+      "evidence": {
+        "projects/boreal": [
+          "Jon Iyer owns Boreal."
+        ],
+        "people/jon-iyer": [
+          "Jon Iyer works on the Infrastructure team at Nimbus Labs."
+        ]
+      },
+      "question": "Which team does the owner of Boreal work on?"
+    },
+    {
+      "id": "linked-boreal-city",
+      "category": "multiple_documents",
+      "query": "northstar",
+      "relevance": {
+        "projects/boreal": 2,
+        "people/jon-iyer": 2
+      },
+      "evidence": {
+        "projects/boreal": [
+          "Jon Iyer owns Boreal."
+        ],
+        "people/jon-iyer": [
+          "Jon is based in Delhi."
+        ]
+      },
+      "question": "Where is the owner of Northstar based?"
+    },
+    {
+      "id": "linked-boreal-retention",
+      "category": "multiple_documents",
+      "query": "northstar",
+      "relevance": {
+        "projects/boreal": 2,
+        "policies/boreal-retention": 2
+      },
+      "evidence": {
+        "projects/boreal": [
+          "Boreal collects device telemetry."
+        ],
+        "policies/boreal-retention": [
+          "Boreal retains raw logs for 30 days and aggregated metrics for 90 days."
+        ]
+      },
+      "question": "What is Northstar and how long does it retain logs?"
+    },
+    {
+      "id": "linked-atlas-limits",
+      "category": "multiple_documents",
+      "query": "atlaspay",
+      "relevance": {
+        "projects/atlas": 2,
+        "operations/atlas-runbook": 2
+      },
+      "evidence": {
+        "projects/atlas": [
+          "Atlas handles merchant payment authorization."
+        ],
+        "operations/atlas-runbook": [
+          "Retry keys remain valid for 48 hours."
+        ]
+      },
+      "question": "What does Atlaspay do and how long are its retry keys valid?"
+    },
+    {
+      "id": "unknown-unknown-project",
+      "category": "unanswerable",
+      "query": "Zephyr database",
+      "relevance": {},
+      "evidence": {}
+    },
+    {
+      "id": "unknown-unrecorded-owner",
+      "category": "unanswerable",
+      "query": "Cedar owner",
+      "relevance": {},
+      "evidence": {}
+    },
+    {
+      "id": "unknown-unrecorded-rotation",
+      "category": "unanswerable",
+      "query": "Boreal credential rotation",
+      "relevance": {},
+      "evidence": {}
+    },
+    {
+      "id": "unknown-unknown-year",
+      "category": "unanswerable",
+      "query": "2027 infrastructure budget",
+      "relevance": {},
+      "evidence": {}
+    },
+    {
+      "id": "unknown-unrecorded-CEO",
+      "category": "unanswerable",
+      "query": "Nimbus CEO",
+      "relevance": {},
+      "evidence": {}
+    },
+    {
+      "id": "unknown-unknown-protocol",
+      "category": "unanswerable",
+      "query": "quasar handshake",
+      "relevance": {},
+      "evidence": {}
+    }
+  ]
+}
