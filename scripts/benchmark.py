@@ -35,7 +35,6 @@ def main():
     command = args.command[1:] if args.command[:1] == ["--"] else args.command
     if not command:
         parser.error("provide the service command after --")
-    # Keep each benchmark run isolated from existing brain data.
     with tempfile.TemporaryDirectory(prefix="jbrain-bench-") as data_dir:
         env = {**os.environ, "JBRAIN_DATA_DIR": data_dir, "JBRAIN_PORT": "0", "JBRAIN_HOST": "127.0.0.1", "JBRAIN_TOKEN": "", "JBRAIN_HISTORY": args.history}
         started = time.perf_counter()
